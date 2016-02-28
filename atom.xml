@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>XuYuan&#39;s Blog</title>
+  <subtitle>Learning and Sharing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://xuyuan.cf/"/>
   <updated>2016-02-28T12:05:03.180Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://xuyuan.cf/</id>
   
   <author>
-    <name>John Doe</name>
-    
+    <name>XuYuan</name>
+    <email>xjtuxuyuan@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/02/28/hello-world/"/>
-    <id>http://yoursite.com/2016/02/28/hello-world/</id>
+    <link href="http://xuyuan.cf/2016/02/28/hello-world/"/>
+    <id>http://xuyuan.cf/2016/02/28/hello-world/</id>
     <published>2016-02-28T12:05:03.178Z</published>
     <updated>2016-02-28T12:05:03.180Z</updated>
     

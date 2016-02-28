@@ -4,9 +4,9 @@
   <subtitle>Learning and Sharing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://xuyuan.cf/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2016-02-28T12:05:03.180Z</updated>
-  <id>http://xuyuan.cf/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>XuYuan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://xuyuan.cf/2016/02/28/hello-world/"/>
-    <id>http://xuyuan.cf/2016/02/28/hello-world/</id>
+    <link href="http://yoursite.com/2016/02/28/hello-world/"/>
+    <id>http://yoursite.com/2016/02/28/hello-world/</id>
     <published>2016-02-28T12:05:03.178Z</published>
     <updated>2016-02-28T12:05:03.180Z</updated>
     

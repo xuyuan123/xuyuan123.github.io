@@ -4,9 +4,9 @@
   <subtitle>Learning and Sharing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="xuyuan.cf/"/>
   <updated>2016-02-29T05:21:40.476Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>xuyuan.cf/</id>
   
   <author>
     <name>XuYuan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>test</title>
-    <link href="http://yoursite.com/2016/02/29/test/"/>
-    <id>http://yoursite.com/2016/02/29/test/</id>
+    <link href="xuyuan.cf/2016/02/29/test/"/>
+    <id>xuyuan.cf/2016/02/29/test/</id>
     <published>2016-02-29T04:57:53.000Z</published>
     <updated>2016-02-29T05:21:40.476Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="cat1" scheme="http://yoursite.com/categories/cat1/"/>
+      <category term="cat1" scheme="xuyuan.cf/categories/cat1/"/>
     
     
-      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
+      <category term="tag1" scheme="xuyuan.cf/tags/tag1/"/>
     
   </entry>
   
   <entry>
     <title>myfirstblog</title>
-    <link href="http://yoursite.com/2016/02/28/myfirstblog/"/>
-    <id>http://yoursite.com/2016/02/28/myfirstblog/</id>
+    <link href="xuyuan.cf/2016/02/28/myfirstblog/"/>
+    <id>xuyuan.cf/2016/02/28/myfirstblog/</id>
     <published>2016-02-28T13:37:02.000Z</published>
     <updated>2016-02-28T13:37:02.561Z</updated>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/02/28/hello-world/"/>
-    <id>http://yoursite.com/2016/02/28/hello-world/</id>
+    <link href="xuyuan.cf/2016/02/28/hello-world/"/>
+    <id>xuyuan.cf/2016/02/28/hello-world/</id>
     <published>2016-02-28T12:05:03.178Z</published>
     <updated>2016-02-28T12:05:03.180Z</updated>
     

@@ -4,7 +4,14 @@
   <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2016-02-28T13:59:26.341Z</lastmod>
+    <lastmod>2016-02-29T05:18:01.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/29/test/</loc>
+    
+    <lastmod>2016-02-29T05:00:01.402Z</lastmod>
     
   </url>
   

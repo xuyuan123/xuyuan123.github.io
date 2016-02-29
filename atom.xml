@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-29T05:00:01.402Z</updated>
+  <updated>2016-02-29T05:21:40.476Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <link href="http://yoursite.com/2016/02/29/test/"/>
     <id>http://yoursite.com/2016/02/29/test/</id>
     <published>2016-02-29T04:57:53.000Z</published>
-    <updated>2016-02-29T05:00:01.402Z</updated>
+    <updated>2016-02-29T05:21:40.476Z</updated>
     
     <content type="html">&lt;!-- abstract --&gt;
-&lt;p&gt;math test:&lt;br&gt;&lt;!-- 开始正文 --&gt;&lt;br&gt;this is a equation:$a^2+b^2=c^2$&lt;br&gt;$$sigma_a+x^2_3=9$$&lt;/p&gt;
+&lt;p&gt;math test:&lt;br&gt;&lt;!-- 开始正文 --&gt;&lt;br&gt;this is a equation:$a^2+b^2=c^2$&lt;br&gt;$$\sigma_a+x^2_3=9$$&lt;/p&gt;
 </content>
     
     <summary type="html">
     
       &lt;!-- abstract --&gt;
-&lt;p&gt;math test:&lt;br&gt;&lt;!-- 开始正文 --&gt;&lt;br&gt;this is a equation:$a^2+b^2=c^2$&lt;br&gt;$$sigma_a+x^2_3=9$$&lt;/p&gt;
+&lt;p&gt;math test:&lt;br&gt;&lt;!-- 开始正文 --&gt;&lt;br&gt;this is a equation:$a^2+b^2=c^2$&lt;br&gt;$$\sigma_a+x^2_3=9$$&lt;/p&gt;
 
     
     </summary>

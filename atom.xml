@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-06T01:12:26.964Z</updated>
+  <updated>2016-03-06T01:34:23.029Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2016/03/05/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
     <id>xuyuan.cf/2016/03/05/博客搭建全过程/</id>
     <published>2016-03-05T03:50:35.000Z</published>
-    <updated>2016-03-06T01:12:26.964Z</updated>
+    <updated>2016-03-06T01:34:23.029Z</updated>
     
     <content type="html">&lt;p&gt;这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-准备工作：安装git，node-js和hexo&quot;&gt;&lt;a href=&quot;#1-准备工作：安装git，node-js和hexo&quot; class=&quot;headerlink&quot; title=&quot;1.准备工作：安装git，node.js和hexo&quot;&gt;&lt;/a&gt;1.准备工作：安装git，node.js和hexo&lt;/h2&gt;&lt;ol&gt;
@@ -89,9 +89,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;进入&lt;a href=&quot;https://www.dnspod.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DNSpod官网&lt;/a&gt;，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。&lt;/p&gt;
-&lt;p&gt; |主机记录|记录类型|记录值|&lt;br&gt; |:——|:——|:——|&lt;br&gt; |@|CNAME|yourUsername.github.io|&lt;br&gt; |www|CNAME|yourUsername.github.io|&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;主机记录    记录类型    记录值 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@           CNAME       [yourUsername.github.io] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;www         CNAME       [yourUsername.github.io]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;xuyuan.cf&quot;&gt;xuyuan.cf&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

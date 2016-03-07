@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-07T11:09:56.289Z</updated>
+  <updated>2016-03-07T13:57:08.849Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2016/03/05/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
     <id>xuyuan.cf/2016/03/05/博客搭建全过程/</id>
     <published>2016-03-05T03:50:35.000Z</published>
-    <updated>2016-03-07T11:09:56.289Z</updated>
+    <updated>2016-03-07T13:57:08.849Z</updated>
     
     <content type="html">&lt;p&gt;这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;准备工作：安装git，node-js和hexo&quot;&gt;&lt;a href=&quot;#准备工作：安装git，node-js和hexo&quot; class=&quot;headerlink&quot; title=&quot;准备工作：安装git，node.js和hexo&quot;&gt;&lt;/a&gt;准备工作：安装git，node.js和hexo&lt;/h2&gt;&lt;ul&gt;

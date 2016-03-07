@@ -65,7 +65,7 @@
 <meta property="og:url" content="xuyuan.cf/2016/03/05/博客搭建全过程/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
 <meta property="og:description" content="这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。">
-<meta property="og:updated_time" content="2016-03-06T05:15:49.179Z">
+<meta property="og:updated_time" content="2016-03-07T10:50:49.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搭建全过程">
 <meta name="twitter:description" content="这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。">
@@ -299,7 +299,7 @@
           
 		
 		
-          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></span> 次</span>
         
 		
         </div>
@@ -325,7 +325,7 @@
 </ol>
 <h2 id="2-注册github帐号并新建仓库"><a href="#2-注册github帐号并新建仓库" class="headerlink" title="2.注册github帐号并新建仓库"></a>2.注册github帐号并新建仓库</h2><ol>
 <li>进入<a href="https://github.com/" target="_blank" rel="external">github的官方网站</a>，输入username，email和passward点击Sign up for Github进行注册并登录进去。</li>
-<li>注册完成后登录进入自己的github页面，选择<code>+New repository</code>新建一个仓库，仓库名字为<code>yourUsername.github.io</code>，其中<code>yourUsername</code>改为你自己注册的时候的用户名。仓库名字必须按照这样的格式书写，这个仓库用来存放搭建网站所需文件。</li>
+<li>注册完成后登录进入自己的github页面，选择<code>+New repository</code>新建一个仓库，仓库名字为<code>username.github.io</code>，其中<code>username</code>改为你自己注册的时候的用户名。仓库名字必须按照这样的格式书写，这个仓库用来存放搭建网站所需文件。</li>
 <li>同理再新建一个仓库，名字命名为MyBlog。这个仓库主要是用来存放博客文件的地方。这个仓库的名字可以随便取任何名字都可以。</li>
 </ol>
 <h2 id="3-初始化和配置hexo和github"><a href="#3-初始化和配置hexo和github" class="headerlink" title="3. 初始化和配置hexo和github"></a>3. 初始化和配置hexo和github</h2><ol>
@@ -339,7 +339,7 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在电脑任意位置克隆仓库到本地，运行下面命令，将之前新建的MyBlog仓库克隆志本地电脑。</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourUsername/MyBlog.git/</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/MyBlog.git/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在MyBlog中新建一个文件夹hexo，并进入到该文件夹内，打开Git Bash，运行下面命令。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">npm install-deployer-git  --save</span><br></pre></td></tr></table></figure>
@@ -366,7 +366,7 @@
 <li><p>参照第三部分内容，使用下面两条命令即可将本地编写的Blog文件提交到自己的个人网站。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在浏览器中打开自己的个人网页：<code>yourUsername.github.io</code>，查看确认自己的博客文章的提交效果。</p>
+<li><p>在浏览器中打开自己的个人网页：<code>username.github.io</code>，查看确认自己的博客文章的提交效果。</p>
 </li>
 </ol>
 <h2 id="5-申请自己的域名，并绑定到自己的github帐号"><a href="#5-申请自己的域名，并绑定到自己的github帐号" class="headerlink" title="5.申请自己的域名，并绑定到自己的github帐号"></a>5.申请自己的域名，并绑定到自己的github帐号</h2><ol>
@@ -374,15 +374,18 @@
 <li>购买域名，首选Godday，不同域名价格不同，首选<code>.com</code>，<code>.me</code>，<code>.net</code>域名，可以使用支付宝付款。</li>
 <li>如果只是个人使用，随便拿来玩一玩的话，还有很多免费的域名，就像本博客的<code>.cf</code>域名，还有类似的<code>.ga</code>，<code>.gq</code>，<code>.tk</code>等域名。</li>
 <li>免费域名申请。进入<a href="http://www.freenom.com/zh/index.html?lang=zh" target="_blank" rel="external">Freenom网站</a>，输入名字，搜索域名是否可用，该网站支持<code>.ga</code>，<code>.gq</code>，<code>.tk</code>，<code>.ml</code>,<code>.cf</code>五种免费的顶级域名。</li>
-<li>搜索到合适的免费域名之后，就可以直接在该网站免费申请注册。申请成功之后进入到自己账户中就可以管理该域名，我们使用DNSpod进行域名解析服务，在该域名的后台管理的nameserver中输入下面两个服务器解析地址：<ul>
-<li>f1g1ns1.dnspod.net</li>
-<li>figins2.dnspod.net</li>
-</ul>
+<li>搜索到合适的免费域名之后，就可以直接在该网站免费申请注册。申请成功之后进入到自己账户中就可以管理该域名，我们使用DNSpod进行域名解析服务，在该域名的后台管理的nameserver中输入下面两个服务器解析地址：<blockquote>
+<p>f1g1ns1.dnspod.net<br>f1g1ns2.dnspod.net</p>
+</blockquote>
 </li>
 <li><p>进入<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSpod官网</a>，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主机记录    记录类型    记录值 </span><br><span class="line">@           CNAME     [yourUsername.github.io] </span><br><span class="line">www         CNAME     [yourUsername.github.io]</span><br></pre></td></tr></table></figure>
+<p> |1|2|<br> |:—:|:–:|<br> |3|4|<br> |5|6|</p>
 </li>
-<li><p>在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：<br> xuyuan.cf</p>
+<li><p>在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：</p>
+<blockquote>
+<p>xuyuan.cf</p>
+</blockquote>
 </li>
 <li>在浏览器中输入你新申请注册的个人网站域名，即可指向到你的个人博客网站。</li>
 </ol>
@@ -597,8 +600,8 @@
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="visit time">
-  本站总访问量<span id="busuanzi_value_site_pv"></span>次  ｜
-  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spiner fa-spin"></span>次  ｜
+  本站访客数<span id="busuanzi_value_site_uv"><i class="fa fa-spiner fa-spin"></span>人次
 </div>
 
 

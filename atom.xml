@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-08T01:18:39.925Z</updated>
+  <updated>2016-03-08T01:41:54.576Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,21 +20,21 @@
     <link href="xuyuan.cf/2016/03/08/Attenuator/"/>
     <id>xuyuan.cf/2016/03/08/Attenuator/</id>
     <published>2016-03-08T03:50:35.000Z</published>
-    <updated>2016-03-08T01:18:39.925Z</updated>
+    <updated>2016-03-08T01:41:54.576Z</updated>
     
     <content type="html">&lt;p&gt;An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.&lt;br&gt;An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;Widly used is the matching T type attenuator. Its circuit model is as follows.&lt;br&gt;&lt;img src=&quot;http://www.electronics-tutorials.ws/attenuators/attn22.gif&quot; alt=&quot;matching T type attenuator model&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Calculate the matching T type attenuator.&lt;br&gt;The matching input impendance $Z&lt;em&gt;{in}$ and output impendance $Z&lt;/em&gt;{out}$ must satisfy&lt;br&gt;$$Z_{in}=R_1+R_3//(R&lt;em&gt;2+Z&lt;/em&gt;{out})$$&lt;br&gt;$$Z_{out}=R_2+R_3//(R&lt;em&gt;1+Z&lt;/em&gt;{in})$$&lt;br&gt;$$\frac{V&lt;em&gt;{in}}{Z&lt;/em&gt;{in}}R_3//(R&lt;em&gt;2+Z&lt;/em&gt;{out})=\frac{V&lt;em&gt;{out}}{Z&lt;/em&gt;{out}}(R&lt;em&gt;2+Z&lt;/em&gt;{out})$$&lt;br&gt;From Solving the above three equations, we can get&lt;br&gt;$$R&lt;em&gt;1=\frac{Z&lt;/em&gt;{in}Z&lt;em&gt;{out}-2Z&lt;/em&gt;{in}Z&lt;em&gt;{out}\alpha+Z&lt;/em&gt;{in}^2\alpha^2}{Z&lt;em&gt;{out}-Z&lt;/em&gt;{in}\alpha^2}$$&lt;br&gt;$$R&lt;em&gt;2=\frac{Z&lt;/em&gt;{out}^2-2Z&lt;em&gt;{in}Z&lt;/em&gt;{out}\alpha+Z&lt;em&gt;{in}Z&lt;/em&gt;{out}\alpha^2}{Z&lt;em&gt;{out}-Z&lt;/em&gt;{in}\alpha^2}$$&lt;br&gt;$$R&lt;em&gt;3=\frac{2Z&lt;/em&gt;{in}Z&lt;em&gt;{out}\alpha}{Z&lt;/em&gt;{out}-Z&lt;em&gt;{in}\alpha^2}$$&lt;br&gt;where the $\alpha=\frac{V&lt;/em&gt;{out}}{V_{in}}$.&lt;/p&gt;
-&lt;p&gt;In general situation, the input and output impendance $Z&lt;em&gt;{in}$ and $Z&lt;/em&gt;{out}$ are the same and both equal to $50\Omega$. The T type attenuator is also the balanced one. Therefore, we could simplify the above equations as follows.&lt;br&gt;$$R_1=R&lt;em&gt;2=Z&lt;/em&gt;{in}\frac{1-\alpha}{1+\alpha}$$&lt;br&gt;$$R&lt;em&gt;3=Z&lt;/em&gt;{in}\frac{2\alpha}{1-\alpha^2}$$&lt;/p&gt;
-&lt;p&gt;Usually, the attenuation is described in dB, that is to say $\kappa=-20\log{\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}}=-20\log{\alpha}$ dB.&lt;br&gt;Then we can get the voltage loss ratio is $\alpha=\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}=10^{-\frac{\kappa}{20}}$&lt;/p&gt;
+&lt;p&gt;Calculate the matching T type attenuator.&lt;br&gt;The matching input impendance $Z_{in}$ and output impendance $Z_{out}$ must satisfy&lt;br&gt;$$Z_{in}=R_1+R_3//(R_2+Z_{out})$$&lt;br&gt;$$Z_{out}=R_2+R_3//(R_1+Z_{in})$$&lt;br&gt;$$\frac{V_{in}}{Z_{in}}R_3//(R_2+Z_{out})=\frac{V_{out}}{Z_{out}}(R_2+Z_{out})$$&lt;br&gt;From Solving the above three equations, we can get&lt;br&gt;$$R_1=\frac{Z_{in}Z_{out}-2Z_{in}Z_{out}\alpha+Z_{in}^2\alpha^2}{Z_{out}-Z_{in}\alpha^2}$$&lt;br&gt;$$R_2=\frac{Z_{out}^2-2Z_{in}Z_{out}\alpha+Z_{in}Z_{out}\alpha^2}{Z_{out}-Z_{in}\alpha^2}$$&lt;br&gt;$$R_3=\frac{2Z_{in}Z_{out}\alpha}{Z_{out}-Z_{in}\alpha^2}$$&lt;br&gt;where the $\alpha=\frac{V_{out}}{V_{in}}$.&lt;/p&gt;
+&lt;p&gt;In general situation, the input and output impendance $Z_{in}$ and $Z_{out}$ are the same and both equal to $50\Omega$. The T type attenuator is also the balanced one. Therefore, we could simplify the above equations as follows.&lt;br&gt;$$R_1=R_2=Z_{in}\frac{1-\alpha}{1+\alpha}$$&lt;br&gt;$$R_3=Z_{in}\frac{2\alpha}{1-\alpha^2}$$&lt;/p&gt;
+&lt;p&gt;Usually, the attenuation is described in dB, that is to say $\kappa=-20\log{\frac{V_{out}}{V_{in}}}=-20\log{\alpha}$ dB.&lt;br&gt;Then we can get the voltage loss ratio is $\alpha=\frac{V_{out}}{V_{in}}=10^{-\frac{\kappa}{20}}$&lt;/p&gt;
 &lt;p&gt;Therefore, from the attenuation and input and output impendance, we can caculate the internal resistance.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;SUMMARY:&lt;/strong&gt;&lt;br&gt;An attenuator with 50 $\Omega$ impedance match:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;The resistance of the T type attenuator satisfy:&lt;br&gt;$$R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}&lt;em&gt;50\Omega$$&lt;br&gt;$$R_3=\frac{2&lt;/em&gt;10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}}$$&lt;/li&gt;
-&lt;li&gt;The output-input power ratio:$$\frac{P&lt;em&gt;{out}}{P&lt;/em&gt;{in}}=10^{-\frac{dB}{10}}$$&lt;/li&gt;
-&lt;li&gt;The output-input voltage ratio: $$\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}=10^{-\frac{dB}{20}}$$&lt;/li&gt;
+&lt;li&gt;The output-input power ratio:&lt;br&gt;$$\frac{P_{out}}{P_{in}}=10^{-\frac{dB}{10}}$$&lt;/li&gt;
+&lt;li&gt;The output-input voltage ratio:&lt;br&gt;$$\frac{V_{out}}{V_{in}}=10^{-\frac{dB}{20}}$$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;For example:&lt;br&gt;|Attenuation|$R_1=R_2$|$R_3$|Voltage Ratio|Power Ratio|&lt;br&gt;|:———-:|:———:|:—–:|:—–:|:—–|&lt;br&gt;|5dB|14.006$\Omega$|82.241$\Omega$|0.562|0.316|&lt;br&gt;|10dB|25.972$\Omega$|35.136$\Omega$|0.316|0.1|&lt;br&gt;|20dB|40.909$\Omega$|10.101$\Omega$|0.1|0.01|&lt;br&gt;|50dB|49.685$\Omega$|0.316$\Omega$|0.032|0.001|&lt;/p&gt;

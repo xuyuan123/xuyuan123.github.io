@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-08T01:41:54.576Z</updated>
+  <updated>2016-03-08T04:23:58.169Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2016/03/08/Attenuator/"/>
     <id>xuyuan.cf/2016/03/08/Attenuator/</id>
     <published>2016-03-08T03:50:35.000Z</published>
-    <updated>2016-03-08T01:41:54.576Z</updated>
+    <updated>2016-03-08T04:23:58.169Z</updated>
     
     <content type="html">&lt;p&gt;An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.&lt;br&gt;An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -37,7 +37,48 @@
 &lt;li&gt;The output-input voltage ratio:&lt;br&gt;$$\frac{V_{out}}{V_{in}}=10^{-\frac{dB}{20}}$$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;For example:&lt;br&gt;|Attenuation|$R_1=R_2$|$R_3$|Voltage Ratio|Power Ratio|&lt;br&gt;|:———-:|:———:|:—–:|:—–:|:—–|&lt;br&gt;|5dB|14.006$\Omega$|82.241$\Omega$|0.562|0.316|&lt;br&gt;|10dB|25.972$\Omega$|35.136$\Omega$|0.316|0.1|&lt;br&gt;|20dB|40.909$\Omega$|10.101$\Omega$|0.1|0.01|&lt;br&gt;|50dB|49.685$\Omega$|0.316$\Omega$|0.032|0.001|&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Attenuation&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;$R_1=R_2$&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;$R_3$&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Voltage Ratio&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Power Ratio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;5dB&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;14.006$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;82.241$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.562&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.316&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;10dB&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;25.972$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;35.136$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.316&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;20dB&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;40.909$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;10.101$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.1&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;50dB&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;49.685$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.316$\Omega$&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.032&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;You can find more informations from the website &lt;a href=&quot;http://chemandy.com/calculators/matching-t-attenuator-calculator.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CHEMANDY ELECTRONICS&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Attenuator_%28electronics%29&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Wikipedia of attenuator&lt;/a&gt;&lt;/p&gt;
 </content>
     

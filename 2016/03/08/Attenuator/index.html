@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Microwave,Instrument," />
 
 
 
@@ -59,15 +59,18 @@
 
 
 
-<meta name="description" content="Learning and Sharing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XuYuan's Blog">
-<meta property="og:url" content="xuyuan.cf/index.html">
+<meta name="description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Attenuator">
+<meta property="og:url" content="xuyuan.cf/2016/03/08/Attenuator/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="Learning and Sharing">
+<meta property="og:description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
+<meta property="og:image" content="http://www.electronics-tutorials.ws/attenuators/attn22.gif">
+<meta property="og:updated_time" content="2016-03-08T01:18:39.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XuYuan's Blog">
-<meta name="twitter:description" content="Learning and Sharing">
+<meta name="twitter:title" content="Attenuator">
+<meta name="twitter:description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
+<meta name="twitter:image" content="http://www.electronics-tutorials.ws/attenuators/attn22.gif">
 
 
 
@@ -85,7 +88,7 @@
   };
 </script>
 
-  <title> XuYuan's Blog </title>
+  <title> Attenuator | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -114,9 +117,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,9 +234,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -255,10 +256,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/03/08/Attenuator/" itemprop="url">
-                  Attenuator
-                </a>
+                Attenuator
               
             
           </h1>
@@ -313,6 +311,8 @@
           
 		
 		
+          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+        
 		
         </div>
       </header>
@@ -325,257 +325,71 @@
       
 
       
-        
-          <p>An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.<br>An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/08/Attenuator/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.<br>An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.</p>
+<a id="more"></a>
+<p>Widly used is the matching T type attenuator. Its circuit model is as follows.<br><img src="http://www.electronics-tutorials.ws/attenuators/attn22.gif" alt="matching T type attenuator model"></p>
+<p>Calculate the matching T type attenuator.<br>The matching input impendance $Z<em>{in}$ and output impendance $Z</em>{out}$ must satisfy<br>$$Z_{in}=R_1+R_3//(R<em>2+Z</em>{out})$$<br>$$Z_{out}=R_2+R_3//(R<em>1+Z</em>{in})$$<br>$$\frac{V<em>{in}}{Z</em>{in}}R_3//(R<em>2+Z</em>{out})=\frac{V<em>{out}}{Z</em>{out}}(R<em>2+Z</em>{out})$$<br>From Solving the above three equations, we can get<br>$$R<em>1=\frac{Z</em>{in}Z<em>{out}-2Z</em>{in}Z<em>{out}\alpha+Z</em>{in}^2\alpha^2}{Z<em>{out}-Z</em>{in}\alpha^2}$$<br>$$R<em>2=\frac{Z</em>{out}^2-2Z<em>{in}Z</em>{out}\alpha+Z<em>{in}Z</em>{out}\alpha^2}{Z<em>{out}-Z</em>{in}\alpha^2}$$<br>$$R<em>3=\frac{2Z</em>{in}Z<em>{out}\alpha}{Z</em>{out}-Z<em>{in}\alpha^2}$$<br>where the $\alpha=\frac{V</em>{out}}{V_{in}}$.</p>
+<p>In general situation, the input and output impendance $Z<em>{in}$ and $Z</em>{out}$ are the same and both equal to $50\Omega$. The T type attenuator is also the balanced one. Therefore, we could simplify the above equations as follows.<br>$$R_1=R<em>2=Z</em>{in}\frac{1-\alpha}{1+\alpha}$$<br>$$R<em>3=Z</em>{in}\frac{2\alpha}{1-\alpha^2}$$</p>
+<p>Usually, the attenuation is described in dB, that is to say $\kappa=-20\log{\frac{V<em>{out}}{V</em>{in}}}=-20\log{\alpha}$ dB.<br>Then we can get the voltage loss ratio is $\alpha=\frac{V<em>{out}}{V</em>{in}}=10^{-\frac{\kappa}{20}}$</p>
+<p>Therefore, from the attenuation and input and output impendance, we can caculate the internal resistance.</p>
+<hr>
+<p><strong>SUMMARY:</strong><br>An attenuator with 50 $\Omega$ impedance match:</p>
+<ol>
+<li>The resistance of the T type attenuator satisfy:<br>$$R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}<em>50\Omega$$<br>$$R_3=\frac{2</em>10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}}$$</li>
+<li>The output-input power ratio:$$\frac{P<em>{out}}{P</em>{in}}=10^{-\frac{dB}{10}}$$</li>
+<li>The output-input voltage ratio: $$\frac{V<em>{out}}{V</em>{in}}=10^{-\frac{dB}{20}}$$</li>
+</ol>
+<hr>
+<p>For example:<br>|Attenuation|$R_1=R_2$|$R_3$|Voltage Ratio|Power Ratio|<br>|:———-:|:———:|:—–:|:—–:|:—–|<br>|5dB|14.006$\Omega$|82.241$\Omega$|0.562|0.316|<br>|10dB|25.972$\Omega$|35.136$\Omega$|0.316|0.1|<br>|20dB|40.909$\Omega$|10.101$\Omega$|0.1|0.01|<br>|50dB|49.685$\Omega$|0.316$\Omega$|0.032|0.001|</p>
+<p>You can find more informations from the website <a href="http://chemandy.com/calculators/matching-t-attenuator-calculator.htm" target="_blank" rel="external">CHEMANDY ELECTRONICS</a> and <a href="http://en.wikipedia.org/wiki/Attenuator_%28electronics%29" target="_blank" rel="external">Wikipedia of attenuator</a></p>
+
       
     </div>
 
     <div>
       
+        
+      
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/05/博客搭建全过程/" itemprop="url">
-                  博客搭建全过程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-05T11:50:35+08:00" content="2016-03-05">
-              2016-03-05
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/Microwave/" rel="tag">#Microwave</a>
           
-
+            <a href="/tags/Instrument/" rel="tag">#Instrument</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/05/博客搭建全过程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/05/博客搭建全过程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-		
-		
-		
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/05/博客搭建全过程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/05/博客搭建全过程/" rel="next" title="博客搭建全过程">
+                <i class="fa fa-chevron-left"></i> 博客搭建全过程
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/28/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-28T20:05:03+08:00" content="2016-02-28">
-              2016-02-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/28/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/28/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-		
-		
-		
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/28/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -583,6 +397,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/08/Attenuator/"
+           data-title="Attenuator" data-url="xuyuan.cf/2016/03/08/Attenuator/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -602,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.png"
@@ -661,6 +492,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -755,6 +603,167 @@
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 

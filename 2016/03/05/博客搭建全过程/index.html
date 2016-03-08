@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="hexo,github," />
 
 
 
@@ -65,7 +65,7 @@
 <meta property="og:url" content="xuyuan.cf/2016/03/05/博客搭建全过程/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
 <meta property="og:description" content="这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。">
-<meta property="og:updated_time" content="2016-03-07T13:57:08.849Z">
+<meta property="og:updated_time" content="2016-03-08T01:10:40.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搭建全过程">
 <meta name="twitter:description" content="这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。">
@@ -388,7 +388,8 @@
 <p>f1g1ns1.dnspod.net<br>f1g1ns2.dnspod.net</p>
 </blockquote>
 </li>
-<li><p>进入<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSpod官网</a>，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。<br>| 主机记录        | 记录类型           | 记录值  |<br>| :————-: |:————-:| :—–:|<br>| @      | CNAME | username.github.io |<br>| www      | CNAME      |   username.github.io |</p>
+<li><p>进入<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSpod官网</a>，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主机记录		记录类型		记录值</span><br><span class="line">@		CNAME		username.github.io</span><br><span class="line">www		CNAME		username.github.io</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：</p>
 <blockquote>
@@ -430,6 +431,8 @@
           
             <a href="/tags/hexo/" rel="tag">#hexo</a>
           
+            <a href="/tags/github/" rel="tag">#github</a>
+          
         </div>
       
 
@@ -444,6 +447,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/08/Attenuator/" rel="prev" title="Attenuator">
+                Attenuator <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -515,7 +522,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -523,7 +530,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -532,7 +539,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -617,6 +624,10 @@
   本站总访问量<span id="busuanzi_value_site_pv"></span>次  ｜
   本站访客数<span id="busuanzi_value_site_uv"></span>人次
 </div>
+
+<% if (page.mathjax){ %>
+<%- partial('mathjax') %>
+<% } %>
 
 
 

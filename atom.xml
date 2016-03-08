@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-07T13:57:08.849Z</updated>
+  <updated>2016-03-08T01:18:39.925Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -16,11 +16,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Attenuator</title>
+    <link href="xuyuan.cf/2016/03/08/Attenuator/"/>
+    <id>xuyuan.cf/2016/03/08/Attenuator/</id>
+    <published>2016-03-08T03:50:35.000Z</published>
+    <updated>2016-03-08T01:18:39.925Z</updated>
+    
+    <content type="html">&lt;p&gt;An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.&lt;br&gt;An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Widly used is the matching T type attenuator. Its circuit model is as follows.&lt;br&gt;&lt;img src=&quot;http://www.electronics-tutorials.ws/attenuators/attn22.gif&quot; alt=&quot;matching T type attenuator model&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Calculate the matching T type attenuator.&lt;br&gt;The matching input impendance $Z&lt;em&gt;{in}$ and output impendance $Z&lt;/em&gt;{out}$ must satisfy&lt;br&gt;$$Z_{in}=R_1+R_3//(R&lt;em&gt;2+Z&lt;/em&gt;{out})$$&lt;br&gt;$$Z_{out}=R_2+R_3//(R&lt;em&gt;1+Z&lt;/em&gt;{in})$$&lt;br&gt;$$\frac{V&lt;em&gt;{in}}{Z&lt;/em&gt;{in}}R_3//(R&lt;em&gt;2+Z&lt;/em&gt;{out})=\frac{V&lt;em&gt;{out}}{Z&lt;/em&gt;{out}}(R&lt;em&gt;2+Z&lt;/em&gt;{out})$$&lt;br&gt;From Solving the above three equations, we can get&lt;br&gt;$$R&lt;em&gt;1=\frac{Z&lt;/em&gt;{in}Z&lt;em&gt;{out}-2Z&lt;/em&gt;{in}Z&lt;em&gt;{out}\alpha+Z&lt;/em&gt;{in}^2\alpha^2}{Z&lt;em&gt;{out}-Z&lt;/em&gt;{in}\alpha^2}$$&lt;br&gt;$$R&lt;em&gt;2=\frac{Z&lt;/em&gt;{out}^2-2Z&lt;em&gt;{in}Z&lt;/em&gt;{out}\alpha+Z&lt;em&gt;{in}Z&lt;/em&gt;{out}\alpha^2}{Z&lt;em&gt;{out}-Z&lt;/em&gt;{in}\alpha^2}$$&lt;br&gt;$$R&lt;em&gt;3=\frac{2Z&lt;/em&gt;{in}Z&lt;em&gt;{out}\alpha}{Z&lt;/em&gt;{out}-Z&lt;em&gt;{in}\alpha^2}$$&lt;br&gt;where the $\alpha=\frac{V&lt;/em&gt;{out}}{V_{in}}$.&lt;/p&gt;
+&lt;p&gt;In general situation, the input and output impendance $Z&lt;em&gt;{in}$ and $Z&lt;/em&gt;{out}$ are the same and both equal to $50\Omega$. The T type attenuator is also the balanced one. Therefore, we could simplify the above equations as follows.&lt;br&gt;$$R_1=R&lt;em&gt;2=Z&lt;/em&gt;{in}\frac{1-\alpha}{1+\alpha}$$&lt;br&gt;$$R&lt;em&gt;3=Z&lt;/em&gt;{in}\frac{2\alpha}{1-\alpha^2}$$&lt;/p&gt;
+&lt;p&gt;Usually, the attenuation is described in dB, that is to say $\kappa=-20\log{\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}}=-20\log{\alpha}$ dB.&lt;br&gt;Then we can get the voltage loss ratio is $\alpha=\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}=10^{-\frac{\kappa}{20}}$&lt;/p&gt;
+&lt;p&gt;Therefore, from the attenuation and input and output impendance, we can caculate the internal resistance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;SUMMARY:&lt;/strong&gt;&lt;br&gt;An attenuator with 50 $\Omega$ impedance match:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The resistance of the T type attenuator satisfy:&lt;br&gt;$$R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}&lt;em&gt;50\Omega$$&lt;br&gt;$$R_3=\frac{2&lt;/em&gt;10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}}$$&lt;/li&gt;
+&lt;li&gt;The output-input power ratio:$$\frac{P&lt;em&gt;{out}}{P&lt;/em&gt;{in}}=10^{-\frac{dB}{10}}$$&lt;/li&gt;
+&lt;li&gt;The output-input voltage ratio: $$\frac{V&lt;em&gt;{out}}{V&lt;/em&gt;{in}}=10^{-\frac{dB}{20}}$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;For example:&lt;br&gt;|Attenuation|$R_1=R_2$|$R_3$|Voltage Ratio|Power Ratio|&lt;br&gt;|:———-:|:———:|:—–:|:—–:|:—–|&lt;br&gt;|5dB|14.006$\Omega$|82.241$\Omega$|0.562|0.316|&lt;br&gt;|10dB|25.972$\Omega$|35.136$\Omega$|0.316|0.1|&lt;br&gt;|20dB|40.909$\Omega$|10.101$\Omega$|0.1|0.01|&lt;br&gt;|50dB|49.685$\Omega$|0.316$\Omega$|0.032|0.001|&lt;/p&gt;
+&lt;p&gt;You can find more informations from the website &lt;a href=&quot;http://chemandy.com/calculators/matching-t-attenuator-calculator.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CHEMANDY ELECTRONICS&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Attenuator_%28electronics%29&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Wikipedia of attenuator&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.&lt;br&gt;An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+    
+    
+      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+    
+      <category term="Instrument" scheme="xuyuan.cf/tags/Instrument/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客搭建全过程</title>
     <link href="xuyuan.cf/2016/03/05/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
     <id>xuyuan.cf/2016/03/05/博客搭建全过程/</id>
     <published>2016-03-05T03:50:35.000Z</published>
-    <updated>2016-03-07T13:57:08.849Z</updated>
+    <updated>2016-03-08T01:10:40.654Z</updated>
     
     <content type="html">&lt;p&gt;这篇文章记录了这个博客平台的整个搭建过程，仅留做记录，供自己以后参考。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;准备工作：安装git，node-js和hexo&quot;&gt;&lt;a href=&quot;#准备工作：安装git，node-js和hexo&quot; class=&quot;headerlink&quot; title=&quot;准备工作：安装git，node.js和hexo&quot;&gt;&lt;/a&gt;准备工作：安装git，node.js和hexo&lt;/h2&gt;&lt;ul&gt;
@@ -87,7 +128,8 @@
 &lt;p&gt;f1g1ns1.dnspod.net&lt;br&gt;f1g1ns2.dnspod.net&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;进入&lt;a href=&quot;https://www.dnspod.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DNSpod官网&lt;/a&gt;，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。&lt;br&gt;| 主机记录        | 记录类型           | 记录值  |&lt;br&gt;| :————-: |:————-:| :—–:|&lt;br&gt;| @      | CNAME | username.github.io |&lt;br&gt;| www      | CNAME      |   username.github.io |&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;进入&lt;a href=&quot;https://www.dnspod.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DNSpod官网&lt;/a&gt;，注册自己的一个账号。登陆进入自己的账号，选择域名管理，添加域名。输入刚刚申请到的域名，在该域名下添加下面两条记录。&lt;/p&gt;
+  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;主机记录		记录类型		记录值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@		CNAME		username.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;www		CNAME		username.github.io&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;在自己博客的hexo中的source文件夹下，添加一个文本文件，名字为CNAME，没有后缀名，在文本文件中输入你自己的网站域名。例如：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -125,6 +167,8 @@
     
     
       <category term="hexo" scheme="xuyuan.cf/tags/hexo/"/>
+    
+      <category term="github" scheme="xuyuan.cf/tags/github/"/>
     
   </entry>
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-08T04:33:41.115Z</updated>
+  <updated>2016-03-08T06:56:27.897Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2016/03/08/Attenuator/"/>
     <id>xuyuan.cf/2016/03/08/Attenuator/</id>
     <published>2016-03-08T03:50:35.000Z</published>
-    <updated>2016-03-08T04:33:41.115Z</updated>
+    <updated>2016-03-08T06:56:27.897Z</updated>
     
     <content type="html">&lt;p&gt;An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.&lt;br&gt;An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -32,7 +32,7 @@
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;SUMMARY:&lt;/strong&gt;&lt;br&gt;An attenuator with 50 $\Omega$ impedance match:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;The resistance of the T type attenuator satisfy:&lt;br&gt;$$ R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}*50\Omega $$&lt;br&gt;$$ R_3=\frac{2*10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}} $$&lt;/li&gt;
+&lt;li&gt;The resistance of the T type attenuator satisfy:&lt;br&gt;$$ R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}\times 50\Omega $$&lt;br&gt;$$ R_3=\frac{2\times 10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}} $$&lt;/li&gt;
 &lt;li&gt;The output-input power ratio:&lt;br&gt;$$\frac{P_{out}}{P_{in}}=10^{-\frac{dB}{10}}$$&lt;/li&gt;
 &lt;li&gt;The output-input voltage ratio:&lt;br&gt;$$\frac{V_{out}}{V_{in}}=10^{-\frac{dB}{20}}$$&lt;/li&gt;
 &lt;/ol&gt;

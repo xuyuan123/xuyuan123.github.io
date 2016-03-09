@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-09T02:02:32.216Z</updated>
+  <updated>2016-03-09T06:35:51.841Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2016/03/09/Transmission%20Line%20Theory/"/>
     <id>xuyuan.cf/2016/03/09/Transmission Line Theory/</id>
     <published>2016-03-09T00:32:35.000Z</published>
-    <updated>2016-03-09T02:02:32.216Z</updated>
+    <updated>2016-03-09T06:35:51.841Z</updated>
     
     <content type="html">&lt;p&gt;传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -41,7 +41,7 @@
 &lt;/ul&gt;
 &lt;h1 id=&quot;传输线上的波传播&quot;&gt;&lt;a href=&quot;#传输线上的波传播&quot; class=&quot;headerlink&quot; title=&quot;传输线上的波传播&quot;&gt;&lt;/a&gt;传输线上的波传播&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;联立上面关于$V(z)$和$I(z)$的方程可得：&lt;br&gt;$$\frac{d^2V(z)}{dz^2}-\gamma^2V(z)=0$$&lt;br&gt;$$\frac{d^2I(z)}{dz^2}-\gamma^2I(z)=0$$&lt;br&gt;其中$\gamma=\alpha+j\beta=\sqrt{(R+j\omega L)(G+j\omega C)}$为复传播常数。&lt;/li&gt;
-&lt;li&gt;由上面两个方程可以求得其行波解：&lt;br&gt;$$V(z)=V_0^+e^{-\gamma z}+V_0^-e^{\gamma z}$$&lt;br&gt;$$V(z)=I_0^+e^{-\gamma z}+I_0^-e^{\gamma z}$$&lt;/li&gt;
+&lt;li&gt;由上面两个方程可以求得其行波解：&lt;br&gt;$$V(z)=V_0^+e^{-\gamma z}+V_0^-e^{\gamma z}$$&lt;br&gt;$$I(z)=I_0^+e^{-\gamma z}+I_0^-e^{\gamma z}$$&lt;/li&gt;
 &lt;li&gt;$e^{-\gamma z}$代表沿$+z$方向传播的波，$e^{\gamma z}$代表沿$-z$方向传播的波。&lt;/li&gt;
 &lt;li&gt;根据$I(z)$和$V(z)$之间的关系可得：&lt;br&gt;$$I(z)=\frac{\gamma}{R+j\omega L}\left[V_0^+e^{-\gamma z}-V_0^-e^{\gamma z} \right]$$&lt;/li&gt;
 &lt;li&gt;定义&lt;strong&gt;特征阻抗&lt;/strong&gt;$Z_0$：&lt;br&gt;$$Z_0=\frac{R+j\omega L}{\gamma}=\sqrt{\frac{R+j\omega L}{G+J\omega C}}$$&lt;/li&gt;
@@ -52,6 +52,17 @@
 &lt;li&gt;&lt;p&gt;传输线上波长：$\lambda=\frac{2\pi}{\beta}$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;相速为：$v_p=\frac{\omega}{\beta}=\lambda f$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;无耗传输线&quot;&gt;&lt;a href=&quot;#无耗传输线&quot; class=&quot;headerlink&quot; title=&quot;无耗传输线&quot;&gt;&lt;/a&gt;无耗传输线&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对于一般传输线而言，损耗都比较小，可以忽略。也就是说：$R=G=0$&lt;br&gt;$$\gamma=\alpha+j\beta=j\omega\sqrt{LC}$$&lt;br&gt;$$\beta=\omega\sqrt{LC}$$&lt;br&gt;$$\alpha=0$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;特征阻抗为：&lt;br&gt;$$Z_0=\sqrt{\frac{L}{C}}$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;无耗传输线的电压和电流为：&lt;br&gt;$$V(z)=V_0^+e^{-j\beta z}+V_0^-e^{j\beta z}$$&lt;br&gt;$$I(z)=\frac{V_0^+}{Z_0}e^{-\beta z}-\frac{V_0^-}{Z_0}e^{\beta z}$$ &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;波长：$\lambda=\frac{2\pi}{\beta}=\frac{2\pi}{\omega \sqrt{LC}}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;相速：$v_p=\frac{\omega}{\beta}=\frac{1}{\sqrt{LC}}$&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     

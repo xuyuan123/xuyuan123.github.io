@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Microwave,Transmission line," />
+  <meta name="keywords" content="Transmission line,Microwave," />
 
 
 
@@ -68,7 +68,11 @@
 <meta property="og:site_name" content="XuYuan's Blog">
 <meta property="og:description" content="传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。">
 <meta property="og:image" content="http://www.dannex.se/theory/pict/image188.gif">
-<meta property="og:updated_time" content="2016-03-09T06:35:51.841Z">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160309172635.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310143358.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwaveQQ20160310144058.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310153522.png">
+<meta property="og:updated_time" content="2016-03-10T07:59:04.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Transmission Line Theory of 《Microwave Engineering》">
 <meta name="twitter:description" content="传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。">
@@ -363,11 +367,113 @@
 </li>
 <li><p>特征阻抗为：<br>$$Z_0=\sqrt{\frac{L}{C}}$$</p>
 </li>
-<li><p>无耗传输线的电压和电流为：<br>$$V(z)=V_0^+e^{-j\beta z}+V_0^-e^{j\beta z}$$<br>$$I(z)=\frac{V_0^+}{Z_0}e^{-\beta z}-\frac{V_0^-}{Z_0}e^{\beta z}$$ </p>
+<li><p>无耗传输线的电压和电流为：<br>$$V(z)=V_0^+e^{-j\beta z}+V_0^-e^{j\beta z}$$<br>$$I(z)=\frac{V_0^+}{Z_0}e^{-j \beta z}-\frac{V_0^-}{Z_0}e^{j \beta z}$$ </p>
 </li>
 <li><p>波长：$\lambda=\frac{2\pi}{\beta}=\frac{2\pi}{\omega \sqrt{LC}}$</p>
 </li>
 <li>相速：$v_p=\frac{\omega}{\beta}=\frac{1}{\sqrt{LC}}$</li>
+</ul>
+<h1 id="端接负载的无耗传输线"><a href="#端接负载的无耗传输线" class="headerlink" title="端接负载的无耗传输线"></a>端接负载的无耗传输线</h1><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160309172635.png" alt="端接负载的无耗传输线"></p>
+<ul>
+<li><p>由上面$z$处的电压和电流公式，可以得到$z=0$处的电压和电流，以及它们与负载阻抗之间的关系：<br>$$Z_L=\frac{V(0)}{I(0)}=\frac{V_0^+ + V_0^-}{V_0^+ -V_0^-} Z_0$$</p>
+</li>
+<li><p>由上面公式可以反解出$V_0^-$<br>$$V_0^-=\frac{Z_L-Z_0}{Z_L+Z_0} V_0^+ $$</p>
+</li>
+<li><p>定义<strong>电压反射系数：</strong>$\Gamma$，表示入射电压波的振幅与反射电压波的振幅之比。<br>$$\Gamma=\frac{Z_L-Z_0}{Z_L+Z_0}$$</p>
+</li>
+<li><p>将$\Gamma$代入无耗传输线的的电压和电流公式中可得：<br>$$V(z)=V_0^+ \left[ e^{-j\beta z}+\Gamma e^{j\beta z} \right]$$<br>$$I(z)=\frac{V_0^+}{Z_0}\left[ e^{-j \beta z}-\Gamma e^{j \beta z} \right]$$ </p>
+</li>
+<li><p>当负载阻抗$Z_L$等于传输线的特征阻抗$Z_0$时，电压反射系数$\Gamma =0$，此时只有入射波，没有反射波。这样的负载称为<strong>匹配负载</strong>。</p>
+</li>
+<li><p>考虑传输线上$z$处的时间平均功率流：<br>$$P_{avg}=\frac{1}{2} Re \left[ V(z) I(z)^* \right] = \frac{1}{2} \frac{\left| V_0^+ \right| ^2}{Z_0} Re  \left[ 1 - \Gamma^* e^{-2j \beta z } + \Gamma e^{2j\beta z} -\left| \Gamma \right|^2 \right] \<br>=  \frac{1}{2} \frac{\left| V_0^+ \right|^2}{Z_0} \left(1-\left| \Gamma \right|^2 \right)$$</p>
+<ul>
+<li>负载匹配时，$\Gamma =0$，传送到负载的功率最大；</li>
+<li>负载阻抗远大于传输线本征阻抗时，$\Gamma =1$，没有功率传到负载。</li>
+</ul>
+</li>
+<li><p>定义回波损耗（return loss）:（以dB为单位）<br>$$RL=-20\lg{\left| \Gamma \right| } dB$$</p>
+<ul>
+<li>匹配负载（$\Gamma=0$）具有$\infty$ dB 的回波损耗（无反射功率）；</li>
+<li>全反射（$\left| \Gamma \right|=1$）具有0 dB的回波损耗（所有的入射功率都被反射回来了）。</li>
+</ul>
+</li>
+<li><p>传输线上电压幅值随距离$z$的变化：<br>$$\left| V(z) \right| = \left| V_0^+ \right| \left| 1+\Gamma e^{2j\beta z} \right|= \left| V_0^+ \right| \left| 1+\Gamma e^{-2j\beta l} \right| = \left| V_0^+ \right| \left| 1+\left| \Gamma \right| e^{j(\theta-2 \beta z)} \right|$$</p>
+<ul>
+<li>其中$l=-z$, $\theta$是反射系数的相位（$\Gamma = \left| \Gamma \right| e^{j \theta}$）。</li>
+<li>电压幅值随传输线的距离$z$的变化而周期性震荡变化。</li>
+<li>当相位项$e^{j(\theta-2\beta l)}=1$时，电压幅值出现最大值：$$V_{max} =\left| V_0^+ \right| (1+\left| \Gamma \right| ) $$</li>
+<li>当相位项$e^{j(\theta-2\beta l)}=-1$时，电压幅值出现最大值：$$V_{min} =\left| V_0^+ \right| (1-\left| \Gamma \right| ) $$</li>
+<li>定义<strong>电压驻波比</strong>：$$ SWR=\frac{V_{max}}{V_{min}} = \frac{1+\left| \Gamma \right|}{1-\left| \Gamma \right|} $$<ul>
+<li>电压驻波比SWR为实数，且$1 \le SWR \le  \infty $ </li>
+<li>$SWR =1 $ 对应负载匹配。</li>
+</ul>
+</li>
+<li>相邻两个电压最大值（或最小值）之间的距离为：$l={2\pi}/{2 \beta}=\lambda /2$</li>
+</ul>
+</li>
+<li><p>传输线上$z=-l$处的反射系数可以表示为：$$\Gamma (l) = \frac{V_0^- e^{-j\beta l}}{V_0^+ e^{j\beta l}} = \Gamma (0) e^{-2j\beta l} $$</p>
+<ul>
+<li>其中：$\Gamma (0)$是$z=0$ 处的反射系数。</li>
+</ul>
+</li>
+<li><p>在传输线上距离负载$z=-l$距离处，朝负载看去的输入阻抗为：$$Z_{in} = \frac{V(-l)}{I(-l)} = \frac{V_0^+ \left[ e^{j\beta l}+\Gamma e^{-j\beta l} \right]}{V_0^+ \left[ e^{j \beta l}-\Gamma e^{-j \beta l} \right]} Z_0 $$</p>
+</li>
+<li>将反射系数$\Gamma $的表达式代入上式，进一步可以得到<strong>传输线的阻抗方程</strong>：<br>$$Z_{in} =Z_0 \frac{Z_L + jZ_0 \tan{\beta l} }{Z_0 + jZ_L \tan{\beta l} } $$</li>
+</ul>
+<h2 id="负载短路的无耗传输线"><a href="#负载短路的无耗传输线" class="headerlink" title="负载短路的无耗传输线"></a>负载短路的无耗传输线</h2><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310143358.png" alt="负载短路的无耗传输线模型"></p>
+<ul>
+<li>负载短路：$Z_L=0$；</li>
+<li>短路负载的反射系数：$\Gamma=-1$；</li>
+<li>短路负载的驻波比为无穷大；</li>
+<li><p>短路负载传输线上的电压和电流为：<br>$$V(z)=V_0^+ \left[ e^{-j \beta z}- e^{j \beta z} \right] = -2jV_0^+ \sin{\beta z} $$<br>$$I(z)=\frac{V_0^+}{Z_0} \left[ e^{-j \beta z}+ e^{j \beta z} \right] =\frac{2V_0^+}{Z_0} \cos{\beta z} $$</p>
+</li>
+<li><p>在$z=-l$处的输入阻抗为：$$Z_{in} =\frac{V(-l)}{I(-l)}= jZ_0 \tan{\beta l} $$</p>
+<ul>
+<li>当$l=0$时， $Z_{in}=0$；</li>
+<li>当$l={\lambda}/{4}$时， $Z_{in}=\infty $；</li>
+</ul>
+</li>
+</ul>
+<h2 id="负载开路的无耗传输线"><a href="#负载开路的无耗传输线" class="headerlink" title="负载开路的无耗传输线"></a>负载开路的无耗传输线</h2><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwaveQQ20160310144058.png" alt="负载开路的无耗传输线模型"></p>
+<ul>
+<li>负载开路：$Z_L=\infty$；</li>
+<li>开路负载的反射系数：$\Gamma=1$；</li>
+<li>开路负载的驻波比也为无穷大；</li>
+<li><p>开路负载传输线上的电压和电流为：<br>$$V(z)=V_0^+ \left[ e^{-j \beta z}+ e^{j \beta z} \right] = 2V_0^+ \cos{\beta z} $$<br>$$I(z)=\frac{V_0^+}{Z_0} \left[ e^{-j \beta z}- e^{j \beta z} \right] =\frac{-2jV_0^+}{Z_0} \sin{\beta z} $$</p>
+</li>
+<li><p>在$z=-l$处的输入阻抗为：$$Z_{in} =\frac{V(-l)}{I(-l)}= -jZ_0 \cot{\beta l} $$</p>
+</li>
+</ul>
+<h2 id="具有特定长度的端接传输线"><a href="#具有特定长度的端接传输线" class="headerlink" title="具有特定长度的端接传输线"></a>具有特定长度的端接传输线</h2><ul>
+<li><p>对于$l=\lambda /2$的传输线，输入阻抗为：$$Z_{in}= Z_L$$</p>
+<ul>
+<li>半波长（或半波长的整数倍）的传输线不变换负载阻抗，与自身的特征阻抗无关。</li>
+</ul>
+</li>
+<li><p>对于$l=\lambda /4$（或者是$l=\lambda /4+n \lambda /2 , n=0,1,2,3…$）的传输线，输入阻抗为：$$Z_{in}=\frac{Z_0^2}{Z_L}$$</p>
+<ul>
+<li>这种传输线称为<strong>四分之一波长变换器</strong>;</li>
+<li>它具有以倒数的方式变换负载阻抗的作用；</li>
+<li>它依赖传输线的特征阻抗。</li>
+</ul>
+</li>
+</ul>
+<h2 id="具有不同特征阻抗的传输线的串接"><a href="#具有不同特征阻抗的传输线的串接" class="headerlink" title="具有不同特征阻抗的传输线的串接"></a>具有不同特征阻抗的传输线的串接</h2><ul>
+<li><p>考虑特征阻抗为$Z_0$的传输线连接到一个具有不同特征阻抗$Z_1$的传输线上，假定负载线无穷长。<br><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310153522.png" alt="具有不同特征阻抗的传输线的串接"></p>
+</li>
+<li><p>由连接处看到的输入阻抗为$Z_1$，反射系数为：$$\Gamma= \frac{Z_1-Z_0}{Z_1+Z_0}$$</p>
+</li>
+<li><p>$z&lt;0$处的电压为：$$V(z)= V_0^+ \left( e^{-j \beta z}+\Gamma e^{j \beta z} \right), z&lt;0 $$</p>
+</li>
+<li><p>$z&gt;0$处的电压为：$$V(z) =V_0^+ T  e^{-j \beta z} , z&gt;0 $$</p>
+<ul>
+<li>其中$T$为传输系数。</li>
+</ul>
+</li>
+<li><p>使上面两个公式的电压值在$z=0$处相等，则可以得到传输系数为：<br>$$T=1+\Gamma=1+ \frac{Z_1-Z_0}{Z_1+Z_0} = \frac{2Z_1}{Z_1+Z_0} $$</p>
+</li>
+<li><p>电路中两点之间的传输系数常常用dB表示为<strong>插入损耗</strong>：$$IL=-20 \lg{\left| T \right|} dB$$</p>
+</li>
 </ul>
 
       
@@ -383,9 +489,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Microwave/" rel="tag">#Microwave</a>
-          
             <a href="/tags/Transmission-line/" rel="tag">#Transmission line</a>
+          
+            <a href="/tags/Microwave/" rel="tag">#Microwave</a>
           
         </div>
       
@@ -401,6 +507,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/10/Microwave Power Ratio and Decibels/" rel="prev" title="Microwave Power Ratio and Decibels">
+                Microwave Power Ratio and Decibels <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -472,7 +582,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -489,7 +599,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -529,7 +639,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线的集总元件模型"><span class="nav-number">1.</span> <span class="nav-text">传输线的集总元件模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线上的波传播"><span class="nav-number">2.</span> <span class="nav-text">传输线上的波传播</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无耗传输线"><span class="nav-number">3.</span> <span class="nav-text">无耗传输线</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线的集总元件模型"><span class="nav-number">1.</span> <span class="nav-text">传输线的集总元件模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线上的波传播"><span class="nav-number">2.</span> <span class="nav-text">传输线上的波传播</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无耗传输线"><span class="nav-number">3.</span> <span class="nav-text">无耗传输线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#端接负载的无耗传输线"><span class="nav-number">4.</span> <span class="nav-text">端接负载的无耗传输线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#负载短路的无耗传输线"><span class="nav-number">4.1.</span> <span class="nav-text">负载短路的无耗传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载开路的无耗传输线"><span class="nav-number">4.2.</span> <span class="nav-text">负载开路的无耗传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具有特定长度的端接传输线"><span class="nav-number">4.3.</span> <span class="nav-text">具有特定长度的端接传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具有不同特征阻抗的传输线的串接"><span class="nav-number">4.4.</span> <span class="nav-text">具有不同特征阻抗的传输线的串接</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

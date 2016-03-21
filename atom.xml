@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-21T13:04:10.621Z</updated>
+  <updated>2016-03-21T13:06:51.717Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,51 +20,43 @@
     <link href="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
     <id>xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
     <published>2016-03-21T07:10:35.000Z</published>
-    <updated>2016-03-21T13:04:10.621Z</updated>
+    <updated>2016-03-21T13:06:51.717Z</updated>
     
     <content type="html">&lt;p&gt;This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Rob Schoelkopf:&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rob Schoelkopf:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://rsl.yale.edu/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SchoelkopfLab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Michel H. Devoret:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Michel H. Devoret:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://qulab.eng.yale.edu/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Qlab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;David Schuster:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;David Schuster:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://schusterlab.uchicago.edu/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SchusterLab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Leo DiCarlo:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Leo DiCarlo:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://dicarlolab.tudelft.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DiCarlo Lab at Delft University&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Andreas Wallraff:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Andreas Wallraff:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://qudev.ethz.ch/andreas_wallraff&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Quantum Device Lab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Irfan Siddiqi:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Irfan Siddiqi:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://research.physics.berkeley.edu/siddiqi/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Quantum Nanoelectronics Laboratory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Jerry M. Chow:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Jerry M. Chow:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://researcher.watson.ibm.com/researcher/view_person_pubs.php?person=us-chowmj&amp;amp;t=1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IBM group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;John Martinis:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;John Martinis:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://web.physics.ucsb.edu/~martinisgroup/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UCSB group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;William D. Oliver:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;William D. Oliver:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://equs.mit.edu/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MIT Engineering Quantum Systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -122,9 +114,9 @@
       <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
     
     
-      <category term="分贝" scheme="xuyuan.cf/tags/%E5%88%86%E8%B4%9D/"/>
-    
       <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+    
+      <category term="分贝" scheme="xuyuan.cf/tags/%E5%88%86%E8%B4%9D/"/>
     
   </entry>
   

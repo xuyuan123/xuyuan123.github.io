@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-03-21T13:06:51.717Z</updated>
+  <updated>2016-03-27T11:42:53.792Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -16,11 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IQ mixer</title>
+    <link href="xuyuan.cf/2016/03/27/IQ-mixer/"/>
+    <id>xuyuan.cf/2016/03/27/IQ-mixer/</id>
+    <published>2016-03-27T11:41:37.000Z</published>
+    <updated>2016-03-27T11:42:53.792Z</updated>
+    
+    <content type="html">&lt;p&gt;Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IQ mixers address the problem of maximizing information transmission in a limited bandwidth by allowing the user to modulate both the in-phase and quadrature components of a carrier simultaneously, doubling the information density&lt;/p&gt;
+&lt;p&gt;The folowing picture is the ideal frequency mixer symbol.&lt;br&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/IdealMixer.svg/512px-IdealMixer.svg.png&quot; alt=&quot;ideal frequency mixer symbol&quot;&gt;&lt;br&gt;The Input Signal ,Local Osicillator and Output Single satisfy the relation: $$Output Signal=InputSignal * LocalOscillator$$&lt;br&gt;The IQ mixer consists of two frequency mixers which can be seen from the following picture.&lt;br&gt;&lt;img src=&quot;http://www.markimicrowave.com/Assets/ProductImages/Mixers/Image_Reject_and_Single_Sideband/IQ_Block_Diagram.png&quot; alt=&quot;IQ mixer model&quot;&gt;&lt;/p&gt;
+&lt;p&gt;For ideal sistuation, the input signals and output signal are:&lt;br&gt;&lt;strong&gt;LO signal:&lt;/strong&gt; $\cos(\omega t)$&lt;br&gt;&lt;strong&gt;I signal:&lt;/strong&gt; $C\cos(\omega_0 t)$&lt;br&gt;&lt;strong&gt;Q signal:&lt;/strong&gt; $D\sin(\omega_0 t)$     $(D=C)$&lt;br&gt;&lt;strong&gt;RF signal:&lt;/strong&gt; $C\cos(\omega t)\cos(\omega_0 t) + D\sin(\omega t)\sin(\omega_0 t)=C\cos(\omega-\omega_0)t$&lt;/p&gt;
+&lt;p&gt;Therefore, the RF output signal only has the frequency $\omega-\omega_0$ term.&lt;/p&gt;
+&lt;p&gt;However, for practise situation, the output signal will have other frequency term because the amplitude and phase are not ideal.&lt;br&gt;The actually output RF signal is&lt;br&gt;&lt;strong&gt;RF Signal:&lt;/strong&gt; $AC(\cos(\omega t)+M)\cos(\omega_0 t) + BD\sin(\omega t+\phi_0)\sin(\omega_0 t)$&lt;br&gt;Then we can see the output signal will contain three frequency terms, that is $\omega$, $\omega-\omega_0$, and $\omega+\omega_0$&lt;br&gt;We need to change the IQ signal to make the output frequency only $\omega-\omega_0$ remained.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First change the $M=0$, the output will not have the $\omega$ term.&lt;/li&gt;
+&lt;li&gt;Change the IQ signal amplitude ratio to make $AC=BD$, and change the IQ signal relative phase to $-\phi_0$, then we can eliminate the $\omega+\omega_0$ term.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When satisfied the above two conditions, the output signal is&lt;br&gt;$$\begin{align}&lt;br&gt;&amp;amp;AC\cos(\omega t)\cos(\omega_0 t) + BD\sin(\omega t+\phi_0)\sin(\omega_0 t-\phi_0)\&lt;br&gt;&amp;amp;=AC\left[ \frac{1}{2}\left(\cos(\omega-\omega_0)t+\cos(\omega+\omega_0)\right) +\frac{1}{2}\left(\cos((\omega-\omega_0)t+2\phi_0)-\cos(\omega+\omega_0)t \right)\right]\&lt;br&gt;&amp;amp;=\frac{AC}{2}\left[\cos(\omega-\omega_0)t+\cos((\omega-\omega_0)t+2\phi_0) \right]\&lt;br&gt;&amp;amp;=AC\cos((\omega-\omega_0)t+\phi_0)\cos(\phi_0)\&lt;br&gt;\end{align}$$&lt;/p&gt;
+&lt;p&gt;Finally, there only remains the $\omega-\omega_0$ frequency term.&lt;/p&gt;
+&lt;p&gt;You can find more information about &lt;a href=&quot;http://www.markimicrowave.com/blog/2013/06/iq-image-reject-and-single-sideband-mixers/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IQ Mixer&lt;/a&gt; in this website.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;SUMMARY:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Change the offset to make the $M=0$ and lower the leakage;&lt;/li&gt;
+&lt;li&gt;Change the IQscale to satisfy $AC=BD$;&lt;/li&gt;
+&lt;li&gt;Change the Phasedelay to make the IQ signal relative phase to $-\phi_0$&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+    
+    
+      <category term="Microwave Instrument" scheme="xuyuan.cf/tags/Microwave-Instrument/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Group links about superconducting quantum computation</title>
     <link href="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
     <id>xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
     <published>2016-03-21T07:10:35.000Z</published>
-    <updated>2016-03-21T13:06:51.717Z</updated>
+    <updated>2016-03-27T07:44:53.482Z</updated>
     
     <content type="html">&lt;p&gt;This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -58,6 +100,30 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;William D. Oliver:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://equs.mit.edu/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MIT Engineering Quantum Systems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dr. Mark Gouker:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ll.mit.edu/mission/electronics/qiin/qiin.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;QUANTUM INFORMATION AND INTEGRATED NANOSYSTEMS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terry P. Orlando: &lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.rle.mit.edu/qubit/about.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RLE:superconducting circuits and quantum computation group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Yasunobu Nakamura:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.qc.rcast.u-tokyo.ac.jp/index_en.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nakamura-Usami Group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;John Clarke:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://research.physics.berkeley.edu/clarke/publications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Clarke Group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gary A. Steele:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://steelelab.tudelft.nl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Steele Lab Quantum Nanoelectronics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arkady Fedorov:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://sqd.equs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SQDLab(The Superconducting Quantum Device Laboratory)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

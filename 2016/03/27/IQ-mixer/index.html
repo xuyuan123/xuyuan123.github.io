@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="quantum group links," />
+  <meta name="keywords" content="Microwave Instrument," />
 
 
 
@@ -61,16 +61,19 @@
 
 
 
-<meta name="description" content="This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.">
+<meta name="description" content="Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Group links about superconducting quantum computation">
-<meta property="og:url" content="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/index.html">
+<meta property="og:title" content="IQ mixer">
+<meta property="og:url" content="xuyuan.cf/2016/03/27/IQ-mixer/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.">
-<meta property="og:updated_time" content="2016-03-27T07:44:53.482Z">
+<meta property="og:description" content="Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/IdealMixer.svg/512px-IdealMixer.svg.png">
+<meta property="og:image" content="http://www.markimicrowave.com/Assets/ProductImages/Mixers/Image_Reject_and_Single_Sideband/IQ_Block_Diagram.png">
+<meta property="og:updated_time" content="2016-03-27T11:42:53.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Group links about superconducting quantum computation">
-<meta name="twitter:description" content="This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.">
+<meta name="twitter:title" content="IQ mixer">
+<meta name="twitter:description" content="Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.">
+<meta name="twitter:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/IdealMixer.svg/512px-IdealMixer.svg.png">
 
 
 
@@ -88,7 +91,7 @@
   };
 </script>
 
-  <title> Group links about superconducting quantum computation | XuYuan's Blog </title>
+  <title> IQ mixer | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -276,7 +279,7 @@
             
             
               
-                Group links about superconducting quantum computation
+                IQ mixer
               
             
           </h1>
@@ -288,8 +291,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-21T15:10:35+08:00" content="2016-03-21">
-              2016-03-21
+            <time itemprop="dateCreated" datetime="2016-03-27T19:41:37+08:00" content="2016-03-27">
+              2016-03-27
             </time>
           </span>
 
@@ -302,8 +305,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/usefull-links/" itemprop="url" rel="index">
-                    <span itemprop="name">usefull links</span>
+                  <a href="/categories/Microwave/" itemprop="url" rel="index">
+                    <span itemprop="name">Microwave</span>
                   </a>
                 </span>
 
@@ -318,8 +321,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/21/Group-links-about-superconducting-quantum-computation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/21/Group-links-about-superconducting-quantum-computation/" itemprop="commentsCount"></span>
+                <a href="/2016/03/27/IQ-mixer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/27/IQ-mixer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,69 +348,26 @@
       
 
       
-        <p>This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.<br><a id="more"></a></p>
+        <p>Mixers are widly used to shift signals from one frequency to another. IQ mixer is a kind of mixer which consits of two mixers. This article talks about the caculation of the IQ mixer.<br><a id="more"></a></p>
+<p>IQ mixers address the problem of maximizing information transmission in a limited bandwidth by allowing the user to modulate both the in-phase and quadrature components of a carrier simultaneously, doubling the information density</p>
+<p>The folowing picture is the ideal frequency mixer symbol.<br><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/IdealMixer.svg/512px-IdealMixer.svg.png" alt="ideal frequency mixer symbol"><br>The Input Signal ,Local Osicillator and Output Single satisfy the relation: $$Output Signal=InputSignal * LocalOscillator$$<br>The IQ mixer consists of two frequency mixers which can be seen from the following picture.<br><img src="http://www.markimicrowave.com/Assets/ProductImages/Mixers/Image_Reject_and_Single_Sideband/IQ_Block_Diagram.png" alt="IQ mixer model"></p>
+<p>For ideal sistuation, the input signals and output signal are:<br><strong>LO signal:</strong> $\cos(\omega t)$<br><strong>I signal:</strong> $C\cos(\omega_0 t)$<br><strong>Q signal:</strong> $D\sin(\omega_0 t)$     $(D=C)$<br><strong>RF signal:</strong> $C\cos(\omega t)\cos(\omega_0 t) + D\sin(\omega t)\sin(\omega_0 t)=C\cos(\omega-\omega_0)t$</p>
+<p>Therefore, the RF output signal only has the frequency $\omega-\omega_0$ term.</p>
+<p>However, for practise situation, the output signal will have other frequency term because the amplitude and phase are not ideal.<br>The actually output RF signal is<br><strong>RF Signal:</strong> $AC(\cos(\omega t)+M)\cos(\omega_0 t) + BD\sin(\omega t+\phi_0)\sin(\omega_0 t)$<br>Then we can see the output signal will contain three frequency terms, that is $\omega$, $\omega-\omega_0$, and $\omega+\omega_0$<br>We need to change the IQ signal to make the output frequency only $\omega-\omega_0$ remained.</p>
 <ul>
-<li><strong>Rob Schoelkopf:</strong><ul>
-<li><a href="http://rsl.yale.edu/" target="_blank" rel="external">SchoelkopfLab</a></li>
+<li>First change the $M=0$, the output will not have the $\omega$ term.</li>
+<li>Change the IQ signal amplitude ratio to make $AC=BD$, and change the IQ signal relative phase to $-\phi_0$, then we can eliminate the $\omega+\omega_0$ term.</li>
 </ul>
-</li>
-<li><strong>Michel H. Devoret:</strong><ul>
-<li><a href="http://qulab.eng.yale.edu/index.html" target="_blank" rel="external">Qlab</a></li>
-</ul>
-</li>
-<li><strong>David Schuster:</strong><ul>
-<li><a href="http://schusterlab.uchicago.edu/index.html" target="_blank" rel="external">SchusterLab</a></li>
-</ul>
-</li>
-<li><strong>Leo DiCarlo:</strong><ul>
-<li><a href="http://dicarlolab.tudelft.nl/" target="_blank" rel="external">DiCarlo Lab at Delft University</a></li>
-</ul>
-</li>
-<li><strong>Andreas Wallraff:</strong><ul>
-<li><a href="http://qudev.ethz.ch/andreas_wallraff" target="_blank" rel="external">Quantum Device Lab</a></li>
-</ul>
-</li>
-<li><strong>Irfan Siddiqi:</strong><ul>
-<li><a href="http://research.physics.berkeley.edu/siddiqi/index.html" target="_blank" rel="external">Quantum Nanoelectronics Laboratory</a></li>
-</ul>
-</li>
-<li><strong>Jerry M. Chow:</strong><ul>
-<li><a href="http://researcher.watson.ibm.com/researcher/view_person_pubs.php?person=us-chowmj&amp;t=1" target="_blank" rel="external">IBM group</a></li>
-</ul>
-</li>
-<li><strong>John Martinis:</strong><ul>
-<li><a href="http://web.physics.ucsb.edu/~martinisgroup/" target="_blank" rel="external">UCSB group</a></li>
-</ul>
-</li>
-<li><strong>William D. Oliver:</strong><ul>
-<li><a href="http://equs.mit.edu/" target="_blank" rel="external">MIT Engineering Quantum Systems</a></li>
-</ul>
-</li>
-<li><strong>Dr. Mark Gouker:</strong><ul>
-<li><a href="https://www.ll.mit.edu/mission/electronics/qiin/qiin.html" target="_blank" rel="external">QUANTUM INFORMATION AND INTEGRATED NANOSYSTEMS</a></li>
-</ul>
-</li>
-<li><strong>Terry P. Orlando: </strong><ul>
-<li><a href="http://www.rle.mit.edu/qubit/about.html" target="_blank" rel="external">RLE:superconducting circuits and quantum computation group</a></li>
-</ul>
-</li>
-<li><strong>Yasunobu Nakamura:</strong><ul>
-<li><a href="http://www.qc.rcast.u-tokyo.ac.jp/index_en.html" target="_blank" rel="external">Nakamura-Usami Group</a></li>
-</ul>
-</li>
-<li><strong>John Clarke:</strong><ul>
-<li><a href="http://research.physics.berkeley.edu/clarke/publications.html" target="_blank" rel="external">Clarke Group</a></li>
-</ul>
-</li>
-<li><strong>Gary A. Steele:</strong><ul>
-<li><a href="http://steelelab.tudelft.nl/" target="_blank" rel="external">Steele Lab Quantum Nanoelectronics</a></li>
-</ul>
-</li>
-<li><strong>Arkady Fedorov:</strong><ul>
-<li><a href="http://sqd.equs.org/" target="_blank" rel="external">SQDLab(The Superconducting Quantum Device Laboratory)</a></li>
-</ul>
-</li>
-</ul>
+<p>When satisfied the above two conditions, the output signal is<br>$$\begin{align}<br>&amp;AC\cos(\omega t)\cos(\omega_0 t) + BD\sin(\omega t+\phi_0)\sin(\omega_0 t-\phi_0)\<br>&amp;=AC\left[ \frac{1}{2}\left(\cos(\omega-\omega_0)t+\cos(\omega+\omega_0)\right) +\frac{1}{2}\left(\cos((\omega-\omega_0)t+2\phi_0)-\cos(\omega+\omega_0)t \right)\right]\<br>&amp;=\frac{AC}{2}\left[\cos(\omega-\omega_0)t+\cos((\omega-\omega_0)t+2\phi_0) \right]\<br>&amp;=AC\cos((\omega-\omega_0)t+\phi_0)\cos(\phi_0)\<br>\end{align}$$</p>
+<p>Finally, there only remains the $\omega-\omega_0$ frequency term.</p>
+<p>You can find more information about <a href="http://www.markimicrowave.com/blog/2013/06/iq-image-reject-and-single-sideband-mixers/" target="_blank" rel="external">IQ Mixer</a> in this website.</p>
+<hr>
+<p><strong>SUMMARY:</strong></p>
+<ol>
+<li>Change the offset to make the $M=0$ and lower the leakage;</li>
+<li>Change the IQscale to satisfy $AC=BD$;</li>
+<li>Change the Phasedelay to make the IQ signal relative phase to $-\phi_0$</li>
+</ol>
 
       
     </div>
@@ -422,7 +382,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/quantum-group-links/" rel="tag">#quantum group links</a>
+            <a href="/tags/Microwave-Instrument/" rel="tag">#Microwave Instrument</a>
           
         </div>
       
@@ -431,17 +391,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/10/Microwave Power Ratio and Decibels/" rel="next" title="Microwave Power Ratio and Decibels">
-                <i class="fa fa-chevron-left"></i> Microwave Power Ratio and Decibels
+              <a href="/2016/03/21/Group-links-about-superconducting-quantum-computation/" rel="next" title="Group links about superconducting quantum computation">
+                <i class="fa fa-chevron-left"></i> Group links about superconducting quantum computation
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/27/IQ-mixer/" rel="prev" title="IQ mixer">
-                IQ mixer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,8 +423,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/21/Group-links-about-superconducting-quantum-computation/"
-           data-title="Group links about superconducting quantum computation" data-url="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/">
+      <div class="ds-thread" data-thread-key="2016/03/27/IQ-mixer/"
+           data-title="IQ mixer" data-url="xuyuan.cf/2016/03/27/IQ-mixer/">
       </div>
     
   </div>

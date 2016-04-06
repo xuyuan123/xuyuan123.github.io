@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-04-06T09:28:13.213Z</updated>
+  <updated>2016-04-06T09:39:53.602Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,18 +20,18 @@
     <link href="xuyuan.cf/2016/04/06/Transmission%20Line%20Input-Output%20Theory/"/>
     <id>xuyuan.cf/2016/04/06/Transmission Line Input-Output Theory/</id>
     <published>2016-04-06T07:10:35.000Z</published>
-    <updated>2016-04-06T09:28:13.213Z</updated>
+    <updated>2016-04-06T09:39:53.602Z</updated>
     
     <content type="html">&lt;p&gt;Transmission line input-output theory is very important in microwave transmission line category. Here give some usefull equations for calculation of the input and output power.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The transmission input-output theory is used to describe the microwave cavity. The input power is $P_{in}$. The output power of the cavity is $P_{out}$. They satisfy the following equation:&lt;br&gt;$$\left| S&lt;em&gt;{21} \right|^2 = \frac{P\&lt;/em&gt;{out}}{P_{in}} = \frac{4\kappa&lt;em&gt;{in} \kappa&lt;/em&gt;{out}}{\kappa^2} = \frac{4Q&lt;em&gt;{tot}^2}{Q&lt;/em&gt;{in}Q_{out}}$$&lt;/p&gt;
-&lt;p&gt;$$P_{out} = n \hbar \omega \kappa&lt;em&gt;{out} = \frac{n\hbar \omega^2}{Q&lt;/em&gt;{out}}$$&lt;/p&gt;
-&lt;p&gt;$$P_{in}= \frac{4\hbar \omega \kappa^2}{4\kappa&lt;em&gt;{in}}=\frac{n\hbar \omega^2 Q&lt;/em&gt;{in}}{4Q_{tot}^2}$$&lt;/p&gt;
-&lt;p&gt;$$\kappa&lt;em&gt;{tot}=\kappa&lt;/em&gt;{in}+\kappa&lt;em&gt;{out} + \kappa&lt;/em&gt;{int} $$&lt;/p&gt;
-&lt;p&gt;$$Q&lt;em&gt;{tot}=\frac{\omega}{\kappa&lt;/em&gt;{tot}} $$&lt;/p&gt;
-&lt;p&gt;$$Q&lt;em&gt;{in}=\frac{\omega}{\kappa&lt;/em&gt;{in}} $$&lt;/p&gt;
-&lt;p&gt;$$Q&lt;em&gt;{out}=\frac{\omega}{\kappa&lt;/em&gt;{out}} $$&lt;/p&gt;
-&lt;p&gt;$$Q&lt;em&gt;{int}=\frac{\omega}{\kappa&lt;/em&gt;{int}} $$&lt;/p&gt;
-&lt;p&gt;$$\frac{1}{Q&lt;em&gt;{tot}}= \frac{1}{Q&lt;/em&gt;{in}}+ \frac{1}{Q&lt;em&gt;{out}}+ \frac{1}{Q&lt;/em&gt;{int}}$$&lt;/p&gt;
+&lt;p&gt;The transmission input-output theory is used to describe the microwave cavity. The input power is $P_{in}$. The output power of the cavity is $P_{out}$. They satisfy the following equation:&lt;br&gt;$$\left| S_{21} \right|^2 = \frac{P_{out}}{P_{in}} = \frac{4\kappa _{in} \kappa _{out}}{\kappa^2} = \frac{4Q_{tot}^2}{Q_{in}Q_{out}}$$&lt;/p&gt;
+&lt;p&gt;$$P_{out} = n \hbar \omega \kappa _{out} = \frac{n\hbar \omega^2}{Q _{out}}$$&lt;/p&gt;
+&lt;p&gt;$$P_{in}= \frac{4\hbar \omega \kappa^2}{4\kappa _{in}}=\frac{n\hbar \omega^2 Q_{in}}{4Q_{tot}^2}$$&lt;/p&gt;
+&lt;p&gt;$$\kappa _{tot}=\kappa _{in}+\kappa _{out} + \kappa _{int} $$&lt;/p&gt;
+&lt;p&gt;$$Q_{tot}=\frac{\omega}{\kappa _{tot}} $$&lt;/p&gt;
+&lt;p&gt;$$Q_{in}=\frac{\omega}{\kappa _{in}} $$&lt;/p&gt;
+&lt;p&gt;$$Q_{out}=\frac{\omega}{\kappa _{out}} $$&lt;/p&gt;
+&lt;p&gt;$$Q_{int}=\frac{\omega}{\kappa _{int}} $$&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{Q_{tot}}= \frac{1}{Q_{in}}+ \frac{1}{Q_{out}}+ \frac{1}{Q_{int}}$$&lt;/p&gt;
 &lt;p&gt;$\kappa_{tot}$ describes the microwave photon decay from the cavity. It consits of three parts: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$\kappa_{in}$, the photons decay from the input port;&lt;/li&gt;

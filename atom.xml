@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2016-04-06T09:39:53.602Z</updated>
+  <updated>2016-05-01T03:39:13.545Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Capacity Measurement with Lock-in Amplifier</title>
+    <link href="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/"/>
+    <id>xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/</id>
+    <published>2016-05-01T01:41:37.000Z</published>
+    <updated>2016-05-01T03:39:13.545Z</updated>
+    
+    <content type="html">&lt;p&gt;Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using a lock-in amplifier.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Measurement-Scheme&quot;&gt;&lt;a href=&quot;#Measurement-Scheme&quot; class=&quot;headerlink&quot; title=&quot;Measurement Scheme&quot;&gt;&lt;/a&gt;Measurement Scheme&lt;/h2&gt;&lt;p&gt;The measurement circuit is shown below.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png&quot; alt=&quot;the measurement circuit&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The reference sin signal comes from the lock-in amplifier and we use a reference resistance $R_{ref}$. We put the unknown capacity $C_x$ in parallel in the circuit. And the $U_{out}$ signal comes into the lock-in amplifier signal in port.&lt;/p&gt;
+&lt;p&gt;We can calculate the output signal:&lt;br&gt;$$\begin{align}&lt;br&gt;&amp;amp;\frac{U_{out}}{U_{in}}=\frac{Z_{out}}{Z_{in}}=\frac{R_0 ||\left( C_0 +C_x \right)}{R_{ref} + R_0 ||\left( C_0 +C_x \right) }\\&lt;br&gt;&amp;amp;=\frac{R_0}{\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right) }\\&lt;br&gt;&amp;amp;=\frac{R_0 \left[\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right)\right]}{\left( R_0+ R_{ref}\right) ^2 + \omega^2R_0^2R_{ref}^2 \left( C_0 +C_x \right)^2}\\&lt;br&gt;\end{align}$$&lt;/p&gt;
+&lt;p&gt;We can get the phase from the above equation:&lt;br&gt;$$\tan\theta=\frac{-\omega R_0 R_{ref}\left( C_0 +C_x \right)}{\left( R_0+ R_{ref}\right)}$$&lt;/p&gt;
+&lt;p&gt;Finally, we can get the relation between the unknown capacity $C_x$ and the signal frequency $\omega$, the phase difference $\theta$:&lt;br&gt;$$C_x=- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta}{\omega} - C_0$$&lt;/p&gt;
+&lt;p&gt;First, we can fixed the frequency at $\omega _k$, and from measuring the phase $\theta$ to obtain the capacity $C_x$:&lt;br&gt;when $C_x=0$, we can get:&lt;br&gt;$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _0}{\omega _k} = C_0$$&lt;br&gt;$$- \frac{\left( R_0+ R_{ref}\right)}{ \omega _k R_0 R_{ref}} = \frac{C_0}{\tan \theta _0}$$&lt;br&gt;Finally, we can get:&lt;br&gt;$$C_x=C_0 \times \left( \frac{\tan \theta}{\tan \theta _0}-1 \right) = \frac{C_0}{\tan \theta_0} \left( \tan \theta - \tan \theta_0 \right)$$&lt;/p&gt;
+&lt;p&gt;Second, we fix the phase to $\theta _k$ and from measuring the frequency $\omega$ to obtain the unknown capacity $C_x$.&lt;br&gt;when $C_x=0$, we can get:&lt;br&gt;$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _k}{\omega _0} = C_0$$&lt;br&gt;$$- \frac{\left( R_0+ R_{ref}\right)\tan \theta _k }{ R_0 R_{ref}} = \omega _0 C_0$$&lt;br&gt;Finally, we can get:&lt;br&gt;$$C_x=C_0 \times \left( \frac{\omega _0}{\omega }-1 \right) =\omega _0 C_0 \left( \frac{1}{\omega}-\frac{1}{\omega_0} \right)=f _0 C_0 \left( \frac{1}{f}-\frac{1}{f_0} \right)$$&lt;/p&gt;
+&lt;p&gt;From the above two equations, we can measure the capacities.&lt;/p&gt;
+&lt;h2 id=&quot;Calibration-Experiment&quot;&gt;&lt;a href=&quot;#Calibration-Experiment&quot; class=&quot;headerlink&quot; title=&quot;Calibration Experiment&quot;&gt;&lt;/a&gt;Calibration Experiment&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Fixed the frequency $f=200Hz$, and measure the phase $\theta$.&lt;br&gt;We use different capacities from 10pF to 680pF for the calibration experiment.the result shows in below figure.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/calibration_fixFreq.png&quot; alt=&quot;calibration_fixFreq&quot;&gt;&lt;br&gt;From the fitting to the curve, we can get:&lt;br&gt;$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix the phase $\theta=-45°$, and measure the frequency.&lt;br&gt;The result for this situation is shown below:&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/calibration_fixPhase.png&quot; alt=&quot;calibration_fixPhase&quot;&gt;&lt;br&gt;From the fitting to the curve, we can get:&lt;br&gt;$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Fix the frequency $f=200Hz$, and measure the background phase $\theta_0$ and the phase $\theta$ corresponding to the unknow capacity $C_x$.&lt;br&gt;$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix the phase $\theta=-45°$, and measure the background frequency $f_0$ and the frequency f corresponding to the unknown capacity $C_x$.&lt;br&gt;$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Average the above two results to get the final capacity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This method can be used to measure the capacities fabricated by trilayer nano-frbrication technology with the help of probe station.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using a lock-in amplifier.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="capacity measurement" scheme="xuyuan.cf/categories/capacity-measurement/"/>
+    
+    
+      <category term="capacity measurement" scheme="xuyuan.cf/tags/capacity-measurement/"/>
+    
+  </entry>
   
   <entry>
     <title>Transmission Line Input-Output Theory</title>
@@ -100,7 +146,7 @@
     <link href="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
     <id>xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
     <published>2016-03-21T07:10:35.000Z</published>
-    <updated>2016-03-27T07:44:53.482Z</updated>
+    <updated>2016-04-08T01:09:35.404Z</updated>
     
     <content type="html">&lt;p&gt;This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -130,6 +176,10 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Jerry M. Chow:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://researcher.watson.ibm.com/researcher/view_person_pubs.php?person=us-chowmj&amp;amp;t=1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IBM group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vijay:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tifr.res.in/~quantro/index.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vijay Group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;John Martinis:&lt;/strong&gt;&lt;ul&gt;

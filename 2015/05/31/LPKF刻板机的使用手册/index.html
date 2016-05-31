@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="capacity measurement," />
+  <meta name="keywords" content="刻板机,manual," />
 
 
 
@@ -61,20 +61,16 @@
 
 
 
-<meta name="description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
+<meta name="description" content="刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Capacity Measurement with Lock-in Amplifier">
-<meta property="og:url" content="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/index.html">
+<meta property="og:title" content="LPKF刻板机的使用手册">
+<meta property="og:url" content="xuyuan.cf/2015/05/31/LPKF刻板机的使用手册/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixFreq.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixPhase.png">
-<meta property="og:updated_time" content="2016-05-01T03:39:13.545Z">
+<meta property="og:description" content="刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。">
+<meta property="og:updated_time" content="2016-05-31T12:03:17.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capacity Measurement with Lock-in Amplifier">
-<meta name="twitter:description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
-<meta name="twitter:image" content="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png">
+<meta name="twitter:title" content="LPKF刻板机的使用手册">
+<meta name="twitter:description" content="刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。">
 
 
 
@@ -92,7 +88,7 @@
   };
 </script>
 
-  <title> Capacity Measurement with Lock-in Amplifier | XuYuan's Blog </title>
+  <title> LPKF刻板机的使用手册 | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +276,7 @@
             
             
               
-                Capacity Measurement with Lock-in Amplifier
+                LPKF刻板机的使用手册
               
             
           </h1>
@@ -292,8 +288,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T09:41:37+08:00" content="2016-05-01">
-              2016-05-01
+            <time itemprop="dateCreated" datetime="2015-05-31T16:06:35+08:00" content="2015-05-31">
+              2015-05-31
             </time>
           </span>
 
@@ -306,8 +302,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/capacity-measurement/" itemprop="url" rel="index">
-                    <span itemprop="name">capacity measurement</span>
+                  <a href="/categories/manual/" itemprop="url" rel="index">
+                    <span itemprop="name">manual</span>
                   </a>
                 </span>
 
@@ -322,8 +318,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/01/Capacity-measurement-with-lockin-amplifier/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/01/Capacity-measurement-with-lockin-amplifier/" itemprop="commentsCount"></span>
+                <a href="/2015/05/31/LPKF刻板机的使用手册/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/31/LPKF刻板机的使用手册/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,30 +345,43 @@
       
 
       
-        <p>Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using a lock-in amplifier.<br><a id="more"></a></p>
-<h2 id="Measurement-Scheme"><a href="#Measurement-Scheme" class="headerlink" title="Measurement Scheme"></a>Measurement Scheme</h2><p>The measurement circuit is shown below.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png" alt="the measurement circuit"></p>
-<p>The reference sin signal comes from the lock-in amplifier and we use a reference resistance $R_{ref}$. We put the unknown capacity $C_x$ in parallel in the circuit. And the $U_{out}$ signal comes into the lock-in amplifier signal in port.</p>
-<p>We can calculate the output signal:<br>$$\begin{align}<br>&amp;\frac{U_{out}}{U_{in}}=\frac{Z_{out}}{Z_{in}}=\frac{R_0 ||\left( C_0 +C_x \right)}{R_{ref} + R_0 ||\left( C_0 +C_x \right) }\\<br>&amp;=\frac{R_0}{\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right) }\\<br>&amp;=\frac{R_0 \left[\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right)\right]}{\left( R_0+ R_{ref}\right) ^2 + \omega^2R_0^2R_{ref}^2 \left( C_0 +C_x \right)^2}\\<br>\end{align}$$</p>
-<p>We can get the phase from the above equation:<br>$$\tan\theta=\frac{-\omega R_0 R_{ref}\left( C_0 +C_x \right)}{\left( R_0+ R_{ref}\right)}$$</p>
-<p>Finally, we can get the relation between the unknown capacity $C_x$ and the signal frequency $\omega$, the phase difference $\theta$:<br>$$C_x=- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta}{\omega} - C_0$$</p>
-<p>First, we can fixed the frequency at $\omega _k$, and from measuring the phase $\theta$ to obtain the capacity $C_x$:<br>when $C_x=0$, we can get:<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _0}{\omega _k} = C_0$$<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ \omega _k R_0 R_{ref}} = \frac{C_0}{\tan \theta _0}$$<br>Finally, we can get:<br>$$C_x=C_0 \times \left( \frac{\tan \theta}{\tan \theta _0}-1 \right) = \frac{C_0}{\tan \theta_0} \left( \tan \theta - \tan \theta_0 \right)$$</p>
-<p>Second, we fix the phase to $\theta _k$ and from measuring the frequency $\omega$ to obtain the unknown capacity $C_x$.<br>when $C_x=0$, we can get:<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _k}{\omega _0} = C_0$$<br>$$- \frac{\left( R_0+ R_{ref}\right)\tan \theta _k }{ R_0 R_{ref}} = \omega _0 C_0$$<br>Finally, we can get:<br>$$C_x=C_0 \times \left( \frac{\omega _0}{\omega }-1 \right) =\omega _0 C_0 \left( \frac{1}{\omega}-\frac{1}{\omega_0} \right)=f _0 C_0 \left( \frac{1}{f}-\frac{1}{f_0} \right)$$</p>
-<p>From the above two equations, we can measure the capacities.</p>
-<h2 id="Calibration-Experiment"><a href="#Calibration-Experiment" class="headerlink" title="Calibration Experiment"></a>Calibration Experiment</h2><ol>
-<li><p>Fixed the frequency $f=200Hz$, and measure the phase $\theta$.<br>We use different capacities from 10pF to 680pF for the calibration experiment.the result shows in below figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixFreq.png" alt="calibration_fixFreq"><br>From the fitting to the curve, we can get:<br>$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$</p>
-</li>
-<li><p>Fix the phase $\theta=-45°$, and measure the frequency.<br>The result for this situation is shown below:<br><img src="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixPhase.png" alt="calibration_fixPhase"><br>From the fitting to the curve, we can get:<br>$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$</p>
-</li>
+        <p>刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。</p>
+<a id="more"></a>
+<h2 id="Gerber文件生成"><a href="#Gerber文件生成" class="headerlink" title="Gerber文件生成"></a>Gerber文件生成</h2><ol>
+<li>PCB 设计常用的设计软件有<a href="http://www.altium.com.cn/" target="_blank" rel="external">Altium Designer</a>， 使用AD设计出来的PCB文件的后缀名为<code>.pcbdoc</code>，我们需要将该文件转成Gerber文件再传给LPKF刻板机进行加工制作。</li>
+<li>使用Altium Designer 软件打开<code>.pcbdoc</code>文件，选择<strong>file/fabrication output/gerber files</strong>， 弹出Gerber setup对话框。</li>
+<li>在general标签页中，选择单位为：<strong>inch</strong>；精度为：<strong>2：5</strong>；</li>
+<li>在layer标签页中，Plot Layers选择Used On； Mirror Layers选择All Off；</li>
+<li>在Advanced标签页中，选择suppress leading zero； reference to relative origin; </li>
+<li>设置完成后，点击OK，即可在<code>.pcbdoc</code>对应文件夹下生成每个layer对应的gerber文件。</li>
+<li>生成孔文件。还是打开<code>.pcbdoc</code>文件，选择<strong>file/fabrication output/NC drill files</strong>， 弹出NC drill setup对话框。</li>
+<li>在option标签页中选择和之前相同的设置，点击OK确定。在弹出的Import Drill Date 对话框中设置单位与前面设置相同。点击OK即可生成孔文件。</li>
 </ol>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ol>
-<li><p>Fix the frequency $f=200Hz$, and measure the background phase $\theta_0$ and the phase $\theta$ corresponding to the unknow capacity $C_x$.<br>$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$</p>
-</li>
-<li><p>Fix the phase $\theta=-45°$, and measure the background frequency $f_0$ and the frequency f corresponding to the unknown capacity $C_x$.<br>$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$</p>
-</li>
-<li><p>Average the above two results to get the final capacity.</p>
-</li>
+<hr>
+<p>Gerber 文件后缀名与相应layer的对照表：<br>|文件|layer|<br>|:–:|:–:|<br>|.GTO|Top Overlay|<br>|.GBO|Bottom Overlay|<br>|.GKO|Keepout layer|<br>|.GTL|Top layer|<br>|.GBL|Bottoim layer|<br>|.TXT|钻孔文件|</p>
+<h2 id="文件导入"><a href="#文件导入" class="headerlink" title="文件导入"></a>文件导入</h2><ol>
+<li>打开刻板机电源。</li>
+<li>打开电脑端软件CircuitPro，电脑自动识别并连接到仪器。</li>
+<li>在菜单栏选择<code>File</code>$\Longrightarrow$<code>New</code>，在出现的模板文件里选择DoubleSided ProConduct.cbf，点击OK。</li>
+<li>在菜单栏选择<code>File</code>$\Longrightarrow$<code>Import</code>，在弹出的对话框中，选择之前生成的几个Gerber文件，重点是：*<strong><em>.GTL(TopLayer), *</em></strong>.GBL(BottomLayer), *<strong><em>.TXT(drill plated), *</em></strong>.GKO(Board Outline)这四个文件。</li>
+<li>根据文件后缀名与层的对应关系，在Layer/Template中将每个文件分配到对应的层上面。</li>
 </ol>
-<p>This method can be used to measure the capacities fabricated by trilayer nano-frbrication technology with the help of probe station.</p>
+<h2 id="设置剥铜区域和靶标，并进行计算"><a href="#设置剥铜区域和靶标，并进行计算" class="headerlink" title="设置剥铜区域和靶标，并进行计算"></a>设置剥铜区域和靶标，并进行计算</h2><ol>
+<li>设置剥铜区域。在菜单栏选择<code>Insert</code>$\Longrightarrow$<code>Rubout area</code>$\Longrightarrow$<code>Rubout top</code>，然后在图中由两点创建一个矩形的剥铜区域。创建完成后点击CLOSE。</li>
+<li>设置靶标。在菜单栏选择<code>Insert</code>$\Longrightarrow$<code>Fiducial</code>$\Longrightarrow$<code>Fiducial...</code>，在PCB板子四周点上四个点，即创建了四个靶标，创建完成后点击CLOSE。</li>
+<li>开始计算切割路径。在菜单栏选择<code>Toolpath</code>$\Longrightarrow$<code>Technology Dialog</code>，在Insulate绝缘设置中选择4/4,全部剥铜，在Coutour Routing切割轮廓中选择3/6，表示轮廓切割时横向留两个断点。在Drills的Show Details中不勾选Create marking drills，不勾选Pockets。点击Start开始计算，计算完成之后直接Close即可。</li>
+</ol>
+<h2 id="装配刀具"><a href="#装配刀具" class="headerlink" title="装配刀具"></a>装配刀具</h2><ol>
+<li>在菜单栏选择<code>Edit</code>$\Longrightarrow$<code>Tool Magazine</code>，打开刀具配置对话框。</li>
+<li>在对话框右侧会显示本次切割所需要的刀具，有红色<code>X</code>表示的是当前刀具架上没有该刀，需要往刀具架上添加该刀。</li>
+<li>在对话空右侧对应刀位的下拉框中选择需要添加的刀具的类型大小，并手动打开仪器盖子，在该刀具位置添加相对应的刀具，注意两者一定要相一致。</li>
+</ol>
+<h2 id="开始切割加工"><a href="#开始切割加工" class="headerlink" title="开始切割加工"></a>开始切割加工</h2><ol>
+<li>在Processing标签页中，Operate项目下拉框中选择Process All，点击绿色三角符号开始运行，请注意每一步的提示信息。所有的步骤在Toolpath标签页中的Phase中显示，其中前面带小三角符号的表示该步骤需要某一刀具进行加工，展开该项即可看到该步骤详情。</li>
+<li>也可以一步一步执行，一般建议这样操作。现在Toolpath标签页中的Phase中选择要执行的步骤（一般需要执行的步骤前面会有一个小三角符号，展开该项即可看到这一步骤所需要的刀具信息），选中该步骤之后再切换回Processing标签页，在Operate项目中点击绿色三角符号开始执行当前步骤。</li>
+<li>一般进行切割时首先要先打靶标，然后先背面刻Bottom层，将板子翻转180度，再在正面刻top层。每一步刻板过程中都会有提示是否识别靶标，尽量每一步都选择识别靶标，以防不同层刻制时出现错位。</li>
+<li>如果要进行孔金属化，那么孔一般最后打。在所有正反面图形以及轮廓都铣完和切割完之后，需要在正反面贴上一张薄膜，然后再进行打孔。打完孔之后在膜上面涂上银浆，然后将银浆从孔里面吸到下表面，实现将孔金属化将双层板两面导通。然后再将电路板放入高温烘烤半个小时，温度设为300摄氏度。烘烤烘烤完成之后揭掉表面的薄膜，再超声清洗一下，电路板即制作完成了。</li>
+</ol>
 
       
     </div>
@@ -387,7 +396,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/capacity-measurement/" rel="tag">#capacity measurement</a>
+            <a href="/tags/刻板机/" rel="tag">#刻板机</a>
+          
+            <a href="/tags/manual/" rel="tag">#manual</a>
           
         </div>
       
@@ -396,13 +407,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/06/Transmission Line Input-Output Theory/" rel="next" title="Transmission Line Input-Output Theory">
-                <i class="fa fa-chevron-left"></i> Transmission Line Input-Output Theory
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/28/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -428,8 +439,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/01/Capacity-measurement-with-lockin-amplifier/"
-           data-title="Capacity Measurement with Lock-in Amplifier" data-url="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/">
+      <div class="ds-thread" data-thread-key="2015/05/31/LPKF刻板机的使用手册/"
+           data-title="LPKF刻板机的使用手册" data-url="xuyuan.cf/2015/05/31/LPKF刻板机的使用手册/">
       </div>
     
   </div>
@@ -531,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Measurement-Scheme"><span class="nav-number">1.</span> <span class="nav-text">Measurement Scheme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calibration-Experiment"><span class="nav-number">2.</span> <span class="nav-text">Calibration Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gerber文件生成"><span class="nav-number">1.</span> <span class="nav-text">Gerber文件生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件导入"><span class="nav-number">2.</span> <span class="nav-text">文件导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置剥铜区域和靶标，并进行计算"><span class="nav-number">3.</span> <span class="nav-text">设置剥铜区域和靶标，并进行计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装配刀具"><span class="nav-number">4.</span> <span class="nav-text">装配刀具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始切割加工"><span class="nav-number">5.</span> <span class="nav-text">开始切割加工</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

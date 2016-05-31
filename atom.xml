@@ -689,4 +689,65 @@
     
   </entry>
   
+  <entry>
+    <title>LPKF刻板机的使用手册</title>
+    <link href="xuyuan.cf/2015/05/31/LPKF%E5%88%BB%E6%9D%BF%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+    <id>xuyuan.cf/2015/05/31/LPKF刻板机的使用手册/</id>
+    <published>2015-05-31T08:06:35.000Z</published>
+    <updated>2016-05-31T12:03:17.929Z</updated>
+    
+    <content type="html">&lt;p&gt;刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Gerber文件生成&quot;&gt;&lt;a href=&quot;#Gerber文件生成&quot; class=&quot;headerlink&quot; title=&quot;Gerber文件生成&quot;&gt;&lt;/a&gt;Gerber文件生成&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;PCB 设计常用的设计软件有&lt;a href=&quot;http://www.altium.com.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Altium Designer&lt;/a&gt;， 使用AD设计出来的PCB文件的后缀名为&lt;code&gt;.pcbdoc&lt;/code&gt;，我们需要将该文件转成Gerber文件再传给LPKF刻板机进行加工制作。&lt;/li&gt;
+&lt;li&gt;使用Altium Designer 软件打开&lt;code&gt;.pcbdoc&lt;/code&gt;文件，选择&lt;strong&gt;file/fabrication output/gerber files&lt;/strong&gt;， 弹出Gerber setup对话框。&lt;/li&gt;
+&lt;li&gt;在general标签页中，选择单位为：&lt;strong&gt;inch&lt;/strong&gt;；精度为：&lt;strong&gt;2：5&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;在layer标签页中，Plot Layers选择Used On； Mirror Layers选择All Off；&lt;/li&gt;
+&lt;li&gt;在Advanced标签页中，选择suppress leading zero； reference to relative origin; &lt;/li&gt;
+&lt;li&gt;设置完成后，点击OK，即可在&lt;code&gt;.pcbdoc&lt;/code&gt;对应文件夹下生成每个layer对应的gerber文件。&lt;/li&gt;
+&lt;li&gt;生成孔文件。还是打开&lt;code&gt;.pcbdoc&lt;/code&gt;文件，选择&lt;strong&gt;file/fabrication output/NC drill files&lt;/strong&gt;， 弹出NC drill setup对话框。&lt;/li&gt;
+&lt;li&gt;在option标签页中选择和之前相同的设置，点击OK确定。在弹出的Import Drill Date 对话框中设置单位与前面设置相同。点击OK即可生成孔文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;Gerber 文件后缀名与相应layer的对照表：&lt;br&gt;|文件|layer|&lt;br&gt;|:–:|:–:|&lt;br&gt;|.GTO|Top Overlay|&lt;br&gt;|.GBO|Bottom Overlay|&lt;br&gt;|.GKO|Keepout layer|&lt;br&gt;|.GTL|Top layer|&lt;br&gt;|.GBL|Bottoim layer|&lt;br&gt;|.TXT|钻孔文件|&lt;/p&gt;
+&lt;h2 id=&quot;文件导入&quot;&gt;&lt;a href=&quot;#文件导入&quot; class=&quot;headerlink&quot; title=&quot;文件导入&quot;&gt;&lt;/a&gt;文件导入&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;打开刻板机电源。&lt;/li&gt;
+&lt;li&gt;打开电脑端软件CircuitPro，电脑自动识别并连接到仪器。&lt;/li&gt;
+&lt;li&gt;在菜单栏选择&lt;code&gt;File&lt;/code&gt;$\Longrightarrow$&lt;code&gt;New&lt;/code&gt;，在出现的模板文件里选择DoubleSided ProConduct.cbf，点击OK。&lt;/li&gt;
+&lt;li&gt;在菜单栏选择&lt;code&gt;File&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Import&lt;/code&gt;，在弹出的对话框中，选择之前生成的几个Gerber文件，重点是：*&lt;strong&gt;&lt;em&gt;.GTL(TopLayer), *&lt;/em&gt;&lt;/strong&gt;.GBL(BottomLayer), *&lt;strong&gt;&lt;em&gt;.TXT(drill plated), *&lt;/em&gt;&lt;/strong&gt;.GKO(Board Outline)这四个文件。&lt;/li&gt;
+&lt;li&gt;根据文件后缀名与层的对应关系，在Layer/Template中将每个文件分配到对应的层上面。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;设置剥铜区域和靶标，并进行计算&quot;&gt;&lt;a href=&quot;#设置剥铜区域和靶标，并进行计算&quot; class=&quot;headerlink&quot; title=&quot;设置剥铜区域和靶标，并进行计算&quot;&gt;&lt;/a&gt;设置剥铜区域和靶标，并进行计算&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;设置剥铜区域。在菜单栏选择&lt;code&gt;Insert&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Rubout area&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Rubout top&lt;/code&gt;，然后在图中由两点创建一个矩形的剥铜区域。创建完成后点击CLOSE。&lt;/li&gt;
+&lt;li&gt;设置靶标。在菜单栏选择&lt;code&gt;Insert&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Fiducial&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Fiducial...&lt;/code&gt;，在PCB板子四周点上四个点，即创建了四个靶标，创建完成后点击CLOSE。&lt;/li&gt;
+&lt;li&gt;开始计算切割路径。在菜单栏选择&lt;code&gt;Toolpath&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Technology Dialog&lt;/code&gt;，在Insulate绝缘设置中选择4/4,全部剥铜，在Coutour Routing切割轮廓中选择3/6，表示轮廓切割时横向留两个断点。在Drills的Show Details中不勾选Create marking drills，不勾选Pockets。点击Start开始计算，计算完成之后直接Close即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;装配刀具&quot;&gt;&lt;a href=&quot;#装配刀具&quot; class=&quot;headerlink&quot; title=&quot;装配刀具&quot;&gt;&lt;/a&gt;装配刀具&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在菜单栏选择&lt;code&gt;Edit&lt;/code&gt;$\Longrightarrow$&lt;code&gt;Tool Magazine&lt;/code&gt;，打开刀具配置对话框。&lt;/li&gt;
+&lt;li&gt;在对话框右侧会显示本次切割所需要的刀具，有红色&lt;code&gt;X&lt;/code&gt;表示的是当前刀具架上没有该刀，需要往刀具架上添加该刀。&lt;/li&gt;
+&lt;li&gt;在对话空右侧对应刀位的下拉框中选择需要添加的刀具的类型大小，并手动打开仪器盖子，在该刀具位置添加相对应的刀具，注意两者一定要相一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;开始切割加工&quot;&gt;&lt;a href=&quot;#开始切割加工&quot; class=&quot;headerlink&quot; title=&quot;开始切割加工&quot;&gt;&lt;/a&gt;开始切割加工&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在Processing标签页中，Operate项目下拉框中选择Process All，点击绿色三角符号开始运行，请注意每一步的提示信息。所有的步骤在Toolpath标签页中的Phase中显示，其中前面带小三角符号的表示该步骤需要某一刀具进行加工，展开该项即可看到该步骤详情。&lt;/li&gt;
+&lt;li&gt;也可以一步一步执行，一般建议这样操作。现在Toolpath标签页中的Phase中选择要执行的步骤（一般需要执行的步骤前面会有一个小三角符号，展开该项即可看到这一步骤所需要的刀具信息），选中该步骤之后再切换回Processing标签页，在Operate项目中点击绿色三角符号开始执行当前步骤。&lt;/li&gt;
+&lt;li&gt;一般进行切割时首先要先打靶标，然后先背面刻Bottom层，将板子翻转180度，再在正面刻top层。每一步刻板过程中都会有提示是否识别靶标，尽量每一步都选择识别靶标，以防不同层刻制时出现错位。&lt;/li&gt;
+&lt;li&gt;如果要进行孔金属化，那么孔一般最后打。在所有正反面图形以及轮廓都铣完和切割完之后，需要在正反面贴上一张薄膜，然后再进行打孔。打完孔之后在膜上面涂上银浆，然后将银浆从孔里面吸到下表面，实现将孔金属化将双层板两面导通。然后再将电路板放入高温烘烤半个小时，温度设为300摄氏度。烘烤烘烤完成之后揭掉表面的薄膜，再超声清洗一下，电路板即制作完成了。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="manual" scheme="xuyuan.cf/categories/manual/"/>
+    
+    
+      <category term="刻板机" scheme="xuyuan.cf/tags/%E5%88%BB%E6%9D%BF%E6%9C%BA/"/>
+    
+      <category term="manual" scheme="xuyuan.cf/tags/manual/"/>
+    
+  </entry>
+  
 </feed>

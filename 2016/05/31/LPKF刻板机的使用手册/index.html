@@ -67,7 +67,7 @@
 <meta property="og:url" content="xuyuan.cf/2016/05/31/LPKF刻板机的使用手册/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
 <meta property="og:description" content="刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。">
-<meta property="og:updated_time" content="2016-05-31T12:07:13.935Z">
+<meta property="og:updated_time" content="2016-05-31T12:09:15.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LPKF刻板机的使用手册">
 <meta name="twitter:description" content="刻板机主要是采用高精度的机械加工来进行PCB电路板的刻制，精度高，可控性好，比传统的腐蚀法制电路板有很多优势。LPKF是德国的一家刻板机公司，是目前比较流行的刻板机。本文介绍了LPKF S63型号的刻板机的简单的使用说明。">
@@ -358,7 +358,41 @@
 <li>在option标签页中选择和之前相同的设置，点击OK确定。在弹出的Import Drill Date 对话框中设置单位与前面设置相同。点击OK即可生成孔文件。</li>
 </ol>
 <hr>
-<p>Gerber 文件后缀名与相应layer的对照表：<br>|文件|layer|<br>|:–:|:–:|<br>|.GTO|Top Overlay|<br>|.GBO|Bottom Overlay|<br>|.GKO|Keepout layer|<br>|.GTL|Top layer|<br>|.GBL|Bottoim layer|<br>|.TXT|钻孔文件|</p>
+<p>Gerber 文件后缀名与相应layer的对照表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件</th>
+<th style="text-align:center">layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.GTO</td>
+<td style="text-align:center">Top Overlay</td>
+</tr>
+<tr>
+<td style="text-align:center">.GBO</td>
+<td style="text-align:center">Bottom Overlay</td>
+</tr>
+<tr>
+<td style="text-align:center">.GKO</td>
+<td style="text-align:center">Keepout layer</td>
+</tr>
+<tr>
+<td style="text-align:center">.GTL</td>
+<td style="text-align:center">Top layer</td>
+</tr>
+<tr>
+<td style="text-align:center">.GBL</td>
+<td style="text-align:center">Bottoim layer</td>
+</tr>
+<tr>
+<td style="text-align:center">.TXT</td>
+<td style="text-align:center">钻孔文件</td>
+</tr>
+</tbody>
+</table>
 <h2 id="文件导入"><a href="#文件导入" class="headerlink" title="文件导入"></a>文件导入</h2><ol>
 <li>打开刻板机电源。</li>
 <li>打开电脑端软件CircuitPro，电脑自动识别并连接到仪器。</li>

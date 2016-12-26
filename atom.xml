@@ -241,7 +241,7 @@
     <link href="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
     <id>xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
     <published>2016-03-21T07:10:35.000Z</published>
-    <updated>2016-04-08T01:09:35.404Z</updated>
+    <updated>2016-12-26T04:40:37.201Z</updated>
     
     <content type="html">&lt;p&gt;This article gives some usefull links about the superconducting quantum computation research groups around the world in order to quickly find the associated papers.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -274,7 +274,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Vijay:&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tifr.res.in/~quantro/index.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vijay Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tifr.res.in/~quantro/pubs.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vijay Group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;John Martinis:&lt;/strong&gt;&lt;ul&gt;
@@ -307,6 +307,14 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Arkady Fedorov:&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://sqd.equs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SQDLab(The Superconducting Quantum Device Laboratory)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fink Group:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://quantumids.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Quantum IDs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alexandre Blais Group:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.physique.usherbrooke.ca/blais/?sec=epiq_publi&amp;amp;lan=FR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alexandre Blais Group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -531,9 +539,9 @@
       <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
-    
       <category term="Transmission line" scheme="xuyuan.cf/tags/Transmission-line/"/>
+    
+      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
     
   </entry>
   

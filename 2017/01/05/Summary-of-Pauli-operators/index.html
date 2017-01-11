@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Microwave,Instrument," />
+  <meta name="keywords" content="quantum," />
 
 
 
@@ -61,18 +61,16 @@
 
 
 
-<meta name="description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
+<meta name="description" content="This article summaries the wildly used Pauli operators and its matrix representation. And I will give a summary of all the properties of the Pauli operators. Finally, I will exihibit the method to tru">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Attenuator">
-<meta property="og:url" content="xuyuan.cf/2016/03/08/Attenuator/index.html">
+<meta property="og:title" content="Summary of Pauli operatoes">
+<meta property="og:url" content="xuyuan.cf/2017/01/05/Summary-of-Pauli-operators/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
-<meta property="og:image" content="http://www.electronics-tutorials.ws/attenuators/attn22.gif">
-<meta property="og:updated_time" content="2016-03-08T12:36:04.670Z">
+<meta property="og:description" content="This article summaries the wildly used Pauli operators and its matrix representation. And I will give a summary of all the properties of the Pauli operators. Finally, I will exihibit the method to tru">
+<meta property="og:updated_time" content="2017-01-11T03:32:37.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Attenuator">
-<meta name="twitter:description" content="An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.An attenuator is effectively the opposite of an amplifer. While an amplifer provide">
-<meta name="twitter:image" content="http://www.electronics-tutorials.ws/attenuators/attn22.gif">
+<meta name="twitter:title" content="Summary of Pauli operatoes">
+<meta name="twitter:description" content="This article summaries the wildly used Pauli operators and its matrix representation. And I will give a summary of all the properties of the Pauli operators. Finally, I will exihibit the method to tru">
 
 
 
@@ -90,7 +88,7 @@
   };
 </script>
 
-  <title> Attenuator | XuYuan's Blog </title>
+  <title> Summary of Pauli operatoes | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +276,7 @@
             
             
               
-                Attenuator
+                Summary of Pauli operatoes
               
             
           </h1>
@@ -290,8 +288,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-08T11:50:35+08:00" content="2016-03-08">
-              2016-03-08
+            <time itemprop="dateCreated" datetime="2017-01-05T15:10:35+08:00" content="2017-01-05">
+              2017-01-05
             </time>
           </span>
 
@@ -304,8 +302,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Microwave/" itemprop="url" rel="index">
-                    <span itemprop="name">Microwave</span>
+                  <a href="/categories/quantum/" itemprop="url" rel="index">
+                    <span itemprop="name">quantum</span>
                   </a>
                 </span>
 
@@ -320,8 +318,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/08/Attenuator/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/08/Attenuator/" itemprop="commentsCount"></span>
+                <a href="/2017/01/05/Summary-of-Pauli-operators/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/05/Summary-of-Pauli-operators/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -347,65 +345,13 @@
       
 
       
-        <p>An attenuator is an electronic device that reduces the power of a signal without appreciably distorting its waveform.<br>An attenuator is effectively the opposite of an amplifer. While an amplifer provides gain, an attenuator provides loss.</p>
+        <p>This article summaries the wildly used Pauli operators and its matrix representation. And I will give a summary of all the properties of the Pauli operators. Finally, I will exihibit the method to truncate the n-level system to a 2-level system.</p>
 <a id="more"></a>
-<p>Widly used is the matching T type attenuator. Its circuit model is as follows.</p>
-<p><div style="text-align:center" markdown="1"><br><img src="http://www.electronics-tutorials.ws/attenuators/attn22.gif" alt="matching T type attenuator model"></div></p>
-<p>Calculate the matching T type attenuator.<br>The matching input impendance $Z_{in}$ and output impendance $Z_{out}$ must satisfy<br>$$Z_{in}=R_1+R_3//(R_2+Z_{out})$$<br>$$Z_{out}=R_2+R_3//(R_1+Z_{in})$$<br>$$\frac{V_{in}}{Z_{in}}R_3//(R_2+Z_{out})=\frac{V_{out}}{Z_{out}}(R_2+Z_{out})$$<br>From Solving the above three equations, we can get<br>$$R_1=\frac{Z_{in}Z_{out}-2Z_{in}Z_{out}\alpha+Z_{in}^2\alpha^2}{Z_{out}-Z_{in}\alpha^2}$$<br>$$R_2=\frac{Z_{out}^2-2Z_{in}Z_{out}\alpha+Z_{in}Z_{out}\alpha^2}{Z_{out}-Z_{in}\alpha^2}$$<br>$$R_3=\frac{2Z_{in}Z_{out}\alpha}{Z_{out}-Z_{in}\alpha^2}$$<br>where the $\alpha=\frac{V_{out}}{V_{in}}$.</p>
-<p>In general situation, the input and output impendance $Z_{in}$ and $Z_{out}$ are the same and both equal to $50\Omega$. The T type attenuator is also the balanced one. Therefore, we could simplify the above equations as follows.<br>$$R_1=R_2=Z_{in}\frac{1-\alpha}{1+\alpha}$$<br>$$R_3=Z_{in}\frac{2\alpha}{1-\alpha^2}$$</p>
-<p>Usually, the attenuation is described in dB, that is to say $\kappa=-20\log{\frac{V_{out}}{V_{in}}}=-20\log{\alpha}$ dB.<br>Then we can get the voltage loss ratio is $\alpha=\frac{V_{out}}{V_{in}}=10^{-\frac{\kappa}{20}}$</p>
-<p>Therefore, from the attenuation and input and output impendance, we can caculate the internal resistance.</p>
-<hr>
-<p><strong>SUMMARY:</strong><br>An attenuator with 50 $\Omega$ impedance match:</p>
-<ol>
-<li>The resistance of the T type attenuator satisfy:<br>$$ R_1=R_2=\frac{1-10^{-\frac{dB}{20}}}{1+10^{-\frac{dB}{20}}}\times 50\Omega $$<br>$$ R_3=\frac{2\times 10^{-\frac{dB}{20}}}{1-10^{-\frac{dB}{10}}} $$</li>
-<li>The output-input power ratio:<br>$$\frac{P_{out}}{P_{in}}=10^{-\frac{dB}{10}}$$</li>
-<li>The output-input voltage ratio:<br>$$\frac{V_{out}}{V_{in}}=10^{-\frac{dB}{20}}$$</li>
-</ol>
-<hr>
-<p>For example:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Attenuation</th>
-<th style="text-align:center">$R_1=R_2$</th>
-<th style="text-align:center">$R_3$</th>
-<th style="text-align:center">Voltage Ratio</th>
-<th style="text-align:center">Power Ratio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">5dB</td>
-<td style="text-align:center">14.006$\Omega$</td>
-<td style="text-align:center">82.241$\Omega$</td>
-<td style="text-align:center">0.562</td>
-<td style="text-align:center">0.316</td>
-</tr>
-<tr>
-<td style="text-align:center">10dB</td>
-<td style="text-align:center">25.972$\Omega$</td>
-<td style="text-align:center">35.136$\Omega$</td>
-<td style="text-align:center">0.316</td>
-<td style="text-align:center">0.1</td>
-</tr>
-<tr>
-<td style="text-align:center">20dB</td>
-<td style="text-align:center">40.909$\Omega$</td>
-<td style="text-align:center">10.101$\Omega$</td>
-<td style="text-align:center">0.1</td>
-<td style="text-align:center">0.01</td>
-</tr>
-<tr>
-<td style="text-align:center">50dB</td>
-<td style="text-align:center">49.685$\Omega$</td>
-<td style="text-align:center">0.316$\Omega$</td>
-<td style="text-align:center">0.032</td>
-<td style="text-align:center">0.001</td>
-</tr>
-</tbody>
-</table>
-<p>You can find more informations from the website <a href="http://chemandy.com/calculators/matching-t-attenuator-calculator.htm" target="_blank" rel="external">CHEMANDY ELECTRONICS</a> and <a href="http://en.wikipedia.org/wiki/Attenuator_%28electronics%29" target="_blank" rel="external">Wikipedia of attenuator</a></p>
+<h2 id="1-Pauli-operators"><a href="#1-Pauli-operators" class="headerlink" title="1.Pauli operators"></a>1.Pauli operators</h2><p>The basic three Pauli operators are: $\sigma_x$, $\sigma_y$ and $\sigma_z$. In the following, I will show the commute relationship and anti-commute relationship between these Pauli operators.<br>$$\left[ \sigma_x, \sigma_y \right] = 2i \sigma_z \quad ; \quad \left{ \sigma_x, \sigma_y \right} =0$$<br>$$\left[ \sigma_y, \sigma_z \right] = 2i \sigma_x \quad ; \quad \left{ \sigma_y, \sigma_z \right} =0$$<br>$$\left[ \sigma_z, \sigma_x \right] = 2i \sigma_y \quad ; \quad \left{ \sigma_z, \sigma_x \right} =0$$<br>$$\sigma_x \sigma_y = i \sigma_z \quad ; \quad  \sigma_x^2 =1$$<br>$$\sigma_y \sigma_z = i \sigma_x \quad ; \quad  \sigma_y^2 =1$$<br>$$\sigma_z \sigma_x = i \sigma_y \quad ; \quad  \sigma_z^2 =1$$<br>$$\sigma^2 = \sigma_x^2 + \sigma_y^2 + \sigma_z^2 =3$$<br>Define another two Pauli operators:<br>$$\sigma_{+} = \frac{1}{2}\left(  \sigma_x +i \sigma_y \right)$$<br>$$\sigma_{-} = \frac{1}{2}\left(  \sigma_x -i \sigma_y \right)$$<br>Then we will get more commute and anti-commute relationships between the creation and annihilation Pauli operations.<br>$$\left[ \sigma_{+}, \sigma_{-} \right] =  \sigma_z \quad ; \quad \left{ \sigma_{+}, \sigma_{-} \right} =1$$<br>$$\left[ \sigma_{+}, \sigma_{x} \right] =  \sigma_z \quad ; \quad \left{ \sigma_{+}, \sigma_{x} \right} =1$$<br>$$\left[ \sigma_{+}, \sigma_{y} \right] = i \sigma_z \quad ; \quad \left{ \sigma_{+}, \sigma_{y} \right} =1$$<br>$$\left[ \sigma_{+}, \sigma_{z} \right] =  -2 \sigma_{+} \quad ; \quad \left{ \sigma_{+}, \sigma_{z} \right} =0$$<br>$$\left[ \sigma_{-}, \sigma_{x} \right] = - \sigma_z \quad ; \quad \left{ \sigma_{-}, \sigma_{x} \right} =1$$<br>$$\left[ \sigma_{-}, \sigma_{y} \right] = i \sigma_z \quad ; \quad \left{ \sigma_{-}, \sigma_{y} \right} =1$$</p>
+<h2 id="left-sigma-sigma-z-right-2-sigma-quad-quad-left-sigma-sigma-z-right-0"><a href="#left-sigma-sigma-z-right-2-sigma-quad-quad-left-sigma-sigma-z-right-0" class="headerlink" title="$$\left[ \sigma_{-}, \sigma_{z} \right] = 2 \sigma_{-} \quad ; \quad \left{ \sigma_{-}, \sigma_{z} \right} =0$$"></a>$$\left[ \sigma_{-}, \sigma_{z} \right] = 2 \sigma_{-} \quad ; \quad \left{ \sigma_{-}, \sigma_{z} \right} =0$$</h2><h2 id="2-Pauli-matrixes"><a href="#2-Pauli-matrixes" class="headerlink" title="2.Pauli matrixes"></a>2.Pauli matrixes</h2><p>Because $\sigma_z$ and $\sigma^2$ are commuted $\left[ \sigma_z, \sigma^2 \right]$=0, we can choose common representation of these two operators.<br>$$\sigma_z \left|z^{+} \right&gt; = \left|z^{+} \right&gt;$$<br>$$\sigma_z \left|z^{-} \right&gt; = - \left|z^{-} \right&gt;$$<br>$$\sigma^2 \left|z^{+} \right&gt; =3 \left|z^{+} \right&gt;$$<br>$$\sigma^2 \left|z^{-} \right&gt; =3 \left|z^{-} \right&gt;$$<br>Therefore, we can write the matrix representation of all these Pauli operators:<br>$$\sigma_x=\begin{pmatrix}<br>0 &amp; 1 \\ 1 &amp; 0<br>\end{pmatrix}$$<br>$$\sigma_y=\begin{pmatrix}<br>0 &amp; -i \\ i &amp; 0<br>\end{pmatrix}$$<br>$$\sigma_z=\begin{pmatrix}<br>1 &amp; 0 \\ 0 &amp; -1<br>\end{pmatrix}$$<br>$$\sigma_{+}=\begin{pmatrix}<br>0 &amp; 1 \\ 0 &amp; 0<br>\end{pmatrix}$$<br>$$\sigma_{-}=\begin{pmatrix}<br>0 &amp; 0 \\ 1 &amp; 0<br>\end{pmatrix}$$<br>The two eigenstates of $\sigma_z$ are:<br>$$\left| z^{+} \right&gt; = \begin{pmatrix}<br>1 \\ 0 \end{pmatrix} \quad; \quad \left| z^{-} \right&gt; = \begin{pmatrix}<br>0 \\ 1 \end{pmatrix}$$<br>These two states conresponds to the spin up and spin down states or excited state and ground state. I show the relationship between these conversional notation:<br>$$\left| z^{+} \right&gt; \Longleftrightarrow \left| \uparrow \right&gt; \Longleftrightarrow \left| 0 \right&gt; \Longleftrightarrow \left| e \right&gt;$$<br>$$\left| z^{-} \right&gt; \Longleftrightarrow \left| \downarrow \right&gt; \Longleftrightarrow \left| 1 \right&gt; \Longleftrightarrow \left| g \right&gt;$$<br>In the following, I will use the $\left| e \right&gt;$ and $\left| g \right&gt;$ to represent the spin up and spin down states.<br>Then, we will find some relationships:<br>$$\sigma_x \left| e \right&gt; = \left| g \right&gt; \quad; \quad \sigma_x \left| g \right&gt; = \left| e \right&gt;$$<br>$$\sigma_y \left| e \right&gt; =i \left| g \right&gt; \quad; \quad \sigma_y \left| g \right&gt; = -i\left| e \right&gt;$$<br>$$\sigma_z \left| e \right&gt; = \left| e \right&gt; \quad; \quad \sigma_z \left| g \right&gt; =- \left| g \right&gt;$$<br>$$\sigma_{+} \left| e \right&gt; = 0 \quad; \quad \sigma_{+} \left| g \right&gt; = \left| e \right&gt;$$<br>$$\sigma_{-} \left| e \right&gt; = \left| g \right&gt; \quad; \quad \sigma_{-} \left| g \right&gt; = 0$$<br>Therefore, we can re-write the Pauli operators by the two egienstates:<br>$$\sigma_x = \left| e \right&gt; \left&lt; g \right| + \left| g \right&gt; \left&lt; e \right|$$<br>$$\sigma_y = -i \left| e \right&gt; \left&lt; g \right| + i \left| g \right&gt; \left&lt; e \right|$$<br>$$\sigma_z = \left| e \right&gt; \left&lt; e \right| - \left| g \right&gt; \left&lt; g \right|$$<br>$$\sigma_{+} = \left| e \right&gt; \left&lt; g \right| $$</p>
+<h2 id="sigma-left-g-right-gt-left-lt-e-right"><a href="#sigma-left-g-right-gt-left-lt-e-right" class="headerlink" title="$$\sigma_{-} = \left| g \right&gt; \left&lt; e \right| $$"></a>$$\sigma_{-} = \left| g \right&gt; \left&lt; e \right| $$</h2><h2 id="3-n-level-system-truncate-to-2-level-system"><a href="#3-n-level-system-truncate-to-2-level-system" class="headerlink" title="3.n-level system truncate to 2-level system"></a>3.n-level system truncate to 2-level system</h2><p>For a n-level system, we have the creation and annihilation operators $a^{\dagger}$ and $a$ for the Fock states. When only considering the first two energy levels $\left| 0 \right&gt;$ and $\left| 1 \right&gt;$, we have some relations:<br>$$a \left| 0 \right&gt; = 0 $$<br>$$a \left| 1 \right&gt; = \left| 0 \right&gt; $$<br>$$a^{\dagger} \left| 0 \right&gt; = \left| 1 \right&gt; $$<br>$$a^{\dagger} \left| 1 \right&gt; = 0 $$</p>
+<p>When comparing with the creation and annihilation operators $\sigma_{+}$ and $\sigma_{-}$, we will find their conresponding relationships:<br>$$a \quad \Longleftrightarrow \quad \sigma_{-}$$<br>$$a^{\dagger} \quad \Longleftrightarrow \quad \sigma_{+}$$<br>Therfore, for a linear harmonic resonator can be simplified as a 2-level system:<br>$$\begin{align}<br>H &amp;= \hbar \omega \left( a^{\dagger} a + \frac{1}{2} \right)<br>\\&amp;=\hbar \omega \left( \sigma_{+} \sigma_{-} + \frac{1}{2} \right)<br>\\&amp;=\hbar \omega \left( \frac{1+\sigma_z}{2} + \frac{1}{2} \right)<br>\\&amp; \approx \frac{\hbar \omega }{2} \sigma_z</p>
+<h2 id="end-align"><a href="#end-align" class="headerlink" title="\end{align}$$"></a>\end{align}$$</h2><h2 id="4-Summary"><a href="#4-Summary" class="headerlink" title="4.Summary"></a>4.Summary</h2><p>This article summaries the properties of all the Pauli operators and exihibits the conresponding relation between a truncated n-level system and a 2-level system.</p>
 
       
     </div>
@@ -420,9 +366,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Microwave/" rel="tag">#Microwave</a>
-          
-            <a href="/tags/Instrument/" rel="tag">#Instrument</a>
+            <a href="/tags/quantum/" rel="tag">#quantum</a>
           
         </div>
       
@@ -431,16 +375,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/05/利用Hexo博客搭建全过程/" rel="next" title="利用Hexo博客搭建全过程">
-                <i class="fa fa-chevron-left"></i> 利用Hexo博客搭建全过程
+              <a href="/2016/05/31/LPKF刻板机的使用手册/" rel="next" title="LPKF刻板机的使用手册">
+                <i class="fa fa-chevron-left"></i> LPKF刻板机的使用手册
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/09/Transmission Line Theory/" rel="prev" title="Transmission Line Theory of 《Microwave Engineering》">
-                Transmission Line Theory of 《Microwave Engineering》 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/" rel="prev" title="Quantization of linear and non-linear LC circuits">
+                Quantization of linear and non-linear LC circuits <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -467,8 +411,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/08/Attenuator/"
-           data-title="Attenuator" data-url="xuyuan.cf/2016/03/08/Attenuator/">
+      <div class="ds-thread" data-thread-key="2017/01/05/Summary-of-Pauli-operators/"
+           data-title="Summary of Pauli operatoes" data-url="xuyuan.cf/2017/01/05/Summary-of-Pauli-operators/">
       </div>
     
   </div>
@@ -570,7 +514,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Pauli-operators"><span class="nav-number">1.</span> <span class="nav-text">1.Pauli operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#left-sigma-sigma-z-right-2-sigma-quad-quad-left-sigma-sigma-z-right-0"><span class="nav-number">2.</span> <span class="nav-text">$$\left[ \sigma_{-}, \sigma_{z} \right] = 2 \sigma_{-} \quad ; \quad \left{ \sigma_{-}, \sigma_{z} \right} =0$$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Pauli-matrixes"><span class="nav-number">3.</span> <span class="nav-text">2.Pauli matrixes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sigma-left-g-right-gt-left-lt-e-right"><span class="nav-number">4.</span> <span class="nav-text">$$\sigma_{-} = \left| g \right> \left< e \right| $$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-n-level-system-truncate-to-2-level-system"><span class="nav-number">5.</span> <span class="nav-text">3.n-level system truncate to 2-level system</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#end-align"><span class="nav-number">6.</span> <span class="nav-text">\end{align}$$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Summary"><span class="nav-number">7.</span> <span class="nav-text">4.Summary</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -5,16 +5,40 @@
     
   <url>
     <loc>xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/</loc>
-    <lastmod>2017-01-11T03:21:30.352Z</lastmod>
+    <lastmod>2017-01-11T03:33:19.565Z</lastmod>
     <data>
         <display>
         <title>Quantization of linear and non-linear LC circuits</title>
         <pubTime>2017-01-10T04:56:47.000Z</pubTime>
         
+        <tag>quantum</tag>
+         
+        <tag>circuit</tag>
+         
          
            
              
               <breadCrumb title="circuit" url="xuyuan.cf/categories/circuit/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>xuyuan.cf/2017/01/05/Summary-of-Pauli-operators/</loc>
+    <lastmod>2017-01-11T03:32:37.388Z</lastmod>
+    <data>
+        <display>
+        <title>Summary of Pauli operatoes</title>
+        <pubTime>2017-01-05T07:10:35.000Z</pubTime>
+        
+        <tag>quantum</tag>
+         
+         
+           
+             
+              <breadCrumb title="quantum" url="xuyuan.cf/categories/quantum/"/>
           
         </display>
     </data>

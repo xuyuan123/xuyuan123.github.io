@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2017-01-11T01:26:36.361Z</updated>
+  <updated>2017-01-11T01:27:43.248Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/"/>
     <id>xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/</id>
     <published>2017-01-10T04:56:47.000Z</published>
-    <updated>2017-01-11T01:26:36.361Z</updated>
+    <updated>2017-01-11T01:27:43.248Z</updated>
     
     <content type="html">&lt;p&gt;When designing a quantum circuit, it’s important to find the Hamiltonian and quantize it to obtain the energy levels. This blog introduce the general method to derive the Hamiltonian of linear and non-linear LC circuits and quantize the Hamiltonian.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -51,6 +51,9 @@
 &lt;p&gt;$$\frac{1}{C_{2s}} = \frac{1}{C_0}+\frac{1}{C_2}$$&lt;/p&gt;
 &lt;p&gt;The inverse matrix $C^{-1}$ can be simplied as:&lt;br&gt;$$C^{-1}=&lt;br&gt;\begin{pmatrix}&lt;br&gt;\frac{1}{C_{1 \Sigma }} &amp;amp; \frac{\beta}{C_{2 \Sigma }} \\  \frac{\beta}{C_{2 \Sigma }} &amp;amp; \frac{1}{C_{2 \Sigma }}&lt;br&gt;\end{pmatrix}$$&lt;/p&gt;
 &lt;p&gt;Here, $\beta = \frac{C_0}{C_0 + C_1}$&lt;/p&gt;
+&lt;p&gt;Therefore, the Hamiltonian of the circuit is:&lt;br&gt;$$\begin{align}&lt;br&gt;H&amp;amp;=\frac{1}{2C_{1 \Sigma}}Q_1^2 + \frac{1}{2 L_1} \Phi&lt;em&gt;1^2+\frac{1}{2 C&lt;/em&gt;{2 \Sigma}} Q_2^2 + \frac{1}{2L_2} \Phi&lt;em&gt;2^2+\frac{\beta}{C&lt;/em&gt;{2 \Sigma}}Q_1 Q_2&lt;br&gt;\\ &amp;amp;=H_0 + V \\&lt;br&gt;\end{align}$$&lt;/p&gt;
+&lt;p&gt;Here, $$H&lt;em&gt;0 = \frac{1}{2C&lt;/em&gt;{1 \Sigma}}Q_1^2 + \frac{1}{2L_1}\Phi&lt;em&gt;1^2+\frac{1}{2C&lt;/em&gt;{2 \Sigma}}Q_2^2 + \frac{1}{2L_2}\Phi_2^2$$&lt;/p&gt;
+&lt;p&gt;$$V = \frac{\beta}{C_{2 \Sigma}}Q_1Q_2$$&lt;/p&gt;
 &lt;p&gt;To be continued……&lt;/p&gt;
 </content>
     

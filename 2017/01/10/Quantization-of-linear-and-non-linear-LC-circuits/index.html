@@ -69,7 +69,7 @@
 <meta property="og:description" content="When designing a quantum circuit, it’s important to find the Hamiltonian and quantize it to obtain the energy levels. This blog introduce the general method to derive the Hamiltonian of linear and non">
 <meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/linear_LC.png">
 <meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/capacitance_coupled_linear_LC.png">
-<meta property="og:updated_time" content="2017-01-11T02:45:14.117Z">
+<meta property="og:updated_time" content="2017-01-11T02:49:39.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quantization of linear and non-linear LC circuits">
 <meta name="twitter:description" content="When designing a quantum circuit, it’s important to find the Hamiltonian and quantize it to obtain the energy levels. This blog introduce the general method to derive the Hamiltonian of linear and non">
@@ -378,7 +378,20 @@
 <p>The inverse matrix $C^{-1}$ can be simplied as:<br>$$C^{-1}=<br>\begin{pmatrix}<br>\frac{1}{C_{1 \Sigma }} &amp; \frac{\beta}{C_{2 \Sigma }} \\  \frac{\beta}{C_{2 \Sigma }} &amp; \frac{1}{C_{2 \Sigma }}<br>\end{pmatrix}$$</p>
 <p>Here, $\beta = \frac{C_0}{C_0 + C_1}$</p>
 <p>Therefore, the Hamiltonian of the circuit is:</p>
-<p>$$\begin{align}<br>H&amp;=\frac{1}{2C_{1 \Sigma}} Q_1^2 + \frac{1}{2 L_1} \Phi_1^2 + \frac{1}{2 C_{2 \Sigma}} Q_2^2 + \frac{1}{2 L_2} \Phi_2^2 + \frac{\beta}{C_{2 \Sigma}} Q_1 Q_2   \\<br>&amp;=H_0 + V<br>\end{align}$$</p>
+<p>$$\begin{align}<br>H&amp;=\frac{1}{2C_{1 \Sigma}} Q_1^2 + \frac{1}{2 L_1} \Phi_1^2 + \frac{1}{2 C_{2 \Sigma}} Q_2^2 + \frac{1}{2 L_2} \Phi_2^2 + \frac{\beta}{C_{2 \Sigma}} Q_1 Q_2   \\<br>&amp;=H_0 + V<br>\end{align}$$<br>Here,<br>$$H_0 = \frac{1}{2C_{1 \Sigma}} Q_1^2 + \frac{1}{2L_1} \Phi_1^2 + \frac{1}{2C_{2 \Sigma}} Q_2^2 + \frac{1}{2L_2} \Phi_2^2$$</p>
+<p>$$V = \frac{\beta}{C_{2 \Sigma}}Q_1Q_2$$</p>
+<p>Define the resonance frequency of the two mode: $\omega_1 = \frac{1}{L_1 C_{1 \Sigma}}$ and $\omega_2 = \frac{1}{L_2 C_{2 \Sigma}}$; the caracteristic impedance of the two mode: $Z_1 = \sqrt{\frac{L_1}{C_{1 \Sigma}}}$ and $Z_2 = \sqrt{\frac{L_2}{C_{2 \Sigma}}}$.</p>
+<p>We can also use the creation and annihilation operators of the two resonator modes to quantize the Hamiltonian.</p>
+<p>$$\Phi_1 = \Phi_{ZPF1} \left( a_1^{\dagger} + a_1 \right)$$</p>
+<p>$$Q_1 = iQ_{ZPF1} \left( a_1^{\dagger} - a_1 \right)$$</p>
+<p>Here, $\Phi_{ZPF1}=\sqrt{\frac{\hbar Z_1}{2}}$ and $Q_{ZPF1}=\sqrt{\frac{\hbar }{2 Z_1}}$</p>
+<p>In the same way, for the second mode:</p>
+<p>$$\Phi_2 = \Phi_{ZPF2} \left( a_2^{\dagger} + a_2 \right)$$</p>
+<p>$$Q_2 = iQ_{ZPF2} \left( a_2^{\dagger} - a_2 \right)$$</p>
+<p>Here, $\Phi_{ZPF2}=\sqrt{\frac{\hbar Z_2}{2}}$ and $Q_{ZPF2}=\sqrt{\frac{\hbar }{2 Z_2}}$</p>
+<p>Then, we could quantize the Hamiltonian $H_0$ finally.</p>
+<p>$$H_0 = \hbar \omega_1 \left( a_1^{\dagger} a_1 + \frac{1}{2} \right) + \hbar \omega_2 \left( a_2^{\dagger} a_2 + \frac{1}{2} \right) $$</p>
+<p>The coupling term $V$ can be expressed:<br>$$V = -\frac{\beta Q_{ZPF1}Q_{ZPF2}}{C_{2\Sigma}} \left( a_1^{\dagger} - a_1 \right) \left( a_2^{\dagger} - a_2 \right) =-\frac{\beta \hbar}{2C_{2\Sigma}\sqrt{Z_1Z_2}} \left( a_1^{\dagger} - a_1 \right) \left( a_2^{\dagger} - a_2 \right) $$</p>
 <p>To be continued……</p>
 
       

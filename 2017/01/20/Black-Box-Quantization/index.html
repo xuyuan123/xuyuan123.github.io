@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Microwave,Transmission line," />
+  <meta name="keywords" content="quantum," />
 
 
 
@@ -61,22 +61,22 @@
 
 
 
-<meta name="description" content="传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。">
+<meta name="description" content="This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is Simon’s paper. For simplicity, I just show 2 simple ca">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Transmission Line Theory of 《Microwave Engineering》">
-<meta property="og:url" content="xuyuan.cf/2016/03/09/Transmission Line Theory/index.html">
+<meta property="og:title" content="Black Box Quantization">
+<meta property="og:url" content="xuyuan.cf/2017/01/20/Black-Box-Quantization/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。">
-<meta property="og:image" content="http://www.dannex.se/theory/pict/image188.gif">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160309172635.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310143358.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwaveQQ20160310144058.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310153522.png">
-<meta property="og:updated_time" content="2016-03-10T07:59:04.224Z">
+<meta property="og:description" content="This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is Simon’s paper. For simplicity, I just show 2 simple ca">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/Qubit_2Cavity.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/Qubit_BBQ.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png">
+<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits_BBQ.png">
+<meta property="og:updated_time" content="2017-03-02T02:08:10.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Transmission Line Theory of 《Microwave Engineering》">
-<meta name="twitter:description" content="传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。">
-<meta name="twitter:image" content="http://www.dannex.se/theory/pict/image188.gif">
+<meta name="twitter:title" content="Black Box Quantization">
+<meta name="twitter:description" content="This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is Simon’s paper. For simplicity, I just show 2 simple ca">
+<meta name="twitter:image" content="http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png">
 
 
 
@@ -94,7 +94,7 @@
   };
 </script>
 
-  <title> Transmission Line Theory of 《Microwave Engineering》 | XuYuan's Blog </title>
+  <title> Black Box Quantization | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +282,7 @@
             
             
               
-                Transmission Line Theory of 《Microwave Engineering》
+                Black Box Quantization
               
             
           </h1>
@@ -294,8 +294,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-09T08:32:35+08:00" content="2016-03-09">
-              2016-03-09
+            <time itemprop="dateCreated" datetime="2017-01-20T10:19:31+08:00" content="2017-01-20">
+              2017-01-20
             </time>
           </span>
 
@@ -308,8 +308,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Microwave/" itemprop="url" rel="index">
-                    <span itemprop="name">Microwave</span>
+                  <a href="/categories/quantum/" itemprop="url" rel="index">
+                    <span itemprop="name">quantum</span>
                   </a>
                 </span>
 
@@ -324,8 +324,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/09/Transmission Line Theory/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/Transmission Line Theory/" itemprop="commentsCount"></span>
+                <a href="/2017/01/20/Black-Box-Quantization/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/Black-Box-Quantization/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -351,150 +351,39 @@
       
 
       
-        <p>传输线理论是微波工程中的一个很重要的基本知识，它把微波的场分析理论和基本电路理论联系了起来。本文介绍传输线理论的基本知识框架。</p>
+        <p>This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is <a href="https://arxiv.org/pdf/1204.0587v1.pdf" target="_blank" rel="external">Simon’s paper</a>. For simplicity, I just show 2 simple cases to illustrate the general priciple of the BBQ method.</p>
 <a id="more"></a>
-<h1 id="传输线的集总元件模型"><a href="#传输线的集总元件模型" class="headerlink" title="传输线的集总元件模型"></a>传输线的集总元件模型</h1><ul>
-<li>微波的波长在3m到3mm之间，对应的频率为300MHz到300GHz之间。</li>
-<li>电路理论假定网络的物理尺寸比电波长小很多，电压的幅值和相位在整个电路中不发生变化；</li>
-<li>传输线尺度与电波长量级相当，为分布参量网络，电压或电流的幅值和相位都可能发生变化。</li>
-<li>等效模型：无穷小长度$\delta z$的一段传输线等效为一个集总元件电路，对应的集总元件参数为：</li>
-</ul>
-<blockquote>
-<p>$R$：两导体单位长度的串联电阻，$\Omega /m$。来源于两导体的有限电导率。<br>$L$：两导体单位长度的串联电感，$H/m$。两导体的总自感。<br>$G$：单位长度的并联电导，$S/m$。来源于两导体间填充材料的介电损耗。<br>$C$：单位长度的并联电容，$F/m$。来源于两导体的紧密贴近。</p>
-</blockquote>
-<p><img src="http://www.dannex.se/theory/pict/image188.gif" alt="传输线理论的等效电路模型"></p>
-<ul>
-<li>利用基尔霍夫电压定律和电流定律可得：<br>$$v(z,t)-R\Delta zi(z,t)-L\Delta z\frac{\partial i(z,t)}{\partial t}-v(z+\Delta z,t)=0$$<br>$$i(z,t)-G\Delta zv(z+\Delta z,t)-C\Delta z\frac{\partial v(z+\Delta z,t)}{\partial t}-i(z+\Delta z,t)=0$$</li>
-<li>由上面两式可得到<strong>传输线方程</strong>（电报方程）：<br>$$\frac{\partial v(z,t)}{\partial t}=-Ri(z,t)-L\frac{\partial i(z,t)}{\partial t}$$<br>$$\frac{\partial i(z,t)}{\partial t}=-Gv(z,t)-C\frac{\partial v(z,t)}{\partial t}$$</li>
-<li>对于简谐稳态，具有余弦型含时分量。上面两式可简化为：<br>$$\frac{dV(z)}{dz}=-(R+j\omega L)I(z)$$<br>$$\frac{dI(z)}{dz}=-(G+j\omega C)V(z)$$</li>
-</ul>
-<h1 id="传输线上的波传播"><a href="#传输线上的波传播" class="headerlink" title="传输线上的波传播"></a>传输线上的波传播</h1><ul>
-<li>联立上面关于$V(z)$和$I(z)$的方程可得：<br>$$\frac{d^2V(z)}{dz^2}-\gamma^2V(z)=0$$<br>$$\frac{d^2I(z)}{dz^2}-\gamma^2I(z)=0$$<br>其中$\gamma=\alpha+j\beta=\sqrt{(R+j\omega L)(G+j\omega C)}$为复传播常数。</li>
-<li>由上面两个方程可以求得其行波解：<br>$$V(z)=V_0^+e^{-\gamma z}+V_0^-e^{\gamma z}$$<br>$$I(z)=I_0^+e^{-\gamma z}+I_0^-e^{\gamma z}$$</li>
-<li>$e^{-\gamma z}$代表沿$+z$方向传播的波，$e^{\gamma z}$代表沿$-z$方向传播的波。</li>
-<li>根据$I(z)$和$V(z)$之间的关系可得：<br>$$I(z)=\frac{\gamma}{R+j\omega L}\left[V_0^+e^{-\gamma z}-V_0^-e^{\gamma z} \right]$$</li>
-<li>定义<strong>特征阻抗</strong>$Z_0$：<br>$$Z_0=\frac{R+j\omega L}{\gamma}=\sqrt{\frac{R+j\omega L}{G+J\omega C}}$$</li>
-<li>特征阻抗联系了传输线上的电压和电流。<br>$$\frac{V_0^+}{I_0^+}=Z_0=\frac{-V_0^-}{I_0^-}$$</li>
-<li>对应电流可以表示为：<br>$$I(z)=\frac{V_0^+}{Z_0}e^{-\gamma z}-\frac{V_0^-}{Z_0}e^{\gamma z}$$</li>
-<li><p>进一步时域形式的电压波形可表示为：<br>$$v(z,t)=\left|V_0^+ \right|\cos(\omega t-\beta z+\phi^+)e^{-\alpha z}+\left|V_0^- \right|\cos(\omega t+\beta z+\phi^-)e^{\alpha z}$$</p>
-</li>
-<li><p>传输线上波长：$\lambda=\frac{2\pi}{\beta}$</p>
-</li>
-<li>相速为：$v_p=\frac{\omega}{\beta}=\lambda f$</li>
-</ul>
-<h1 id="无耗传输线"><a href="#无耗传输线" class="headerlink" title="无耗传输线"></a>无耗传输线</h1><ul>
-<li><p>对于一般传输线而言，损耗都比较小，可以忽略。也就是说：$R=G=0$<br>$$\gamma=\alpha+j\beta=j\omega\sqrt{LC}$$<br>$$\beta=\omega\sqrt{LC}$$<br>$$\alpha=0$$</p>
-</li>
-<li><p>特征阻抗为：<br>$$Z_0=\sqrt{\frac{L}{C}}$$</p>
-</li>
-<li><p>无耗传输线的电压和电流为：<br>$$V(z)=V_0^+e^{-j\beta z}+V_0^-e^{j\beta z}$$<br>$$I(z)=\frac{V_0^+}{Z_0}e^{-j \beta z}-\frac{V_0^-}{Z_0}e^{j \beta z}$$ </p>
-</li>
-<li><p>波长：$\lambda=\frac{2\pi}{\beta}=\frac{2\pi}{\omega \sqrt{LC}}$</p>
-</li>
-<li>相速：$v_p=\frac{\omega}{\beta}=\frac{1}{\sqrt{LC}}$</li>
-</ul>
-<h1 id="端接负载的无耗传输线"><a href="#端接负载的无耗传输线" class="headerlink" title="端接负载的无耗传输线"></a>端接负载的无耗传输线</h1><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160309172635.png" alt="端接负载的无耗传输线"></p>
-<ul>
-<li><p>由上面$z$处的电压和电流公式，可以得到$z=0$处的电压和电流，以及它们与负载阻抗之间的关系：<br>$$Z_L=\frac{V(0)}{I(0)}=\frac{V_0^+ + V_0^-}{V_0^+ -V_0^-} Z_0$$</p>
-</li>
-<li><p>由上面公式可以反解出$V_0^-$<br>$$V_0^-=\frac{Z_L-Z_0}{Z_L+Z_0} V_0^+ $$</p>
-</li>
-<li><p>定义<strong>电压反射系数：</strong>$\Gamma$，表示入射电压波的振幅与反射电压波的振幅之比。<br>$$\Gamma=\frac{Z_L-Z_0}{Z_L+Z_0}$$</p>
-</li>
-<li><p>将$\Gamma$代入无耗传输线的的电压和电流公式中可得：<br>$$V(z)=V_0^+ \left[ e^{-j\beta z}+\Gamma e^{j\beta z} \right]$$<br>$$I(z)=\frac{V_0^+}{Z_0}\left[ e^{-j \beta z}-\Gamma e^{j \beta z} \right]$$ </p>
-</li>
-<li><p>当负载阻抗$Z_L$等于传输线的特征阻抗$Z_0$时，电压反射系数$\Gamma =0$，此时只有入射波，没有反射波。这样的负载称为<strong>匹配负载</strong>。</p>
-</li>
-<li><p>考虑传输线上$z$处的时间平均功率流：<br>$$P_{avg}=\frac{1}{2} Re \left[ V(z) I(z)^* \right] = \frac{1}{2} \frac{\left| V_0^+ \right| ^2}{Z_0} Re  \left[ 1 - \Gamma^* e^{-2j \beta z } + \Gamma e^{2j\beta z} -\left| \Gamma \right|^2 \right] \<br>=  \frac{1}{2} \frac{\left| V_0^+ \right|^2}{Z_0} \left(1-\left| \Gamma \right|^2 \right)$$</p>
-<ul>
-<li>负载匹配时，$\Gamma =0$，传送到负载的功率最大；</li>
-<li>负载阻抗远大于传输线本征阻抗时，$\Gamma =1$，没有功率传到负载。</li>
-</ul>
-</li>
-<li><p>定义回波损耗（return loss）:（以dB为单位）<br>$$RL=-20\lg{\left| \Gamma \right| } dB$$</p>
-<ul>
-<li>匹配负载（$\Gamma=0$）具有$\infty$ dB 的回波损耗（无反射功率）；</li>
-<li>全反射（$\left| \Gamma \right|=1$）具有0 dB的回波损耗（所有的入射功率都被反射回来了）。</li>
-</ul>
-</li>
-<li><p>传输线上电压幅值随距离$z$的变化：<br>$$\left| V(z) \right| = \left| V_0^+ \right| \left| 1+\Gamma e^{2j\beta z} \right|= \left| V_0^+ \right| \left| 1+\Gamma e^{-2j\beta l} \right| = \left| V_0^+ \right| \left| 1+\left| \Gamma \right| e^{j(\theta-2 \beta z)} \right|$$</p>
-<ul>
-<li>其中$l=-z$, $\theta$是反射系数的相位（$\Gamma = \left| \Gamma \right| e^{j \theta}$）。</li>
-<li>电压幅值随传输线的距离$z$的变化而周期性震荡变化。</li>
-<li>当相位项$e^{j(\theta-2\beta l)}=1$时，电压幅值出现最大值：$$V_{max} =\left| V_0^+ \right| (1+\left| \Gamma \right| ) $$</li>
-<li>当相位项$e^{j(\theta-2\beta l)}=-1$时，电压幅值出现最大值：$$V_{min} =\left| V_0^+ \right| (1-\left| \Gamma \right| ) $$</li>
-<li>定义<strong>电压驻波比</strong>：$$ SWR=\frac{V_{max}}{V_{min}} = \frac{1+\left| \Gamma \right|}{1-\left| \Gamma \right|} $$<ul>
-<li>电压驻波比SWR为实数，且$1 \le SWR \le  \infty $ </li>
-<li>$SWR =1 $ 对应负载匹配。</li>
-</ul>
-</li>
-<li>相邻两个电压最大值（或最小值）之间的距离为：$l={2\pi}/{2 \beta}=\lambda /2$</li>
-</ul>
-</li>
-<li><p>传输线上$z=-l$处的反射系数可以表示为：$$\Gamma (l) = \frac{V_0^- e^{-j\beta l}}{V_0^+ e^{j\beta l}} = \Gamma (0) e^{-2j\beta l} $$</p>
-<ul>
-<li>其中：$\Gamma (0)$是$z=0$ 处的反射系数。</li>
-</ul>
-</li>
-<li><p>在传输线上距离负载$z=-l$距离处，朝负载看去的输入阻抗为：$$Z_{in} = \frac{V(-l)}{I(-l)} = \frac{V_0^+ \left[ e^{j\beta l}+\Gamma e^{-j\beta l} \right]}{V_0^+ \left[ e^{j \beta l}-\Gamma e^{-j \beta l} \right]} Z_0 $$</p>
-</li>
-<li>将反射系数$\Gamma $的表达式代入上式，进一步可以得到<strong>传输线的阻抗方程</strong>：<br>$$Z_{in} =Z_0 \frac{Z_L + jZ_0 \tan{\beta l} }{Z_0 + jZ_L \tan{\beta l} } $$</li>
-</ul>
-<h2 id="负载短路的无耗传输线"><a href="#负载短路的无耗传输线" class="headerlink" title="负载短路的无耗传输线"></a>负载短路的无耗传输线</h2><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310143358.png" alt="负载短路的无耗传输线模型"></p>
-<ul>
-<li>负载短路：$Z_L=0$；</li>
-<li>短路负载的反射系数：$\Gamma=-1$；</li>
-<li>短路负载的驻波比为无穷大；</li>
-<li><p>短路负载传输线上的电压和电流为：<br>$$V(z)=V_0^+ \left[ e^{-j \beta z}- e^{j \beta z} \right] = -2jV_0^+ \sin{\beta z} $$<br>$$I(z)=\frac{V_0^+}{Z_0} \left[ e^{-j \beta z}+ e^{j \beta z} \right] =\frac{2V_0^+}{Z_0} \cos{\beta z} $$</p>
-</li>
-<li><p>在$z=-l$处的输入阻抗为：$$Z_{in} =\frac{V(-l)}{I(-l)}= jZ_0 \tan{\beta l} $$</p>
-<ul>
-<li>当$l=0$时， $Z_{in}=0$；</li>
-<li>当$l={\lambda}/{4}$时， $Z_{in}=\infty $；</li>
-</ul>
-</li>
-</ul>
-<h2 id="负载开路的无耗传输线"><a href="#负载开路的无耗传输线" class="headerlink" title="负载开路的无耗传输线"></a>负载开路的无耗传输线</h2><p><img src="http://7xroek.com1.z0.glb.clouddn.com/microwaveQQ20160310144058.png" alt="负载开路的无耗传输线模型"></p>
-<ul>
-<li>负载开路：$Z_L=\infty$；</li>
-<li>开路负载的反射系数：$\Gamma=1$；</li>
-<li>开路负载的驻波比也为无穷大；</li>
-<li><p>开路负载传输线上的电压和电流为：<br>$$V(z)=V_0^+ \left[ e^{-j \beta z}+ e^{j \beta z} \right] = 2V_0^+ \cos{\beta z} $$<br>$$I(z)=\frac{V_0^+}{Z_0} \left[ e^{-j \beta z}- e^{j \beta z} \right] =\frac{-2jV_0^+}{Z_0} \sin{\beta z} $$</p>
-</li>
-<li><p>在$z=-l$处的输入阻抗为：$$Z_{in} =\frac{V(-l)}{I(-l)}= -jZ_0 \cot{\beta l} $$</p>
-</li>
-</ul>
-<h2 id="具有特定长度的端接传输线"><a href="#具有特定长度的端接传输线" class="headerlink" title="具有特定长度的端接传输线"></a>具有特定长度的端接传输线</h2><ul>
-<li><p>对于$l=\lambda /2$的传输线，输入阻抗为：$$Z_{in}= Z_L$$</p>
-<ul>
-<li>半波长（或半波长的整数倍）的传输线不变换负载阻抗，与自身的特征阻抗无关。</li>
-</ul>
-</li>
-<li><p>对于$l=\lambda /4$（或者是$l=\lambda /4+n \lambda /2 , n=0,1,2,3…$）的传输线，输入阻抗为：$$Z_{in}=\frac{Z_0^2}{Z_L}$$</p>
-<ul>
-<li>这种传输线称为<strong>四分之一波长变换器</strong>;</li>
-<li>它具有以倒数的方式变换负载阻抗的作用；</li>
-<li>它依赖传输线的特征阻抗。</li>
-</ul>
-</li>
-</ul>
-<h2 id="具有不同特征阻抗的传输线的串接"><a href="#具有不同特征阻抗的传输线的串接" class="headerlink" title="具有不同特征阻抗的传输线的串接"></a>具有不同特征阻抗的传输线的串接</h2><ul>
-<li><p>考虑特征阻抗为$Z_0$的传输线连接到一个具有不同特征阻抗$Z_1$的传输线上，假定负载线无穷长。<br><img src="http://7xroek.com1.z0.glb.clouddn.com/microwave20160310153522.png" alt="具有不同特征阻抗的传输线的串接"></p>
-</li>
-<li><p>由连接处看到的输入阻抗为$Z_1$，反射系数为：$$\Gamma= \frac{Z_1-Z_0}{Z_1+Z_0}$$</p>
-</li>
-<li><p>$z&lt;0$处的电压为：$$V(z)= V_0^+ \left( e^{-j \beta z}+\Gamma e^{j \beta z} \right), z&lt;0 $$</p>
-</li>
-<li><p>$z&gt;0$处的电压为：$$V(z) =V_0^+ T  e^{-j \beta z} , z&gt;0 $$</p>
-<ul>
-<li>其中$T$为传输系数。</li>
-</ul>
-</li>
-<li><p>使上面两个公式的电压值在$z=0$处相等，则可以得到传输系数为：<br>$$T=1+\Gamma=1+ \frac{Z_1-Z_0}{Z_1+Z_0} = \frac{2Z_1}{Z_1+Z_0} $$</p>
-</li>
-<li><p>电路中两点之间的传输系数常常用dB表示为<strong>插入损耗</strong>：$$IL=-20 \lg{\left| T \right|} dB$$</p>
-</li>
-</ul>
+<hr>
+<h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>In my previous article <a href="http://xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/">“Quantization of linear and non-linear LC circuits”</a>, we have learned the method to quantize a simple linear and non-linear LC circuit. However, a typical circuit always consitsing of many capacitors and inductors is more complex than a simple LC circuit. Generally, we consider this complex linear LC circuit as a black box. The following figure shows a complex linear LC circuit which is considered as a linear black box. This linear black box is usually coupled to a non-linear element. In the following figure, the gray background indicates the linear black box.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png" alt="Complex LC circuit"></p>
+<p>In the following two parts, we illustrate the black box quantization method in two simple situations. One is “one qubit coupled to two resonator modes”, another is “two qubits coupled to one resonator mode”.</p>
+<hr>
+<h3 id="2-One-qubit-coupled-to-two-resonator-modes"><a href="#2-One-qubit-coupled-to-two-resonator-modes" class="headerlink" title="2. One qubit coupled to two resonator modes"></a>2. One qubit coupled to two resonator modes</h3><p>The LC circuit we will deal with is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/Qubit_2Cavity.png" alt="Qubit coupled to two cavities"><br>For the non-linear element Josephson junction, it can be considered as a non-linear inductor. The Hamiltonian of the non-linear inductor can be expressed as:<br>$$H_{inductor} = -E_J \cos\varphi = -E_J \left( 1 - \frac{1}{2!} \varphi^2 + \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$</p>
+<p>The non-linear part of the Josephson junction can be obtained by removing the linear part of the inductor Hamiltonian.<br>$$V = H_{inductor} + E_J \left( 1 - \frac{1}{2!} \varphi^2 \right) = -E_J \left(  \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$</p>
+<p>The linear part of the inductor Hamiltonian and other linear inductors and capacitors form the black box, which is equivalent to a series of LC resonators. Then the circuit can be simplified as non-linear Josephson junction coupled to a linear black box, which is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/Qubit_BBQ.png" alt="Qubit_BBQ"><br>The gray background indicates the linear black box. The impedence of the black box can be expressed as:<br>$$\begin{align}<br>Z &amp;= j\omega L_1 //\frac{1}{j\omega C_1} + j\omega L_2 //\frac{1}{j\omega C_2} + j\omega L_3 //\frac{1}{j\omega C_3}<br>\&amp;= \frac{1}{j\omega C_1 + \frac{1}{j\omega L_1}} + \frac{1}{j\omega C_2 + \frac{1}{j\omega L_2}} + \frac{1}{j\omega C_3 + \frac{1}{j\omega L_3}}<br>\&amp;= \frac{Z_1}{j \left( \frac{\omega}{\omega_1}-\frac{\omega_1}{\omega} \right)} + \frac{Z_2}{j \left( \frac{\omega}{\omega_2}-\frac{\omega_2}{\omega} \right)} + \frac{Z_3}{j \left( \frac{\omega}{\omega_3}-\frac{\omega_3}{\omega} \right)}<br>\end{align}$$<br>Here, we have defined the resonance frequencies are: $\omega_1 = \frac{1}{L_1 C_1}$, $\omega_2 = \frac{1}{L_2 C_2}$ and $\omega_3 = \frac{1}{L_3 C_3}$. The characteristic impedances are: $Z_1 = \sqrt{\frac{L_1}{C_1}}$, $Z_2 = \sqrt{\frac{L_2}{C_2}}$ and $Z_3 = \sqrt{\frac{L_3}{C_3}}$.</p>
+<p>Then the admittance of the black box can be expressed as:<br>$$Y = Z^{-1} = j \left( \frac{Z_1}{ \frac{\omega}{\omega_1}-\frac{\omega_1}{\omega} } + \frac{Z_2}{\frac{\omega}{\omega_2}-\frac{\omega_2}{\omega} } + \frac{Z_3}{ \frac{\omega}{\omega_3}-\frac{\omega_3}{\omega} } \right)^{-1}$$</p>
+<p>Then from zero points of the imaginary of the admittance $ImY = 0$, we can obtain the three resonance frequencies: $\omega = \omega_1$, $\omega = \omega_2$ and $\omega = \omega_3$.</p>
+<p>We can also derive the expression of the derivative of the imaginary admittance and find this derivative at the three resonance frequencies.<br>When $\omega = \omega<em>1$:<br>$$\left(ImY \right)’</em>{\omega_1} = \frac{2}{\omega_1 Z_1} \quad \Longrightarrow \quad Z_1 = \frac{2}{\omega<em>1 \left(ImY \right)’</em>{\omega_1}} $$</p>
+<p>When $\omega = \omega<em>2$:<br>$$\left(ImY \right)’</em>{\omega_2} = \frac{2}{\omega_2 Z_2} \quad \Longrightarrow \quad Z_2 = \frac{2}{\omega<em>2 \left(ImY \right)’</em>{\omega_2}} $$</p>
+<p>When $\omega = \omega<em>3$:<br>$$\left(ImY \right)’</em>{\omega_3} = \frac{2}{\omega_3 Z_3} \quad \Longrightarrow \quad Z_3 = \frac{2}{\omega<em>3 \left(ImY \right)’</em>{\omega_3}} $$</p>
+<p>Therefore, we can see that a positive slope of the imaginary admittance can always be obtained at each zero point.</p>
+<p>For a specific model, we use High Frequency Structural Simulator (HFSS) software to obtain the admittance of the linear black box seen from the two port. With the knowledge of the admittance of the black box, we can obtain the zero points of the imaginary admittance and its slope of at each zero points. These zero points are coresponding to the resonance frequencies of the black box. From the resonance frequencies and slopes, we can calculate the characteristic impedance of each mode.</p>
+<p>After obtaining the resonance frequency and characteristic impedance of each mode, we can write the quantized Hamiltonian of the linear black box.<br>$$H_{linear} = \hbar \omega_1 a_1^{\dagger} a_1 + \hbar \omega_2 a_2^{\dagger} a_2 + \hbar \omega_3 a_3^{\dagger} a_3$$<br>Here, the $a_1^{\dagger}$, $a_1$,$a_2^{\dagger}$, $a_2$ and $a_3^{\dagger}$, $a_3$ are the creation and anhilation operator of the three modes.<br>The flux variable of each mode can also be expressed by the creation and anhilation operators.<br>$$\Phi<em>1 = \Phi</em>{ZPF1} \left( a_1^{\dagger} + a_1 \right)$$<br>$$\Phi<em>2 = \Phi</em>{ZPF2} \left( a_2^{\dagger} + a_2 \right)$$<br>$$\Phi<em>3 = \Phi</em>{ZPF3} \left( a_3^{\dagger} + a<em>3 \right)$$<br>Here, $\Phi</em>{ZPF1} = \sqrt{\frac{\hbar Z<em>1}{2}}$, $\Phi</em>{ZPF2} = \sqrt{\frac{\hbar Z<em>2}{2}}$ and $\Phi</em>{ZPF3} = \sqrt{\frac{\hbar Z_3}{2}}$<br>The phase difference of each mode can be expressed as:<br>$$\varphi_1 = 2\pi \frac{\Phi_1}{\varphi_0} = 2\pi \frac{\Phi_1}{h/2e} = \frac{2e}{\hbar} \Phi_1$$<br>$$\varphi_2 = 2\pi \frac{\Phi_2}{\varphi_0} = 2\pi \frac{\Phi_2}{h/2e} = \frac{2e}{\hbar} \Phi_2$$<br>$$\varphi_3 = 2\pi \frac{\Phi_3}{\varphi_0} = 2\pi \frac{\Phi_3}{h/2e} = \frac{2e}{\hbar} \Phi_3$$</p>
+<p>The phase difference across the non-linear Josephson junction can be expressed as:<br>$$\begin{align}<br>\varphi &amp;= \varphi_1 + \varphi_2 + \varphi_3<br>\&amp;=\frac{2e}{\hbar} \left( \Phi_1 + \Phi_2 + \Phi_3 \right)<br>\&amp;=\frac{2e}{\hbar} \left[ \sqrt{\frac{\hbar Z_1}{2}} \left( a_1^{\dagger} + a_1 \right) +  \sqrt{\frac{\hbar Z_2}{2}} \left( a_2^{\dagger} + a_2 \right) + \sqrt{\frac{\hbar Z_3}{2}} \left( a_3^{\dagger} + a_3 \right) \right]<br>\end{align}$$</p>
+<p>Therefore, the non-linear Hamiltonian of the Josephson junction can be expressed as:<br>$$\begin{align}<br>&amp;H_{non-linear} = V<br>\&amp;= -E_J \left( \frac{1}{4!}\varphi^4 - \frac{1}{6!}\varphi^6 + \frac{1}{8!}\varphi^8 - \frac{1}{10!}\varphi^{10} + … \right)<br>\end{align}$$</p>
+<p>Finally, we can obtain the whole Hamiltonian of the system:<br>$$H<em>{system} = H</em>{linear} + H_{non-linear}$$<br>After obtaning the whole Hamiltonian, we can diagonalize this Hamiltonian numerically and find its eigenenergies, from which we can obtain the resonance frequencies, self-Kerr, cross-Kerr terms and finally, we can acquire the coupling strength and anharmonicity of the qubit.</p>
+<hr>
+<h3 id="3-Two-qubits-coupled-to-one-resonator-mode"><a href="#3-Two-qubits-coupled-to-one-resonator-mode" class="headerlink" title="3. Two qubits coupled to one resonator mode"></a>3. Two qubits coupled to one resonator mode</h3><p>Then we are gong to deal with a two qubits situation, which is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png" alt="cavity_2qubits"></p>
+<p>We use the same method as before to move all the linear part into the black box, and only the two ports non-linear Josephson junctions remain. The equivalent circuit is shown below.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits_BBQ.png" alt="cavity_2qubits_BBQ"></p>
+<p>Here, we consider the port 1 as the reference port. We could obtain the impedance matrix from the HFSS for each resonance mode. That is to say, we can obtain $Z<em>{11} \left(\omega \right)$, $Z</em>{12} \left(\omega \right)$, $Z<em>{21} \left(\omega \right)$ and $Z</em>{22} \left(\omega \right)$ at each frequency point.</p>
+<p>We use the method as before. We first calculate the admattance of the two port:<br>$$Y<em>1(\omega) = Z</em>{11} \left(\omega \right) ^{-1}$$<br>$$Y<em>2(\omega) = Z</em>{22} \left(\omega \right) ^{-1}$$<br>Find the zero points of the imaginary admattance $ImY_1(\omega) =0$ or $ImY_2(\omega) =0$, we can get the resonance frequency of each mode. $\omega = \omega_1$, $\omega = \omega_2$ and $\omega = \omega<em>3$ . The zero root solutions of these two equations should be same.<br>Therefore, we can obtain the linear Hamiltonian:<br>$$H</em>{linear} = \hbar \omega_1 a_1^{\dagger} a_1 +\hbar \omega_2 a_2^{\dagger} a_2+\hbar \omega_3 a_3^{\dagger} a_3$$</p>
+<p>The characteristic impedance of the three modes can aslo be calculated:<br>$$Z_1 = \frac{2}{\omega<em>1 \left(ImY \right)’</em>{\omega_1}} $$<br>$$Z_2 = \frac{2}{\omega<em>2 \left(ImY \right)’</em>{\omega_2}} $$<br>$$Z_3 = \frac{2}{\omega<em>3 \left(ImY \right)’</em>{\omega_3}} $$</p>
+<p>The phase difference across the reference Josephson junction port can be expressed as:<br>$$\begin{align}<br>\varphi1 &amp;= \varphi_1 + \varphi_2 + \varphi_3<br>\&amp;=\frac{2e}{\hbar} \left( \Phi_1 + \Phi_2 + \Phi<em>3 \right)<br>\&amp;=\frac{2e}{\hbar} \left[ \Phi</em>{ZPF1} \left( a_1^{\dagger} + a<em>1 \right) +  \Phi</em>{ZPF2} \left( a_2^{\dagger} + a<em>2 \right) + \Phi</em>{ZPF3} \left( a_3^{\dagger} + a_3 \right) \right]<br>\end{align}$$</p>
+<p>The second junction port can also be calculated:<br>$$\begin{align}<br>\varphi2 &amp;= \frac{Z_{21}(\omega<em>1) }{Z</em>{11}(\omega_1)}\varphi<em>1 + \frac{Z</em>{21}(\omega<em>2) }{Z</em>{11}(\omega_2)}\varphi<em>2 + \frac{Z</em>{21}(\omega<em>3) }{Z</em>{11}(\omega_3)}\varphi<em>3<br>\&amp;=\frac{2e}{\hbar} \left( \frac{Z</em>{21}(\omega<em>1) }{Z</em>{11}(\omega_1)}\Phi<em>1 + \frac{Z</em>{21}(\omega<em>2) }{Z</em>{11}(\omega_2)}\Phi<em>2 + \frac{Z</em>{21}(\omega<em>3) }{Z</em>{11}(\omega_3)}\Phi<em>3 \right)<br>\&amp;=\frac{2e}{\hbar} \left[ \frac{Z</em>{21}(\omega<em>1) }{Z</em>{11}(\omega<em>1)} \Phi</em>{ZPF1}\left( a_1^{\dagger} + a<em>1 \right) +  \frac{Z</em>{21}(\omega<em>2) }{Z</em>{11}(\omega<em>2)}\Phi</em>{ZPF2} \left( a_2^{\dagger} + a<em>2 \right) + \frac{Z</em>{21}(\omega<em>3) }{Z</em>{11}(\omega<em>3)}\Phi</em>{ZPF3} \left( a_3^{\dagger} + a<em>3 \right) \right]<br>\end{align}$$<br>Here, $\Phi</em>{ZPF1} = \sqrt{\frac{\hbar Z<em>1}{2}}$, $\Phi</em>{ZPF2} = \sqrt{\frac{\hbar Z<em>2}{2}}$ and $\Phi</em>{ZPF3} = \sqrt{\frac{\hbar Z<em>3}{2}}$<br>Here, we define a matrix:<br>$$\phi</em>{ZPF} =\frac{2e}{\hbar} \begin{pmatrix}<br>\Phi<em>{ZPF1} &amp; \Phi</em>{ZPF2} &amp; \Phi<em>{ZPF3} \ \frac{Z</em>{21}(\omega<em>1) }{Z</em>{11}(\omega<em>1)}\Phi</em>{ZPF1} &amp; \frac{Z_{21}(\omega<em>2) }{Z</em>{11}(\omega<em>2)}\Phi</em>{ZPF2} &amp; \frac{Z_{21}(\omega<em>3) }{Z</em>{11}(\omega<em>3)}\Phi</em>{ZPF3}<br>\end{pmatrix}$$<br>$$a = \begin{pmatrix}<br>a_1^{\dagger} + a_1 \ a_2^{\dagger} + a_2 \ a_3^{\dagger} + a<em>3<br>\end{pmatrix}$$<br>Therefore,<br>$$\varphi = \begin{pmatrix}<br>\varphi 1 \ \varphi 2<br>\end{pmatrix}<br>=\phi</em>{ZPF} \cdot a$$</p>
+<p>We can define a function which expand the cos function and ignore the first two terms.<br>$$\begin{align}F(x) &amp;= \cos(x) -(1 - \frac{1}{2!}x^2)<br>\ &amp;= \frac{1}{4!}x^4 - \frac{1}{6!}x^6 + \frac{1}{8!}x^8 - \frac{1}{10!}x^{10} + …\end{align}$$</p>
+<p>Therefore, we can obtain the non-linear Hamiltonian:<br>$$H<em>{non-linear} = -E</em>{J1} F(\varphi 1) -E<em>{J2} F(\varphi 2)$$<br>Finally, we can acquire the total Hamiltonian of the system:<br>$$H</em>{system} = H<em>{linear} + H</em>{non-linear}$$</p>
+<hr>
+<h3 id="4-Summary"><a href="#4-Summary" class="headerlink" title="4. Summary"></a>4. Summary</h3><p>This article summaries the method of black box quantization with two simple situations. The black box quantization </p>
+<hr>
 
       
     </div>
@@ -509,9 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Microwave/" rel="tag">#Microwave</a>
-          
-            <a href="/tags/Transmission-line/" rel="tag">#Transmission line</a>
+            <a href="/tags/quantum/" rel="tag">#quantum</a>
           
         </div>
       
@@ -520,17 +407,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/08/Attenuator/" rel="next" title="Attenuator">
-                <i class="fa fa-chevron-left"></i> Attenuator
+              <a href="/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/" rel="next" title="Quantization of linear and non-linear LC circuits">
+                <i class="fa fa-chevron-left"></i> Quantization of linear and non-linear LC circuits
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/10/Microwave Power Ratio and Decibels/" rel="prev" title="Microwave Power Ratio and Decibels">
-                Microwave Power Ratio and Decibels <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,8 +439,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/09/Transmission Line Theory/"
-           data-title="Transmission Line Theory of 《Microwave Engineering》" data-url="xuyuan.cf/2016/03/09/Transmission Line Theory/">
+      <div class="ds-thread" data-thread-key="2017/01/20/Black-Box-Quantization/"
+           data-title="Black Box Quantization" data-url="xuyuan.cf/2017/01/20/Black-Box-Quantization/">
       </div>
     
   </div>
@@ -659,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线的集总元件模型"><span class="nav-number">1.</span> <span class="nav-text">传输线的集总元件模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输线上的波传播"><span class="nav-number">2.</span> <span class="nav-text">传输线上的波传播</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无耗传输线"><span class="nav-number">3.</span> <span class="nav-text">无耗传输线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#端接负载的无耗传输线"><span class="nav-number">4.</span> <span class="nav-text">端接负载的无耗传输线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#负载短路的无耗传输线"><span class="nav-number">4.1.</span> <span class="nav-text">负载短路的无耗传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载开路的无耗传输线"><span class="nav-number">4.2.</span> <span class="nav-text">负载开路的无耗传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具有特定长度的端接传输线"><span class="nav-number">4.3.</span> <span class="nav-text">具有特定长度的端接传输线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具有不同特征阻抗的传输线的串接"><span class="nav-number">4.4.</span> <span class="nav-text">具有不同特征阻抗的传输线的串接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-One-qubit-coupled-to-two-resonator-modes"><span class="nav-number">2.</span> <span class="nav-text">2. One qubit coupled to two resonator modes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Two-qubits-coupled-to-one-resonator-mode"><span class="nav-number">3.</span> <span class="nav-text">3. Two qubits coupled to one resonator mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Summary"><span class="nav-number">4.</span> <span class="nav-text">4. Summary</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2017-03-02T02:16:19.531Z</updated>
+  <updated>2017-03-02T02:18:26.761Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="xuyuan.cf/2017/01/20/Black-Box-Quantization/"/>
     <id>xuyuan.cf/2017/01/20/Black-Box-Quantization/</id>
     <published>2017-01-20T02:19:31.000Z</published>
-    <updated>2017-03-02T02:16:19.531Z</updated>
+    <updated>2017-03-02T02:18:26.761Z</updated>
     
     <content type="html">&lt;p&gt;This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is &lt;a href=&quot;https://arxiv.org/pdf/1204.0587v1.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Simon’s paper&lt;/a&gt;. For simplicity, I just show 2 simple cases to illustrate the general priciple of the BBQ method.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -34,14 +34,25 @@
 &lt;p&gt;Then the admittance of the black box can be expressed as:&lt;br&gt;$$Y = Z^{-1} = j \left( \frac{Z_1}{ \frac{\omega}{\omega_1}-\frac{\omega_1}{\omega} } + \frac{Z_2}{\frac{\omega}{\omega_2}-\frac{\omega_2}{\omega} } + \frac{Z_3}{ \frac{\omega}{\omega_3}-\frac{\omega_3}{\omega} } \right)^{-1}$$&lt;/p&gt;
 &lt;p&gt;Then from zero points of the imaginary of the admittance $ImY = 0$, we can obtain the three resonance frequencies: $\omega = \omega_1$, $\omega = \omega_2$ and $\omega = \omega_3$.&lt;/p&gt;
 &lt;p&gt;We can also derive the expression of the derivative of the imaginary admittance and find this derivative at the three resonance frequencies.&lt;br&gt;When $\omega = \omega_1$:&lt;/p&gt;
-&lt;p&gt;$$\left( ImY \right)^’_{\omega_1} = \frac{2}{\omega_1 Z_1} \quad \Longrightarrow \quad Z_1 = \frac{2}{\omega&lt;em&gt;1 \left(ImY \right)^’&lt;/em&gt;{\omega_1}} $$&lt;/p&gt;
-&lt;p&gt;When $\omega = \omega&lt;em&gt;2$:&lt;br&gt;$$\left(ImY \right)^’&lt;/em&gt;{\omega_2} = \frac{2}{\omega_2 Z_2} \quad \Longrightarrow \quad Z_2 = \frac{2}{\omega&lt;em&gt;2 \left(ImY \right)^’&lt;/em&gt;{\omega_2}} $$&lt;/p&gt;
-&lt;p&gt;When $\omega = \omega&lt;em&gt;3$:&lt;br&gt;$$\left(ImY \right)^’&lt;/em&gt;{\omega_3} = \frac{2}{\omega_3 Z_3} \quad \Longrightarrow \quad Z_3 = \frac{2}{\omega&lt;em&gt;3 \left(ImY \right)^’&lt;/em&gt;{\omega_3}} $$&lt;/p&gt;
+&lt;p&gt;$$\left( ImY \right)’_{\omega_1} = \frac{2}{\omega_1 Z_1} \quad \Longrightarrow \quad Z_1 = \frac{2}{\omega&lt;em&gt;1 \left(ImY \right)’&lt;/em&gt;{\omega_1}} $$&lt;/p&gt;
+&lt;p&gt;When $\omega = \omega_2$:&lt;/p&gt;
+&lt;p&gt;$$\left(ImY \right)’_{\omega_2} = \frac{2}{\omega_2 Z_2} \quad \Longrightarrow \quad Z_2 = \frac{2}{\omega&lt;em&gt;2 \left(ImY \right)’&lt;/em&gt;{\omega_2}} $$&lt;/p&gt;
+&lt;p&gt;When $\omega = \omega_3$:&lt;/p&gt;
+&lt;p&gt;$$\left(ImY \right)’_{\omega_3} = \frac{2}{\omega_3 Z_3} \quad \Longrightarrow \quad Z_3 = \frac{2}{\omega&lt;em&gt;3 \left(ImY \right)’&lt;/em&gt;{\omega_3}} $$&lt;/p&gt;
 &lt;p&gt;Therefore, we can see that a positive slope of the imaginary admittance can always be obtained at each zero point.&lt;/p&gt;
 &lt;p&gt;For a specific model, we use High Frequency Structural Simulator (HFSS) software to obtain the admittance of the linear black box seen from the two port. With the knowledge of the admittance of the black box, we can obtain the zero points of the imaginary admittance and its slope of at each zero points. These zero points are coresponding to the resonance frequencies of the black box. From the resonance frequencies and slopes, we can calculate the characteristic impedance of each mode.&lt;/p&gt;
-&lt;p&gt;After obtaining the resonance frequency and characteristic impedance of each mode, we can write the quantized Hamiltonian of the linear black box.&lt;br&gt;$$H_{linear} = \hbar \omega_1 a_1^{\dagger} a_1 + \hbar \omega_2 a_2^{\dagger} a_2 + \hbar \omega_3 a_3^{\dagger} a_3$$&lt;br&gt;Here, the $a_1^{\dagger}$, $a_1$,$a_2^{\dagger}$, $a_2$ and $a_3^{\dagger}$, $a_3$ are the creation and anhilation operator of the three modes.&lt;br&gt;The flux variable of each mode can also be expressed by the creation and anhilation operators.&lt;br&gt;$$\Phi&lt;em&gt;1 = \Phi&lt;/em&gt;{ZPF1} \left( a_1^{\dagger} + a_1 \right)$$&lt;br&gt;$$\Phi&lt;em&gt;2 = \Phi&lt;/em&gt;{ZPF2} \left( a_2^{\dagger} + a_2 \right)$$&lt;br&gt;$$\Phi&lt;em&gt;3 = \Phi&lt;/em&gt;{ZPF3} \left( a_3^{\dagger} + a&lt;em&gt;3 \right)$$&lt;br&gt;Here, $\Phi&lt;/em&gt;{ZPF1} = \sqrt{\frac{\hbar Z&lt;em&gt;1}{2}}$, $\Phi&lt;/em&gt;{ZPF2} = \sqrt{\frac{\hbar Z&lt;em&gt;2}{2}}$ and $\Phi&lt;/em&gt;{ZPF3} = \sqrt{\frac{\hbar Z_3}{2}}$&lt;br&gt;The phase difference of each mode can be expressed as:&lt;br&gt;$$\varphi_1 = 2\pi \frac{\Phi_1}{\varphi_0} = 2\pi \frac{\Phi_1}{h/2e} = \frac{2e}{\hbar} \Phi_1$$&lt;br&gt;$$\varphi_2 = 2\pi \frac{\Phi_2}{\varphi_0} = 2\pi \frac{\Phi_2}{h/2e} = \frac{2e}{\hbar} \Phi_2$$&lt;br&gt;$$\varphi_3 = 2\pi \frac{\Phi_3}{\varphi_0} = 2\pi \frac{\Phi_3}{h/2e} = \frac{2e}{\hbar} \Phi_3$$&lt;/p&gt;
-&lt;p&gt;The phase difference across the non-linear Josephson junction can be expressed as:&lt;br&gt;$$\begin{align}&lt;br&gt;\varphi &amp;amp;= \varphi_1 + \varphi_2 + \varphi_3&lt;br&gt;\&amp;amp;=\frac{2e}{\hbar} \left( \Phi_1 + \Phi_2 + \Phi_3 \right)&lt;br&gt;\&amp;amp;=\frac{2e}{\hbar} \left[ \sqrt{\frac{\hbar Z_1}{2}} \left( a_1^{\dagger} + a_1 \right) +  \sqrt{\frac{\hbar Z_2}{2}} \left( a_2^{\dagger} + a_2 \right) + \sqrt{\frac{\hbar Z_3}{2}} \left( a_3^{\dagger} + a_3 \right) \right]&lt;br&gt;\end{align}$$&lt;/p&gt;
-&lt;p&gt;Therefore, the non-linear Hamiltonian of the Josephson junction can be expressed as:&lt;br&gt;$$\begin{align}&lt;br&gt;&amp;amp;H_{non-linear} = V&lt;br&gt;\&amp;amp;= -E_J \left( \frac{1}{4!}\varphi^4 - \frac{1}{6!}\varphi^6 + \frac{1}{8!}\varphi^8 - \frac{1}{10!}\varphi^{10} + … \right)&lt;br&gt;\end{align}$$&lt;/p&gt;
+&lt;p&gt;After obtaining the resonance frequency and characteristic impedance of each mode, we can write the quantized Hamiltonian of the linear black box.&lt;br&gt;$$H_{linear} = \hbar \omega_1 a_1^{\dagger} a_1 + \hbar \omega_2 a_2^{\dagger} a_2 + \hbar \omega_3 a_3^{\dagger} a_3$$&lt;/p&gt;
+&lt;p&gt;Here, the $a_1^{\dagger}$, $a_1$,$a_2^{\dagger}$, $a_2$ and $a_3^{\dagger}$, $a_3$ are the creation and anhilation operator of the three modes.&lt;br&gt;The flux variable of each mode can also be expressed by the creation and anhilation operators.&lt;br&gt;$$\Phi&lt;em&gt;1 = \Phi&lt;/em&gt;{ZPF1} \left( a_1^{\dagger} + a_1 \right)$$&lt;/p&gt;
+&lt;p&gt;$$\Phi&lt;em&gt;2 = \Phi&lt;/em&gt;{ZPF2} \left( a_2^{\dagger} + a_2 \right)$$&lt;/p&gt;
+&lt;p&gt;$$\Phi&lt;em&gt;3 = \Phi&lt;/em&gt;{ZPF3} \left( a_3^{\dagger} + a_3 \right)$$&lt;/p&gt;
+&lt;p&gt;Here, $\Phi_{ZPF1} = \sqrt{\frac{\hbar Z&lt;em&gt;1}{2}}$, $\Phi&lt;/em&gt;{ZPF2} = \sqrt{\frac{\hbar Z&lt;em&gt;2}{2}}$ and $\Phi&lt;/em&gt;{ZPF3} = \sqrt{\frac{\hbar Z_3}{2}}$&lt;/p&gt;
+&lt;p&gt;The phase difference of each mode can be expressed as:&lt;br&gt;$$\varphi_1 = 2\pi \frac{\Phi_1}{\varphi_0} = 2\pi \frac{\Phi_1}{h/2e} = \frac{2e}{\hbar} \Phi_1$$&lt;/p&gt;
+&lt;p&gt;$$\varphi_2 = 2\pi \frac{\Phi_2}{\varphi_0} = 2\pi \frac{\Phi_2}{h/2e} = \frac{2e}{\hbar} \Phi_2$$&lt;/p&gt;
+&lt;p&gt;$$\varphi_3 = 2\pi \frac{\Phi_3}{\varphi_0} = 2\pi \frac{\Phi_3}{h/2e} = \frac{2e}{\hbar} \Phi_3$$&lt;/p&gt;
+&lt;p&gt;The phase difference across the non-linear Josephson junction can be expressed as:&lt;/p&gt;
+&lt;p&gt;$$\begin{align}&lt;br&gt;\varphi &amp;amp;= \varphi_1 + \varphi_2 + \varphi_3&lt;br&gt;\&amp;amp;=\frac{2e}{\hbar} \left( \Phi_1 + \Phi_2 + \Phi_3 \right)&lt;br&gt;\&amp;amp;=\frac{2e}{\hbar} \left[ \sqrt{\frac{\hbar Z_1}{2}} \left( a_1^{\dagger} + a_1 \right) +  \sqrt{\frac{\hbar Z_2}{2}} \left( a_2^{\dagger} + a_2 \right) + \sqrt{\frac{\hbar Z_3}{2}} \left( a_3^{\dagger} + a_3 \right) \right]&lt;br&gt;\end{align}$$&lt;/p&gt;
+&lt;p&gt;Therefore, the non-linear Hamiltonian of the Josephson junction can be expressed as:&lt;/p&gt;
+&lt;p&gt;$$\begin{align}&lt;br&gt;&amp;amp;H_{non-linear} = V&lt;br&gt;\&amp;amp;= -E_J \left( \frac{1}{4!}\varphi^4 - \frac{1}{6!}\varphi^6 + \frac{1}{8!}\varphi^8 - \frac{1}{10!}\varphi^{10} + … \right)&lt;br&gt;\end{align}$$&lt;/p&gt;
 &lt;p&gt;Finally, we can obtain the whole Hamiltonian of the system:&lt;br&gt;$$H&lt;em&gt;{system} = H&lt;/em&gt;{linear} + H_{non-linear}$$&lt;br&gt;After obtaning the whole Hamiltonian, we can diagonalize this Hamiltonian numerically and find its eigenenergies, from which we can obtain the resonance frequencies, self-Kerr, cross-Kerr terms and finally, we can acquire the coupling strength and anharmonicity of the qubit.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;3-Two-qubits-coupled-to-one-resonator-mode&quot;&gt;&lt;a href=&quot;#3-Two-qubits-coupled-to-one-resonator-mode&quot; class=&quot;headerlink&quot; title=&quot;3. Two qubits coupled to one resonator mode&quot;&gt;&lt;/a&gt;3. Two qubits coupled to one resonator mode&lt;/h3&gt;&lt;p&gt;Then we are gong to deal with a two qubits situation, which is shown in the following figure.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png&quot; alt=&quot;cavity_2qubits&quot;&gt;&lt;/p&gt;

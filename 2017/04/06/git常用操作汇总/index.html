@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="capacity measurement," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -61,20 +61,46 @@
 
 
 
-<meta name="description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
+<meta name="description" content="git 常用操作汇总
+git add -A
+git status
+git commit -m “description”
+git config
+git help ?
+git clone git@github.com:xuyuan123/xuyuan123.github.io
+git branch
+git checkout master
+git push -u origin master
+git p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Capacity Measurement with Lock-in Amplifier">
-<meta property="og:url" content="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/index.html">
+<meta property="og:title" content="git 常用操作汇总">
+<meta property="og:url" content="xuyuan.cf/2017/04/06/git常用操作汇总/index.html">
 <meta property="og:site_name" content="XuYuan's Blog">
-<meta property="og:description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixFreq.png">
-<meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixPhase.png">
-<meta property="og:updated_time" content="2016-05-01T03:39:13.545Z">
+<meta property="og:description" content="git 常用操作汇总
+git add -A
+git status
+git commit -m “description”
+git config
+git help ?
+git clone git@github.com:xuyuan123/xuyuan123.github.io
+git branch
+git checkout master
+git push -u origin master
+git p">
+<meta property="og:updated_time" content="2017-04-06T02:04:29.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capacity Measurement with Lock-in Amplifier">
-<meta name="twitter:description" content="Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using">
-<meta name="twitter:image" content="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png">
+<meta name="twitter:title" content="git 常用操作汇总">
+<meta name="twitter:description" content="git 常用操作汇总
+git add -A
+git status
+git commit -m “description”
+git config
+git help ?
+git clone git@github.com:xuyuan123/xuyuan123.github.io
+git branch
+git checkout master
+git push -u origin master
+git p">
 
 
 
@@ -92,7 +118,7 @@
   };
 </script>
 
-  <title> Capacity Measurement with Lock-in Amplifier | XuYuan's Blog </title>
+  <title> git 常用操作汇总 | XuYuan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +306,7 @@
             
             
               
-                Capacity Measurement with Lock-in Amplifier
+                git 常用操作汇总
               
             
           </h1>
@@ -292,8 +318,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T09:41:37+08:00" content="2016-05-01">
-              2016-05-01
+            <time itemprop="dateCreated" datetime="2017-04-06T09:24:35+08:00" content="2017-04-06">
+              2017-04-06
             </time>
           </span>
 
@@ -306,8 +332,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/capacity-measurement/" itemprop="url" rel="index">
-                    <span itemprop="name">capacity measurement</span>
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
                   </a>
                 </span>
 
@@ -322,8 +348,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/01/Capacity-measurement-with-lockin-amplifier/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/01/Capacity-measurement-with-lockin-amplifier/" itemprop="commentsCount"></span>
+                <a href="/2017/04/06/git常用操作汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/06/git常用操作汇总/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,30 +375,22 @@
       
 
       
-        <p>Capacity is a difficult parameter to measure, especially for small capacities fabricated by trilayer nano-fabrication technology. This article provides a method to measure the small capacity by using a lock-in amplifier.<br><a id="more"></a></p>
-<h2 id="Measurement-Scheme"><a href="#Measurement-Scheme" class="headerlink" title="Measurement Scheme"></a>Measurement Scheme</h2><p>The measurement circuit is shown below.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/capacity_measurement_circuit.png" alt="the measurement circuit"></p>
-<p>The reference sin signal comes from the lock-in amplifier and we use a reference resistance $R_{ref}$. We put the unknown capacity $C_x$ in parallel in the circuit. And the $U_{out}$ signal comes into the lock-in amplifier signal in port.</p>
-<p>We can calculate the output signal:<br>$$\begin{align}<br>&amp;\frac{U_{out}}{U_{in}}=\frac{Z_{out}}{Z_{in}}=\frac{R_0 ||\left( C_0 +C_x \right)}{R_{ref} + R_0 ||\left( C_0 +C_x \right) }\\<br>&amp;=\frac{R_0}{\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right) }\\<br>&amp;=\frac{R_0 \left[\left( R_0+ R_{ref}\right) +j\omega R_0 R_{ref}\left( C_0 +C_x \right)\right]}{\left( R_0+ R_{ref}\right) ^2 + \omega^2R_0^2R_{ref}^2 \left( C_0 +C_x \right)^2}\\<br>\end{align}$$</p>
-<p>We can get the phase from the above equation:<br>$$\tan\theta=\frac{-\omega R_0 R_{ref}\left( C_0 +C_x \right)}{\left( R_0+ R_{ref}\right)}$$</p>
-<p>Finally, we can get the relation between the unknown capacity $C_x$ and the signal frequency $\omega$, the phase difference $\theta$:<br>$$C_x=- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta}{\omega} - C_0$$</p>
-<p>First, we can fixed the frequency at $\omega _k$, and from measuring the phase $\theta$ to obtain the capacity $C_x$:<br>when $C_x=0$, we can get:<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _0}{\omega _k} = C_0$$<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ \omega _k R_0 R_{ref}} = \frac{C_0}{\tan \theta _0}$$<br>Finally, we can get:<br>$$C_x=C_0 \times \left( \frac{\tan \theta}{\tan \theta _0}-1 \right) = \frac{C_0}{\tan \theta_0} \left( \tan \theta - \tan \theta_0 \right)$$</p>
-<p>Second, we fix the phase to $\theta _k$ and from measuring the frequency $\omega$ to obtain the unknown capacity $C_x$.<br>when $C_x=0$, we can get:<br>$$- \frac{\left( R_0+ R_{ref}\right)}{ R_0 R_{ref}}\times \frac{\tan \theta _k}{\omega _0} = C_0$$<br>$$- \frac{\left( R_0+ R_{ref}\right)\tan \theta _k }{ R_0 R_{ref}} = \omega _0 C_0$$<br>Finally, we can get:<br>$$C_x=C_0 \times \left( \frac{\omega _0}{\omega }-1 \right) =\omega _0 C_0 \left( \frac{1}{\omega}-\frac{1}{\omega_0} \right)=f _0 C_0 \left( \frac{1}{f}-\frac{1}{f_0} \right)$$</p>
-<p>From the above two equations, we can measure the capacities.</p>
-<h2 id="Calibration-Experiment"><a href="#Calibration-Experiment" class="headerlink" title="Calibration Experiment"></a>Calibration Experiment</h2><ol>
-<li><p>Fixed the frequency $f=200Hz$, and measure the phase $\theta$.<br>We use different capacities from 10pF to 680pF for the calibration experiment.the result shows in below figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixFreq.png" alt="calibration_fixFreq"><br>From the fitting to the curve, we can get:<br>$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$</p>
-</li>
-<li><p>Fix the phase $\theta=-45°$, and measure the frequency.<br>The result for this situation is shown below:<br><img src="http://7xroek.com1.z0.glb.clouddn.com/calibration_fixPhase.png" alt="calibration_fixPhase"><br>From the fitting to the curve, we can get:<br>$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$</p>
-</li>
-</ol>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ol>
-<li><p>Fix the frequency $f=200Hz$, and measure the background phase $\theta_0$ and the phase $\theta$ corresponding to the unknow capacity $C_x$.<br>$$C_x=-264.78 \times \left( \tan(\theta+1.6428) - \tan(\theta _0 -1.6428) \right) pF$$</p>
-</li>
-<li><p>Fix the phase $\theta=-45°$, and measure the background frequency $f_0$ and the frequency f corresponding to the unknown capacity $C_x$.<br>$$C_x=53266 \times \left( \frac{1}{f+7.9213} -\frac{1}{f_0 +7.9213} \right) pF$$</p>
-</li>
-<li><p>Average the above two results to get the final capacity.</p>
-</li>
-</ol>
-<p>This method can be used to measure the capacities fabricated by trilayer nano-frbrication technology with the help of probe station.</p>
+        <h2 id="git-常用操作汇总"><a href="#git-常用操作汇总" class="headerlink" title="git 常用操作汇总"></a>git 常用操作汇总</h2><ul>
+<li>git add -A</li>
+<li>git status</li>
+<li>git commit -m “description”</li>
+<li>git config</li>
+<li>git help ?</li>
+<li>git clone git@github.com:xuyuan123/xuyuan123.github.io</li>
+<li>git branch</li>
+<li>git checkout master</li>
+<li>git push -u origin master</li>
+<li>git push origin master</li>
+<li>git remote</li>
+<li>git remote -v</li>
+</ul>
+<a id="more"></a>
+<p><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="external">常用git命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git 教程</a></p>
 
       
     </div>
@@ -387,7 +405,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/capacity-measurement/" rel="tag">#capacity measurement</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -396,17 +414,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/06/Transmission Line Input-Output Theory/" rel="next" title="Transmission Line Input-Output Theory">
-                <i class="fa fa-chevron-left"></i> Transmission Line Input-Output Theory
+              <a href="/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/" rel="next" title="Matlab connect Vector Network Analyzer E5071C with GPIB">
+                <i class="fa fa-chevron-left"></i> Matlab connect Vector Network Analyzer E5071C with GPIB
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/31/LPKF刻板机的使用手册/" rel="prev" title="LPKF刻板机的使用手册">
-                LPKF刻板机的使用手册 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -432,8 +446,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/01/Capacity-measurement-with-lockin-amplifier/"
-           data-title="Capacity Measurement with Lock-in Amplifier" data-url="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/">
+      <div class="ds-thread" data-thread-key="2017/04/06/git常用操作汇总/"
+           data-title="git 常用操作汇总" data-url="xuyuan.cf/2017/04/06/git常用操作汇总/">
       </div>
     
   </div>
@@ -535,7 +549,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Measurement-Scheme"><span class="nav-number">1.</span> <span class="nav-text">Measurement Scheme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calibration-Experiment"><span class="nav-number">2.</span> <span class="nav-text">Calibration Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-常用操作汇总"><span class="nav-number">1.</span> <span class="nav-text">git 常用操作汇总</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

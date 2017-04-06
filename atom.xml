@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2017-04-06T02:00:35.415Z</updated>
+  <updated>2017-04-06T02:04:29.025Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git 常用操作汇总</title>
+    <link href="xuyuan.cf/2017/04/06/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/"/>
+    <id>xuyuan.cf/2017/04/06/git常用操作汇总/</id>
+    <published>2017-04-06T01:24:35.000Z</published>
+    <updated>2017-04-06T02:04:29.025Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;git-常用操作汇总&quot;&gt;&lt;a href=&quot;#git-常用操作汇总&quot; class=&quot;headerlink&quot; title=&quot;git 常用操作汇总&quot;&gt;&lt;/a&gt;git 常用操作汇总&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;git add -A&lt;/li&gt;
+&lt;li&gt;git status&lt;/li&gt;
+&lt;li&gt;git commit -m “description”&lt;/li&gt;
+&lt;li&gt;git config&lt;/li&gt;
+&lt;li&gt;git help ?&lt;/li&gt;
+&lt;li&gt;git clone git@github.com:xuyuan123/xuyuan123.github.io&lt;/li&gt;
+&lt;li&gt;git branch&lt;/li&gt;
+&lt;li&gt;git checkout master&lt;/li&gt;
+&lt;li&gt;git push -u origin master&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
+&lt;li&gt;git remote&lt;/li&gt;
+&lt;li&gt;git remote -v&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;常用git命令&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git 教程&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;git-常用操作汇总&quot;&gt;&lt;a href=&quot;#git-常用操作汇总&quot; class=&quot;headerlink&quot; title=&quot;git 常用操作汇总&quot;&gt;&lt;/a&gt;git 常用操作汇总&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;git add -A&lt;/li&gt;
+&lt;li&gt;git status&lt;/li&gt;
+&lt;li&gt;git commit -m “description”&lt;/li&gt;
+&lt;li&gt;git config&lt;/li&gt;
+&lt;li&gt;git help ?&lt;/li&gt;
+&lt;li&gt;git clone git@github.com:xuyuan123/xuyuan123.github.io&lt;/li&gt;
+&lt;li&gt;git branch&lt;/li&gt;
+&lt;li&gt;git checkout master&lt;/li&gt;
+&lt;li&gt;git push -u origin master&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
+&lt;li&gt;git remote&lt;/li&gt;
+&lt;li&gt;git remote -v&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="xuyuan.cf/categories/git/"/>
+    
+    
+      <category term="git" scheme="xuyuan.cf/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab connect Vector Network Analyzer E5071C with GPIB</title>

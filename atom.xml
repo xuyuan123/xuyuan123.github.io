@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="xuyuan.cf/"/>
-  <updated>2017-03-02T03:41:50.760Z</updated>
+  <updated>2017-04-06T01:57:35.119Z</updated>
   <id>xuyuan.cf/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab connect vector network analyzer E5071C with GPIB</title>
+    <link href="xuyuan.cf/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/"/>
+    <id>xuyuan.cf/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/</id>
+    <published>2017-04-05T07:10:35.000Z</published>
+    <updated>2017-04-06T01:57:35.119Z</updated>
+    
+    <content type="html">&lt;p&gt;这篇文章讲述了如何通过MATLAB用GPIB线连接到网络分析仪E5071C，并通过MATLAB采集网络分析仪上的S参数的数据。也可以利用MATLAB获取网络分析仪上的设置的各项参数，同时也能利用MATLAB对网络分析仪的巨大部分参数进行设置。所有的MATLAB的源代码已经上传在&lt;a href=&quot;https://github.com/xuyuan123/matlab_VNA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的GitHub仓库&lt;/a&gt;里了，有需要的可以去下载，这里只简单介绍如何使用这些函数。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;1-写在最前面&quot;&gt;&lt;a href=&quot;#1-写在最前面&quot; class=&quot;headerlink&quot; title=&quot;1. 写在最前面&quot;&gt;&lt;/a&gt;1. 写在最前面&lt;/h3&gt;&lt;p&gt;在用MATLAB控制网络分析仪之前，首先应该打开网络分析仪，设置其GPIB号，并将GPIB线与电脑相连接。&lt;br&gt;接下来最重要的一步就是要让MATLAB连接到你的网络分析仪。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;VNA = VNA_connect(&amp;apos;GPIB0::6::INSTR&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这个connect函数只有一个输入变量，为网络分析仪的GPIB号。connect函数的输出变量VNA为对应网络分析仪的一个类。后面所有的操作都必须要保证你的MATLAB工作区变量中有VNA这个变量。&lt;/p&gt;
+&lt;h3 id=&quot;2-网络分析仪常见操作的实现&quot;&gt;&lt;a href=&quot;#2-网络分析仪常见操作的实现&quot; class=&quot;headerlink&quot; title=&quot;2. 网络分析仪常见操作的实现&quot;&gt;&lt;/a&gt;2. 网络分析仪常见操作的实现&lt;/h3&gt;&lt;p&gt;经常使用网络分析仪的可能会经常使用到某些功能，绝大部分功能都是可以通过MATLAB直接控制的。这里给出了大部分网络分析仪功能的MATLAB实现的函数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设置或获取网络分析仪的power:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepPower(VNA,-40);  % 设置网分当前的power为 -40dBm；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepPower(VNA);  % 获取网分当前的power；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取start frequency：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepSart(VNA,5e9);  % 设置网分当前的start frequency 为5GHz；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepSart(VNA);  % 获取网分当前的start frequency；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取stop frequency：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepStop(VNA,15e9);  % 设置网分当前的stop frequency 为15GHz；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepStop(VNA);  % 获取网分当前的stop frequency；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取center frequency：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepCenter(VNA,8e9);  % 设置网分当前的center frequency 为8GHz；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepCenter(VNA);  % 获取网分当前的center frequency；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取span:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepSpan(VNA,3e9);  % 设置网分当前的span 为3GHz；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_SweepSpan(VNA);  % 获取网分当前的span；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取网分当前测量类型：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_MeasType(VNA,sparameter);  % 设置网分当前的测量类型，其中第二个参数可以是&amp;#123;&amp;apos;S11&amp;apos;, &amp;apos;S12&amp;apos;, &amp;apos;S21&amp;apos;, &amp;apos;S22&amp;apos;&amp;#125;中的任意一个；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_MeasType(VNA);  % 获取网分当前的测量类型；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置或获取网分当前测量类型：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_DataFormat(VNA,foamat);  % 设置网分当前的数据类型，其中第二个参数可以是&amp;#123;&amp;apos;MLOG&amp;apos;, &amp;apos;PHAS&amp;apos;, &amp;apos;REAL&amp;apos;, &amp;apos;IMAG&amp;apos;&amp;#125;中的任意一个，分别对应大小，相位，实部和虚部；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_DataFormat(VNA);  % 获取网分当前的数据类型；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置网分restart average：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;VNA_AvegRestart(VNA);  % 设置网分restart average&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置网分当前图形auto scale：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;VNA_AutoScale(VNA);  % 设置网分当前图形auto scale;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他的常用的网分控制函数：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_RfoutputStates(VNA); % 获取当前网分的Rf output的状态；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_RfoutputStates(VNA,states); % 设置网分的Rf output打开或关闭，states可以是&amp;#123;&amp;apos;ON&amp;apos;, &amp;apos;OFF&amp;apos;&amp;#125;中的任意一个；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_AvegCount(VNA); % 获取当前网分的average factor；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_AvegCount(VNA,counts); % 设置当前网分的average factor为counts；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_AvegStates(VNA); % 获取当前网分的average状态是否打开；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_AvegStates(VNA,states); % 设置网分的average状态为打开或关闭，states可以是&amp;#123;&amp;apos;ON&amp;apos;, &amp;apos;OFF&amp;apos;&amp;#125;中的任意一个；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3-MATLAB采集网分上的数据&quot;&gt;&lt;a href=&quot;#3-MATLAB采集网分上的数据&quot; class=&quot;headerlink&quot; title=&quot;3. MATLAB采集网分上的数据&quot;&gt;&lt;/a&gt;3. MATLAB采集网分上的数据&lt;/h3&gt;&lt;p&gt;在第二部分常见的这些网分操作的基础上，我们可以直接利用MATLAB采集网分上的数据。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_GetCurrentCurve(VNA,savefilename,&amp;apos;170405&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;该函数自动采集当前网分上显示的图形，并保存该数据到本地电脑的’D:/data/170405/‘文件夹下，以savefilename命名的文件。其中第三个参数可以不写，默认为今天的日期。&lt;br&gt;当然也可以采集特定S参数，特定数据格式的网分数据。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_GetSparameters(VNA,savefilename,datestring,Sparameter,format);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;其中format可以不写，默认为’MLOG’; Sparameter 也可以不写，默认为’S21’; datestring 也可以不写，默认为今天的日期。&lt;br&gt;也可以直接将4个S参数都采集下来，用下面的这个函数：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;results = VNA_Get4Sparameters(VNA,savefilename,datestring,format);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;后面两个参数为默认参数，和上面的一样。这个函数直接将四个S参数全部采集下来并画在一张图上保存在本地电脑上。&lt;/p&gt;
+&lt;p&gt;在这些函数的基础上可以进一步定制更多的功能。比如说改变power采集网分的S参数数据，或者是改变另外一个设备Yoko的电压，采集网分的S参数， 等等。。。&lt;/p&gt;
+&lt;h3 id=&quot;4-Summary&quot;&gt;&lt;a href=&quot;#4-Summary&quot; class=&quot;headerlink&quot; title=&quot;4. Summary&quot;&gt;&lt;/a&gt;4. Summary&lt;/h3&gt;&lt;p&gt;这篇文章简单总结了利用MATLAB控制网络分析仪E5071的基本的函数功能，能够实现绝大部分的数据采集工作。并且能够在此基础上定制更多的功能。目前这些代码也并非是非常的完善，可能也会存在很多问题，基本上没有任何错误和异常的处理操作，所以感兴趣的朋友可以联系我共同完善这些代码。&lt;br&gt;所有的MATLAB源代码都已经上传在&lt;a href=&quot;https://github.com/xuyuan123/matlab_VNA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的GitHub仓库&lt;/a&gt;里，欢迎下载使用。MATLAB源代码编写过程中参考了&lt;a href=&quot;http://ena.support.keysight.com/e5071c/manuals/webhelp/eng/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;E5071官方的说明文档&lt;/a&gt;。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章讲述了如何通过MATLAB用GPIB线连接到网络分析仪E5071C，并通过MATLAB采集网络分析仪上的S参数的数据。也可以利用MATLAB获取网络分析仪上的设置的各项参数，同时也能利用MATLAB对网络分析仪的巨大部分参数进行设置。所有的MATLAB的源代码已经上传在&lt;a href=&quot;https://github.com/xuyuan123/matlab_VNA&quot;&gt;我的GitHub仓库&lt;/a&gt;里了，有需要的可以去下载，这里只简单介绍如何使用这些函数。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="matlab" scheme="xuyuan.cf/categories/matlab/"/>
+    
+    
+      <category term="matlab E5071 GPIB" scheme="xuyuan.cf/tags/matlab-E5071-GPIB/"/>
+    
+  </entry>
   
   <entry>
     <title>Black Box Quantization</title>
@@ -577,9 +642,9 @@
       <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
-    
       <category term="分贝" scheme="xuyuan.cf/tags/%E5%88%86%E8%B4%9D/"/>
+    
+      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
     
   </entry>
   

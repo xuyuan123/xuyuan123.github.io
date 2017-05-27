@@ -72,7 +72,7 @@
 <meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/Qubit_BBQ.png">
 <meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png">
 <meta property="og:image" content="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits_BBQ.png">
-<meta property="og:updated_time" content="2017-03-02T03:41:50.760Z">
+<meta property="og:updated_time" content="2017-05-27T03:52:18.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Black Box Quantization">
 <meta name="twitter:description" content="This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is Simon’s paper. For simplicity, I just show 2 simple ca">
@@ -165,16 +165,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -185,22 +175,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -354,10 +344,10 @@
         <p>This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is <a href="https://arxiv.org/pdf/1204.0587v1.pdf" target="_blank" rel="external">Simon’s paper</a>. For simplicity, I just show 2 simple cases to illustrate the general priciple of the BBQ method.</p>
 <a id="more"></a>
 <hr>
-<h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>In my previous article <a href="http://xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/">“Quantization of linear and non-linear LC circuits”</a>, we have learned the method to quantize a simple linear and non-linear LC circuit. However, a typical circuit always consitsing of many capacitors and inductors is more complex than a simple LC circuit. Generally, we consider this complex linear LC circuit as a black box. The following figure shows a complex linear LC circuit which is considered as a linear black box. This linear black box is usually coupled to a non-linear element. In the following figure, the gray background indicates the linear black box.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png" alt="Complex LC circuit"></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In my previous article <a href="http://xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/">“Quantization of linear and non-linear LC circuits”</a>, we have learned the method to quantize a simple linear and non-linear LC circuit. However, a typical circuit always consitsing of many capacitors and inductors is more complex than a simple LC circuit. Generally, we consider this complex linear LC circuit as a black box. The following figure shows a complex linear LC circuit which is considered as a linear black box. This linear black box is usually coupled to a non-linear element. In the following figure, the gray background indicates the linear black box.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png" alt="Complex LC circuit"></p>
 <p>In the following two parts, we illustrate the black box quantization method in two simple situations. One is “one qubit coupled to two resonator modes”, another is “two qubits coupled to one resonator mode”.</p>
 <hr>
-<h3 id="2-One-qubit-coupled-to-two-resonator-modes"><a href="#2-One-qubit-coupled-to-two-resonator-modes" class="headerlink" title="2. One qubit coupled to two resonator modes"></a>2. One qubit coupled to two resonator modes</h3><p>The LC circuit we will deal with is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/Qubit_2Cavity.png" alt="Qubit coupled to two cavities"><br>For the non-linear element Josephson junction, it can be considered as a non-linear inductor. The Hamiltonian of the non-linear inductor can be expressed as:<br>$$H_{inductor} = -E_J \cos\varphi = -E_J \left( 1 - \frac{1}{2!} \varphi^2 + \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$</p>
+<h2 id="One-qubit-coupled-to-two-resonator-modes"><a href="#One-qubit-coupled-to-two-resonator-modes" class="headerlink" title="One qubit coupled to two resonator modes"></a>One qubit coupled to two resonator modes</h2><p>The LC circuit we will deal with is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/Qubit_2Cavity.png" alt="Qubit coupled to two cavities"><br>For the non-linear element Josephson junction, it can be considered as a non-linear inductor. The Hamiltonian of the non-linear inductor can be expressed as:<br>$$H_{inductor} = -E_J \cos\varphi = -E_J \left( 1 - \frac{1}{2!} \varphi^2 + \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$</p>
 <p>The non-linear part of the Josephson junction can be obtained by removing the linear part of the inductor Hamiltonian.<br>$$V = H_{inductor} + E_J \left( 1 - \frac{1}{2!} \varphi^2 \right) = -E_J \left(  \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$</p>
 <p>The linear part of the inductor Hamiltonian and other linear inductors and capacitors form the black box, which is equivalent to a series of LC resonators. Then the circuit can be simplified as non-linear Josephson junction coupled to a linear black box, which is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/Qubit_BBQ.png" alt="Qubit\_BBQ"><br>The gray background indicates the linear black box. The impedence of the black box can be expressed as:<br>$$\begin{align}<br>Z &amp;= j\omega L_1 //\frac{1}{j\omega C_1} + j\omega L_2 //\frac{1}{j\omega C_2} + j\omega L_3 //\frac{1}{j\omega C_3}<br>\\&amp;= \frac{1}{j\omega C_1 + \frac{1}{j\omega L_1}} + \frac{1}{j\omega C_2 + \frac{1}{j\omega L_2}} + \frac{1}{j\omega C_3 + \frac{1}{j\omega L_3}}<br>\\&amp;= \frac{Z_1}{j \left( \frac{\omega}{\omega_1}-\frac{\omega_1}{\omega} \right)} + \frac{Z_2}{j \left( \frac{\omega}{\omega_2}-\frac{\omega_2}{\omega} \right)} + \frac{Z_3}{j \left( \frac{\omega}{\omega_3}-\frac{\omega_3}{\omega} \right)}<br>\end{align}$$<br>Here, we have defined the resonance frequencies are: $\omega_1 = \frac{1}{L_1 C_1}$, $\omega_2 = \frac{1}{L_2 C_2}$ and $\omega_3 = \frac{1}{L_3 C_3}$. The characteristic impedances are: $Z_1 = \sqrt{\frac{L_1}{C_1}}$, $Z_2 = \sqrt{\frac{L_2}{C_2}}$ and $Z_3 = \sqrt{\frac{L_3}{C_3}}$.</p>
 <p>Then the admittance of the black box can be expressed as:<br>$$Y = Z^{-1} = j \left( \frac{Z_1}{ \frac{\omega}{\omega_1}-\frac{\omega_1}{\omega} } + \frac{Z_2}{\frac{\omega}{\omega_2}-\frac{\omega_2}{\omega} } + \frac{Z_3}{ \frac{\omega}{\omega_3}-\frac{\omega_3}{\omega} } \right)^{-1}$$</p>
@@ -387,7 +377,7 @@
 <p>$$\begin{align}<br>&amp;H_{non-linear} = V<br>\\&amp;= -E_J \left( \frac{1}{4!}\varphi^4 - \frac{1}{6!}\varphi^6 + \frac{1}{8!}\varphi^8 - \frac{1}{10!}\varphi^{10} + … \right)<br>\end{align}$$</p>
 <p>Finally, we can obtain the whole Hamiltonian of the system:<br>$$H_{system} = H_{linear} + H_{non-linear}$$<br>After obtaning the whole Hamiltonian, we can diagonalize this Hamiltonian numerically and find its eigenenergies, from which we can obtain the resonance frequencies, self-Kerr, cross-Kerr terms and finally, we can acquire the coupling strength and anharmonicity of the qubit.</p>
 <hr>
-<h3 id="3-Two-qubits-coupled-to-one-resonator-mode"><a href="#3-Two-qubits-coupled-to-one-resonator-mode" class="headerlink" title="3. Two qubits coupled to one resonator mode"></a>3. Two qubits coupled to one resonator mode</h3><p>Then we are gong to deal with a two qubits situation, which is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png" alt="cavity_2qubits"></p>
+<h2 id="Two-qubits-coupled-to-one-resonator-mode"><a href="#Two-qubits-coupled-to-one-resonator-mode" class="headerlink" title="Two qubits coupled to one resonator mode"></a>Two qubits coupled to one resonator mode</h2><p>Then we are gong to deal with a two qubits situation, which is shown in the following figure.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits.png" alt="cavity_2qubits"></p>
 <p>We use the same method as before to move all the linear part into the black box, and only the two ports non-linear Josephson junctions remain. The equivalent circuit is shown below.<br><img src="http://7xroek.com1.z0.glb.clouddn.com/cavity_2qubits_BBQ.png" alt="cavity_2qubits_BBQ"></p>
 <p>Here, we consider the port 1 as the reference port. We could obtain the impedance matrix from the HFSS for each resonance mode. That is to say, we can obtain $Z_{11} \left(\omega \right)$, $Z_{12} \left(\omega \right)$, $Z_{21} \left(\omega \right)$ and $Z_{22} \left(\omega \right)$ at each frequency point.</p>
 <p>We use the method as before. We first calculate the admattance of the two port:<br>$$Y_1(\omega) = Z_{11} \left(\omega \right) ^{-1}$$<br>$$Y_2(\omega) = Z_{22} \left(\omega \right) ^{-1}$$<br>Find the zero points of the imaginary admattance $ImY_1(\omega) =0$ or $ImY_2(\omega) =0$, we can get the resonance frequency of each mode. $\omega = \omega_1$, $\omega = \omega_2$ and $\omega = \omega_3$ . The zero root solutions of these two equations should be same.<br>Therefore, we can obtain the linear Hamiltonian:<br>$$H_{linear} = \hbar \omega_1 a_1^{\dagger} a_1 +\hbar \omega_2 a_2^{\dagger} a_2+\hbar \omega_3 a_3^{\dagger} a_3$$</p>
@@ -397,7 +387,7 @@
 <p>We can define a function which expand the cos function and ignore the first two terms.<br>$$\begin{align}F(x) &amp;= \cos(x) -(1 - \frac{1}{2!}x^2)<br>\\ &amp;= \frac{1}{4!}x^4 - \frac{1}{6!}x^6 + \frac{1}{8!}x^8 - \frac{1}{10!}x^{10} + …\end{align}$$</p>
 <p>Therefore, we can obtain the non-linear Hamiltonian:<br>$$H_{non-linear} = -E_{J1} F(\varphi 1) -E_{J2} F(\varphi 2)$$<br>Finally, we can acquire the total Hamiltonian of the system:<br>$$H_{system} = H_{linear} + H_{non-linear}$$</p>
 <hr>
-<h3 id="4-Summary"><a href="#4-Summary" class="headerlink" title="4. Summary"></a>4. Summary</h3><p>This article summaries the method of black box quantization with two simple situations. The black box quantization </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This article summaries the method of black box quantization with two simple situations. The black box quantization </p>
 <hr>
 
       
@@ -511,10 +501,10 @@
           
           
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              
                 <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -561,7 +551,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-One-qubit-coupled-to-two-resonator-modes"><span class="nav-number">2.</span> <span class="nav-text">2. One qubit coupled to two resonator modes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Two-qubits-coupled-to-one-resonator-mode"><span class="nav-number">3.</span> <span class="nav-text">3. Two qubits coupled to one resonator mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Summary"><span class="nav-number">4.</span> <span class="nav-text">4. Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-qubit-coupled-to-two-resonator-modes"><span class="nav-number">2.</span> <span class="nav-text">One qubit coupled to two resonator modes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-qubits-coupled-to-one-resonator-mode"><span class="nav-number">3.</span> <span class="nav-text">Two qubits coupled to one resonator mode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

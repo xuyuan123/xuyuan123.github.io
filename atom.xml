@@ -4,9 +4,9 @@
   <subtitle>Learning and Sharing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="xuyuan.cf/"/>
+  <link href="xuyuan123.github.io/"/>
   <updated>2017-05-27T03:33:43.655Z</updated>
-  <id>xuyuan.cf/</id>
+  <id>xuyuan123.github.io/</id>
   
   <author>
     <name>XuYuan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>git 常用操作汇总</title>
-    <link href="xuyuan.cf/2017/04/06/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/"/>
-    <id>xuyuan.cf/2017/04/06/git常用操作汇总/</id>
+    <link href="xuyuan123.github.io/2017/04/06/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/"/>
+    <id>xuyuan123.github.io/2017/04/06/git常用操作汇总/</id>
     <published>2017-04-06T01:24:35.000Z</published>
     <updated>2017-05-27T03:33:43.655Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="git" scheme="xuyuan.cf/categories/git/"/>
+      <category term="git" scheme="xuyuan123.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="xuyuan.cf/tags/git/"/>
+      <category term="git" scheme="xuyuan123.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>Matlab connect Vector Network Analyzer E5071C with GPIB</title>
-    <link href="xuyuan.cf/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/"/>
-    <id>xuyuan.cf/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/</id>
+    <link href="xuyuan123.github.io/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/"/>
+    <id>xuyuan123.github.io/2017/04/05/MATLAB-connect-vector-network-analyzer-E5071C-with-GPIB/</id>
     <published>2017-04-05T07:10:35.000Z</published>
     <updated>2017-05-27T03:33:32.768Z</updated>
     
@@ -99,24 +99,24 @@
     
     </summary>
     
-      <category term="matlab" scheme="xuyuan.cf/categories/matlab/"/>
+      <category term="matlab" scheme="xuyuan123.github.io/categories/matlab/"/>
     
     
-      <category term="matlab E5071 GPIB" scheme="xuyuan.cf/tags/matlab-E5071-GPIB/"/>
+      <category term="matlab E5071 GPIB" scheme="xuyuan123.github.io/tags/matlab-E5071-GPIB/"/>
     
   </entry>
   
   <entry>
     <title>Black Box Quantization</title>
-    <link href="xuyuan.cf/2017/01/20/Black-Box-Quantization/"/>
-    <id>xuyuan.cf/2017/01/20/Black-Box-Quantization/</id>
+    <link href="xuyuan123.github.io/2017/01/20/Black-Box-Quantization/"/>
+    <id>xuyuan123.github.io/2017/01/20/Black-Box-Quantization/</id>
     <published>2017-01-20T02:19:31.000Z</published>
     <updated>2017-05-27T03:52:18.556Z</updated>
     
     <content type="html">&lt;p&gt;This article introduces the method called “Black Box Quantization (BBQ)” to deal with complex LC circuits. The basic reference of this article is &lt;a href=&quot;https://arxiv.org/pdf/1204.0587v1.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Simon’s paper&lt;/a&gt;. For simplicity, I just show 2 simple cases to illustrate the general priciple of the BBQ method.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;In my previous article &lt;a href=&quot;http://xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/&quot;&gt;“Quantization of linear and non-linear LC circuits”&lt;/a&gt;, we have learned the method to quantize a simple linear and non-linear LC circuit. However, a typical circuit always consitsing of many capacitors and inductors is more complex than a simple LC circuit. Generally, we consider this complex linear LC circuit as a black box. The following figure shows a complex linear LC circuit which is considered as a linear black box. This linear black box is usually coupled to a non-linear element. In the following figure, the gray background indicates the linear black box.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png&quot; alt=&quot;Complex LC circuit&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;In my previous article &lt;a href=&quot;http://xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;“Quantization of linear and non-linear LC circuits”&lt;/a&gt;, we have learned the method to quantize a simple linear and non-linear LC circuit. However, a typical circuit always consitsing of many capacitors and inductors is more complex than a simple LC circuit. Generally, we consider this complex linear LC circuit as a black box. The following figure shows a complex linear LC circuit which is considered as a linear black box. This linear black box is usually coupled to a non-linear element. In the following figure, the gray background indicates the linear black box.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/complex_circuit.png&quot; alt=&quot;Complex LC circuit&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In the following two parts, we illustrate the black box quantization method in two simple situations. One is “one qubit coupled to two resonator modes”, another is “two qubits coupled to one resonator mode”.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;One-qubit-coupled-to-two-resonator-modes&quot;&gt;&lt;a href=&quot;#One-qubit-coupled-to-two-resonator-modes&quot; class=&quot;headerlink&quot; title=&quot;One qubit coupled to two resonator modes&quot;&gt;&lt;/a&gt;One qubit coupled to two resonator modes&lt;/h2&gt;&lt;p&gt;The LC circuit we will deal with is shown in the following figure.&lt;br&gt;&lt;img src=&quot;http://7xroek.com1.z0.glb.clouddn.com/Qubit_2Cavity.png&quot; alt=&quot;Qubit coupled to two cavities&quot;&gt;&lt;br&gt;For the non-linear element Josephson junction, it can be considered as a non-linear inductor. The Hamiltonian of the non-linear inductor can be expressed as:&lt;br&gt;$$H_{inductor} = -E_J \cos\varphi = -E_J \left( 1 - \frac{1}{2!} \varphi^2 + \frac{1}{4!} \varphi^4 - \frac{1}{6!} \varphi^6 + … \right)$$&lt;/p&gt;
@@ -169,17 +169,17 @@
     
     </summary>
     
-      <category term="quantum" scheme="xuyuan.cf/categories/quantum/"/>
+      <category term="quantum" scheme="xuyuan123.github.io/categories/quantum/"/>
     
     
-      <category term="quantum" scheme="xuyuan.cf/tags/quantum/"/>
+      <category term="quantum" scheme="xuyuan123.github.io/tags/quantum/"/>
     
   </entry>
   
   <entry>
     <title>Quantization of linear and non-linear LC circuits</title>
-    <link href="xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/"/>
-    <id>xuyuan.cf/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/</id>
+    <link href="xuyuan123.github.io/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/"/>
+    <id>xuyuan123.github.io/2017/01/10/Quantization-of-linear-and-non-linear-LC-circuits/</id>
     <published>2017-01-10T04:56:47.000Z</published>
     <updated>2017-05-27T03:32:27.255Z</updated>
     
@@ -250,19 +250,19 @@
     
     </summary>
     
-      <category term="circuit" scheme="xuyuan.cf/categories/circuit/"/>
+      <category term="circuit" scheme="xuyuan123.github.io/categories/circuit/"/>
     
     
-      <category term="quantum" scheme="xuyuan.cf/tags/quantum/"/>
+      <category term="quantum" scheme="xuyuan123.github.io/tags/quantum/"/>
     
-      <category term="circuit" scheme="xuyuan.cf/tags/circuit/"/>
+      <category term="circuit" scheme="xuyuan123.github.io/tags/circuit/"/>
     
   </entry>
   
   <entry>
     <title>Summary of Pauli operatoes</title>
-    <link href="xuyuan.cf/2017/01/05/Summary-of-Pauli-operators/"/>
-    <id>xuyuan.cf/2017/01/05/Summary-of-Pauli-operators/</id>
+    <link href="xuyuan123.github.io/2017/01/05/Summary-of-Pauli-operators/"/>
+    <id>xuyuan123.github.io/2017/01/05/Summary-of-Pauli-operators/</id>
     <published>2017-01-05T07:10:35.000Z</published>
     <updated>2017-05-27T03:32:46.076Z</updated>
     
@@ -284,17 +284,17 @@
     
     </summary>
     
-      <category term="quantum" scheme="xuyuan.cf/categories/quantum/"/>
+      <category term="quantum" scheme="xuyuan123.github.io/categories/quantum/"/>
     
     
-      <category term="quantum" scheme="xuyuan.cf/tags/quantum/"/>
+      <category term="quantum" scheme="xuyuan123.github.io/tags/quantum/"/>
     
   </entry>
   
   <entry>
     <title>LPKF刻板机的使用手册</title>
-    <link href="xuyuan.cf/2016/05/31/LPKF%E5%88%BB%E6%9D%BF%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
-    <id>xuyuan.cf/2016/05/31/LPKF刻板机的使用手册/</id>
+    <link href="xuyuan123.github.io/2016/05/31/LPKF%E5%88%BB%E6%9D%BF%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+    <id>xuyuan123.github.io/2016/05/31/LPKF刻板机的使用手册/</id>
     <published>2016-05-31T08:06:35.000Z</published>
     <updated>2016-05-31T12:10:59.334Z</updated>
     
@@ -377,19 +377,19 @@
     
     </summary>
     
-      <category term="manual" scheme="xuyuan.cf/categories/manual/"/>
+      <category term="manual" scheme="xuyuan123.github.io/categories/manual/"/>
     
     
-      <category term="刻板机" scheme="xuyuan.cf/tags/%E5%88%BB%E6%9D%BF%E6%9C%BA/"/>
+      <category term="刻板机" scheme="xuyuan123.github.io/tags/%E5%88%BB%E6%9D%BF%E6%9C%BA/"/>
     
-      <category term="manual" scheme="xuyuan.cf/tags/manual/"/>
+      <category term="manual" scheme="xuyuan123.github.io/tags/manual/"/>
     
   </entry>
   
   <entry>
     <title>Capacity Measurement with Lock-in Amplifier</title>
-    <link href="xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/"/>
-    <id>xuyuan.cf/2016/05/01/Capacity-measurement-with-lockin-amplifier/</id>
+    <link href="xuyuan123.github.io/2016/05/01/Capacity-measurement-with-lockin-amplifier/"/>
+    <id>xuyuan123.github.io/2016/05/01/Capacity-measurement-with-lockin-amplifier/</id>
     <published>2016-05-01T01:41:37.000Z</published>
     <updated>2016-05-01T03:39:13.545Z</updated>
     
@@ -425,17 +425,17 @@
     
     </summary>
     
-      <category term="capacity measurement" scheme="xuyuan.cf/categories/capacity-measurement/"/>
+      <category term="capacity measurement" scheme="xuyuan123.github.io/categories/capacity-measurement/"/>
     
     
-      <category term="capacity measurement" scheme="xuyuan.cf/tags/capacity-measurement/"/>
+      <category term="capacity measurement" scheme="xuyuan123.github.io/tags/capacity-measurement/"/>
     
   </entry>
   
   <entry>
     <title>Transmission Line Input-Output Theory</title>
-    <link href="xuyuan.cf/2016/04/06/Transmission%20Line%20Input-Output%20Theory/"/>
-    <id>xuyuan.cf/2016/04/06/Transmission Line Input-Output Theory/</id>
+    <link href="xuyuan123.github.io/2016/04/06/Transmission%20Line%20Input-Output%20Theory/"/>
+    <id>xuyuan123.github.io/2016/04/06/Transmission Line Input-Output Theory/</id>
     <published>2016-04-06T07:10:35.000Z</published>
     <updated>2016-04-06T09:39:53.602Z</updated>
     
@@ -463,17 +463,17 @@
     
     </summary>
     
-      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/tags/Microwave/"/>
     
   </entry>
   
   <entry>
     <title>IQ mixer</title>
-    <link href="xuyuan.cf/2016/03/27/IQ-mixer/"/>
-    <id>xuyuan.cf/2016/03/27/IQ-mixer/</id>
+    <link href="xuyuan123.github.io/2016/03/27/IQ-mixer/"/>
+    <id>xuyuan123.github.io/2016/03/27/IQ-mixer/</id>
     <published>2016-03-27T11:41:37.000Z</published>
     <updated>2016-03-27T11:47:43.437Z</updated>
     
@@ -505,17 +505,17 @@
     
     </summary>
     
-      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/categories/Microwave/"/>
     
     
-      <category term="Microwave Instrument" scheme="xuyuan.cf/tags/Microwave-Instrument/"/>
+      <category term="Microwave Instrument" scheme="xuyuan123.github.io/tags/Microwave-Instrument/"/>
     
   </entry>
   
   <entry>
     <title>Group links about superconducting quantum computation</title>
-    <link href="xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
-    <id>xuyuan.cf/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
+    <link href="xuyuan123.github.io/2016/03/21/Group-links-about-superconducting-quantum-computation/"/>
+    <id>xuyuan123.github.io/2016/03/21/Group-links-about-superconducting-quantum-computation/</id>
     <published>2016-03-21T07:10:35.000Z</published>
     <updated>2017-05-27T03:51:43.075Z</updated>
     
@@ -634,17 +634,17 @@
     
     </summary>
     
-      <category term="usefull links" scheme="xuyuan.cf/categories/usefull-links/"/>
+      <category term="usefull links" scheme="xuyuan123.github.io/categories/usefull-links/"/>
     
     
-      <category term="quantum group links" scheme="xuyuan.cf/tags/quantum-group-links/"/>
+      <category term="quantum group links" scheme="xuyuan123.github.io/tags/quantum-group-links/"/>
     
   </entry>
   
   <entry>
     <title>Microwave Power Ratio and Decibels</title>
-    <link href="xuyuan.cf/2016/03/10/Microwave%20Power%20Ratio%20and%20Decibels/"/>
-    <id>xuyuan.cf/2016/03/10/Microwave Power Ratio and Decibels/</id>
+    <link href="xuyuan123.github.io/2016/03/10/Microwave%20Power%20Ratio%20and%20Decibels/"/>
+    <id>xuyuan123.github.io/2016/03/10/Microwave Power Ratio and Decibels/</id>
     <published>2016-03-10T02:32:35.000Z</published>
     <updated>2017-05-27T03:28:20.556Z</updated>
     
@@ -676,19 +676,19 @@
     
     </summary>
     
-      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/tags/Microwave/"/>
     
-      <category term="分贝" scheme="xuyuan.cf/tags/%E5%88%86%E8%B4%9D/"/>
+      <category term="分贝" scheme="xuyuan123.github.io/tags/%E5%88%86%E8%B4%9D/"/>
     
   </entry>
   
   <entry>
     <title>Transmission Line Theory of 《Microwave Engineering》</title>
-    <link href="xuyuan.cf/2016/03/09/Transmission%20Line%20Theory/"/>
-    <id>xuyuan.cf/2016/03/09/Transmission Line Theory/</id>
+    <link href="xuyuan123.github.io/2016/03/09/Transmission%20Line%20Theory/"/>
+    <id>xuyuan123.github.io/2016/03/09/Transmission Line Theory/</id>
     <published>2016-03-09T00:32:35.000Z</published>
     <updated>2016-03-10T07:59:04.224Z</updated>
     
@@ -844,19 +844,19 @@
     
     </summary>
     
-      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/tags/Microwave/"/>
     
-      <category term="Transmission line" scheme="xuyuan.cf/tags/Transmission-line/"/>
+      <category term="Transmission line" scheme="xuyuan123.github.io/tags/Transmission-line/"/>
     
   </entry>
   
   <entry>
     <title>Attenuator</title>
-    <link href="xuyuan.cf/2016/03/08/Attenuator/"/>
-    <id>xuyuan.cf/2016/03/08/Attenuator/</id>
+    <link href="xuyuan123.github.io/2016/03/08/Attenuator/"/>
+    <id>xuyuan123.github.io/2016/03/08/Attenuator/</id>
     <published>2016-03-08T03:50:35.000Z</published>
     <updated>2016-03-08T12:36:04.670Z</updated>
     
@@ -927,19 +927,19 @@
     
     </summary>
     
-      <category term="Microwave" scheme="xuyuan.cf/categories/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/categories/Microwave/"/>
     
     
-      <category term="Microwave" scheme="xuyuan.cf/tags/Microwave/"/>
+      <category term="Microwave" scheme="xuyuan123.github.io/tags/Microwave/"/>
     
-      <category term="Instrument" scheme="xuyuan.cf/tags/Instrument/"/>
+      <category term="Instrument" scheme="xuyuan123.github.io/tags/Instrument/"/>
     
   </entry>
   
   <entry>
     <title>利用Hexo博客搭建全过程</title>
-    <link href="xuyuan.cf/2016/03/05/%E5%88%A9%E7%94%A8Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
-    <id>xuyuan.cf/2016/03/05/利用Hexo博客搭建全过程/</id>
+    <link href="xuyuan123.github.io/2016/03/05/%E5%88%A9%E7%94%A8Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
+    <id>xuyuan123.github.io/2016/03/05/利用Hexo博客搭建全过程/</id>
     <published>2016-03-05T03:50:35.000Z</published>
     <updated>2017-05-27T03:29:54.637Z</updated>
     
@@ -1064,19 +1064,19 @@
     
     </summary>
     
-      <category term="hexo" scheme="xuyuan.cf/categories/hexo/"/>
+      <category term="hexo" scheme="xuyuan123.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="xuyuan.cf/tags/hexo/"/>
+      <category term="hexo" scheme="xuyuan123.github.io/tags/hexo/"/>
     
-      <category term="github" scheme="xuyuan.cf/tags/github/"/>
+      <category term="github" scheme="xuyuan123.github.io/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="xuyuan.cf/2016/02/28/hello-world/"/>
-    <id>xuyuan.cf/2016/02/28/hello-world/</id>
+    <link href="xuyuan123.github.io/2016/02/28/hello-world/"/>
+    <id>xuyuan123.github.io/2016/02/28/hello-world/</id>
     <published>2016-02-28T12:05:03.178Z</published>
     <updated>2016-02-29T10:21:29.874Z</updated>
     
